@@ -1,0 +1,19 @@
+.ap-footer-main {
+  /* default */
+  --footer-self-base-default-background-color: var(--color-reference-normal-accent);
+  --footer-self-base-default-icon-color: var(--color-reference-normal-secondary);
+  --footer-self-base-default-padding: var(--spacing-sm) var(--spacing-2xs) var(--spacing-sm) var(--spacing-2xs);
+  --footer-self-base-default-text-color: var(--color-reference-normal-secondary);
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --footer-self-base-default-padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
+  }
+
+  /* - - X L A R G E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 1440px) {
+    /* default */
+    --footer-self-base-default-padding: var(--spacing-lg) var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+  }
+}

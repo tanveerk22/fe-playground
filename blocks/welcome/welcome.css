@@ -1,0 +1,214 @@
+/* Full-bleed: the tab bar and welcome panel span edge to edge, like the
+   account page in the live design — not capped at the site's 1200px
+   marketing-section width. */
+main > .section.welcome-container > .welcome-wrapper {
+  max-width: unset;
+  margin: 0;
+  padding: 0;
+}
+
+/* The header is position:absolute over the page (it's built to float over a
+   hero image) so it never reserves layout space of its own. Pages with no
+   hero — like this account page — have to push their first section down by
+   the nav height themselves, the same way body.legal does for legal pages
+   (see styles/styles.css). Padding, not margin, so it stays inside the
+   full-bleed container above instead of collapsing against it. */
+main > .section.welcome-container {
+  margin: 0;
+  padding-top: var(--nav-height-mob);
+}
+
+@media (width >= 1440px) {
+  main > .section.welcome-container {
+    padding-top: var(--nav-height-desk);
+  }
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------------------------------------------ *
+ * Tabs — "My AP" (active), "Portfolio"/"Wishlist" (disabled, for now),
+ * "Logout" pinned to the right. Moves to its own block once Portfolio
+ * and Wishlist have real content.
+ * ------------------------------------------------------------------ */
+.welcome-tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-l);
+  padding: 0 var(--spacing-s);
+  border-bottom: var(--border-width-sm, 1px) solid var(--color-palette-beige89, #e7e4df);
+}
+
+.welcome-tab,
+.welcome-logout {
+  position: relative;
+  margin: 0;
+  padding: var(--spacing-m) 0;
+  background: none;
+  border: none;
+  color: var(--ap-black);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: var(--body-font-weight);
+  letter-spacing: var(--body-letter-spacing);
+  text-transform: none;
+  cursor: pointer;
+}
+
+.welcome-tab:disabled {
+  color: var(--color-palette-grey75, #bfbfbf);
+  cursor: not-allowed;
+}
+
+.welcome-tab.is-active {
+  font-weight: 500;
+}
+
+.welcome-tab.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: var(--border-width-md, 2px);
+  background-color: var(--ap-black);
+}
+
+.welcome-logout {
+  margin-left: auto;
+}
+
+.welcome-logout:hover,
+.welcome-tab:not(:disabled):hover {
+  opacity: 0.7;
+}
+
+/* ------------------------------------------------------------------ *
+ * Panel — heading / body copy / CTA, on the light section background.
+ * ------------------------------------------------------------------ */
+.welcome-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  padding: var(--spacing-xxl) var(--spacing-s);
+  background-color: var(--ap-light-bg);
+  text-align: center;
+}
+
+.welcome-intro h1 {
+  margin: 0;
+}
+
+.welcome-copy {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.welcome-copy p {
+  margin: 0 0 var(--spacing-s);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  letter-spacing: var(--body-letter-spacing);
+}
+
+.welcome-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.welcome-add-watch {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: var(--spacing-s);
+  background: var(--ap-black);
+  color: var(--ap-white);
+  border: none;
+  font-family: var(--body-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-letter-spacing);
+  cursor: pointer;
+}
+
+.welcome-add-watch:hover {
+  opacity: 0.85;
+}
+
+.welcome-status {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  color: var(--ap-black);
+}
+
+.welcome-login {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: var(--spacing-m) auto 0;
+  padding: var(--spacing-s);
+  background: var(--ap-black);
+  color: var(--ap-white);
+  border: none;
+  font-family: var(--body-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-letter-spacing);
+  cursor: pointer;
+}
+
+.welcome-login:hover {
+  opacity: 0.85;
+}
+
+@media (width >= 768px) {
+  .welcome-tabs {
+    padding: 0 var(--spacing-m);
+  }
+
+  .welcome-panel {
+    padding: var(--spacing-xxl) var(--spacing-l);
+  }
+}
+
+/* Desktop: heading, copy and CTA sit side by side in a single row,
+   matching the live "My AP" account page. */
+@media (width >= 1024px) {
+  .welcome-tabs {
+    padding: 0 var(--spacing-l);
+  }
+
+  .welcome-panel {
+    display: grid;
+    grid-template-columns: minmax(200px, auto) 1fr minmax(240px, 340px);
+    align-items: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xxl) var(--spacing-xl);
+    text-align: left;
+  }
+
+  .welcome-copy {
+    max-width: unset;
+    margin: 0;
+  }
+
+  .welcome-add-watch {
+    max-width: unset;
+    margin: 0;
+  }
+}
+
+@media (width >= 1440px) {
+  .welcome-tabs {
+    padding: 0 var(--spacing-xxl);
+  }
+
+  .welcome-panel {
+    padding: var(--spacing-xxl);
+  }
+}

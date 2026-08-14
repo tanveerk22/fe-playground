@@ -1,0 +1,13 @@
+.ap-banner-sticky {
+  /* default */
+  --banner-self-base-default-action-gap: var(--spacing-3xs);
+  --banner-self-base-default-background-color: var(--color-reference-normal-neutral7);
+  --banner-self-base-default-border-radius: var(--radius-none);
+  --banner-self-base-default-border: var(--border-width-sm) solid var(--color-reference-none);
+  --banner-self-base-default-description-color: var(--color-reference-normal-primary);
+  --banner-self-base-default-description-font: var(--font-primary-body-sm);
+  --banner-self-base-default-icon-color: var(--color-reference-normal-primary);
+  --banner-self-base-default-padding: var(--spacing-xs) var(--spacing-2xs) var(--spacing-xs) var(--spacing-2xs);
+  --banner-self-base-default-title-color: var(--color-reference-normal-primary);
+  --banner-self-base-default-title-font: var(--font-primary-body-xl);
+}

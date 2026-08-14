@@ -1,0 +1,145 @@
+/*
+ * Design-token demo block.
+ *
+ * Branding, theme, and core (spacing/typography) tokens are already global
+ * — see /styles/tokens-global.css, loaded site-wide from head.html — so
+ * this file only imports the component-level tokens it actually renders.
+ * The former site.css naming collisions (--spacing-xs, --spacing-xl,
+ * --font-secondary-display-sm) have been resolved by renaming this site's
+ * own variables to --legacy-*; see docs/design-tokens-poc.md.
+ */
+@import url('/styles/tokens/component/input/button/primary.css');
+@import url('/styles/tokens/component/input/button/secondary.css');
+
+.token-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 32px 16px;
+  background-color: var(--color-palette-white);
+  color: var(--color-palette-black);
+}
+
+.token-showcase-section h3 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.token-showcase-swatch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.token-showcase-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 96px;
+}
+
+.token-showcase-swatch-color {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--color-palette-grey46);
+}
+
+.token-showcase-swatch-label {
+  font-size: 11px;
+  font-family: monospace;
+  text-align: center;
+  word-break: break-all;
+}
+
+.token-showcase-spacing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.token-showcase-spacing-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.token-showcase-spacing-label {
+  width: 120px;
+  font-size: 12px;
+  font-family: monospace;
+  flex-shrink: 0;
+}
+
+.token-showcase-spacing-bar {
+  display: block;
+  height: 16px;
+  background-color: var(--color-palette-green24);
+}
+
+.token-showcase-type-sample {
+  margin: 0 0 12px;
+}
+
+.token-showcase-type-label-md {
+  font: var(--font-primary-label-md);
+}
+
+.token-showcase-type-display-sm {
+  font: var(--font-secondary-display-sm);
+}
+
+.token-showcase-type-display-lg {
+  font: var(--font-primary-display-lg);
+}
+
+.token-showcase-type-display-xl {
+  font: var(--font-primary-display-xl);
+}
+
+.token-showcase-button-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.token-showcase button.ap-button-primary--normal,
+.token-showcase button.ap-button-secondary--normal {
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  white-space: normal;
+  background-color: var(--button-self-base-default-background-color);
+  border-radius: var(--button-self-base-default-border-radius);
+  color: var(--button-self-base-default-text-color);
+  font: var(--button-self-base-default-text-font);
+  padding: var(--button-self-base-default-padding);
+  min-width: var(--button-self-base-default-min-width);
+  max-width: var(--button-self-base-default-max-width);
+  min-height: var(--button-self-base-default-min-height);
+  width: var(--button-self-base-default-width);
+}
+
+.token-showcase button.ap-button-primary--normal {
+  border: none;
+}
+
+.token-showcase button.ap-button-secondary--normal {
+  border: var(--button-self-base-default-border);
+}
+
+.token-showcase button.ap-button-primary--normal:hover,
+.token-showcase button.ap-button-primary--normal:focus {
+  background-color: var(--button-self-base-hover-background-color);
+  color: var(--button-self-base-hover-text-color);
+}
+
+.token-showcase button.ap-button-secondary--normal:hover,
+.token-showcase button.ap-button-secondary--normal:focus {
+  background-color: var(--button-self-base-hover-background-color);
+  color: var(--button-self-base-hover-text-color);
+  border: var(--button-self-base-hover-border);
+}

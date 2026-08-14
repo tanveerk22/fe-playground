@@ -1,0 +1,66 @@
+:root {
+  --spacing-4xl: 136px;
+  --spacing-3xl: 120px;
+  --spacing-2xl: 96px;
+  --spacing-xl: 80px;
+  --spacing-lg: 64px;
+  --spacing-md: 48px;
+  --spacing-sm: 32px;
+  --spacing-xs: 24px;
+  --spacing-2xs: 20px;
+  --spacing-3xs: 16px;
+  --spacing-4xs: 8px;
+  --spacing-5xs: 4px;
+  --spacing-none: 0px;
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    --spacing-4xl: 160px;
+    --spacing-3xl: 136px;
+    --spacing-2xl: 120px;
+    --spacing-xl: 96px;
+    --spacing-lg: 80px;
+    --spacing-md: 64px;
+    --spacing-sm: 48px;
+    --spacing-xs: 32px;
+    --spacing-2xs: 24px;
+    --spacing-3xs: 16px;
+    --spacing-4xs: 8px;
+    --spacing-5xs: 4px;
+    --spacing-none: 0px;
+  }
+
+  /* - - L A R G E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 1024px) {
+    --spacing-4xl: 160px;
+    --spacing-3xl: 136px;
+    --spacing-2xl: 120px;
+    --spacing-xl: 96px;
+    --spacing-lg: 80px;
+    --spacing-md: 64px;
+    --spacing-sm: 48px;
+    --spacing-xs: 32px;
+    --spacing-2xs: 24px;
+    --spacing-3xs: 16px;
+    --spacing-4xs: 8px;
+    --spacing-5xs: 4px;
+    --spacing-none: 0px;
+  }
+
+  /* - - X L A R G E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 1440px) {
+    --spacing-4xl: 256px;
+    --spacing-3xl: 208px;
+    --spacing-2xl: 176px;
+    --spacing-xl: 120px;
+    --spacing-lg: 104px;
+    --spacing-md: 80px;
+    --spacing-sm: 64px;
+    --spacing-xs: 32px;
+    --spacing-2xs: 24px;
+    --spacing-3xs: 16px;
+    --spacing-4xs: 8px;
+    --spacing-5xs: 4px;
+    --spacing-none: 0px;
+  }
+}

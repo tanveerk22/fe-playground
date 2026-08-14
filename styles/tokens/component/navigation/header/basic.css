@@ -1,0 +1,48 @@
+.ap-header-basic {
+  /* default */
+  --header-self-base-default-background-color: var(--color-reference-normal-secondary);
+  --header-self-base-default-divider-color: var(--color-reference-normal-neutral2);
+  --header-self-base-default-height: 80px;
+  --header-self-base-default-horizontal-gap: var(--spacing-3xs);
+  --header-self-base-default-icon-color: var(--color-reference-normal-primary);
+  --header-self-base-default-padding: var(--spacing-xs) var(--spacing-2xs) var(--spacing-xs) var(--spacing-2xs);
+  --header-self-base-default-text-color: var(--color-reference-normal-primary);
+  --header-self-base-default-text-font: var(--font-primary-label-md);
+  --header-self-base-default-width: 100%;
+  /* hover */
+  --header-self-base-hover-background-color: var(--color-reference-normal-secondary);
+  --header-self-base-hover-divider-color: var(--header-self-base-default-divider-color);
+  --header-self-base-hover-height: 80px;
+  --header-self-base-hover-horizontal-gap: var(--header-self-base-default-horizontal-gap);
+  --header-self-base-hover-icon-color: var(--color-reference-normal-neutral5);
+  --header-self-base-hover-padding: var(--spacing-xs) var(--spacing-2xs) var(--spacing-xs) var(--spacing-2xs);
+  --header-self-base-hover-text-color: var(--color-reference-normal-neutral5);
+  --header-self-base-hover-text-font: var(--font-primary-label-md);
+  --header-self-base-hover-width: 100%;
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --header-self-base-default-height: 120px;
+    --header-self-base-default-padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) var(--spacing-sm);
+    --header-self-base-default-width: 100%;
+    /* hover */
+    --header-self-base-hover-height: 120px;
+    --header-self-base-hover-padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) var(--spacing-sm);
+    --header-self-base-hover-width: 100%;
+  }
+
+  /* - - X L A R G E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 1440px) {
+    /* default */
+    --header-self-base-default-height: 120px;
+    --header-self-base-default-horizontal-gap: var(--spacing-2xs);
+    --header-self-base-default-padding: var(--spacing-xs) var(--spacing-md) var(--spacing-xs) var(--spacing-md);
+    --header-self-base-default-width: 100%;
+    /* hover */
+    --header-self-base-hover-height: 120px;
+    --header-self-base-hover-horizontal-gap: var(--header-self-base-default-horizontal-gap);
+    --header-self-base-hover-padding: var(--spacing-xs) var(--spacing-md) var(--spacing-xs) var(--spacing-md);
+    --header-self-base-hover-width: 100%;
+  }
+}

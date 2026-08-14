@@ -1,0 +1,34 @@
+.ap-pin-accent {
+  /* default */
+  --pin-self-base-default-background-color: var(--color-reference-normal-accent);
+  --pin-self-base-default-background-height: 40px;
+  --pin-self-base-default-background-width: 40px;
+  --pin-self-base-default-border-radius: var(--radius-none);
+  --pin-self-base-default-logo-color: var(--color-reference-normal-secondary);
+  --pin-self-base-default-logo-height: 16px;
+  --pin-self-base-default-logo-width: 16px;
+  --pin-self-base-default-shadow: var(--shadow-primary);
+  /* hover */
+  --pin-self-base-hover-background-color: var(--color-reference-normal-accent);
+  --pin-self-base-hover-background-height: 48px;
+  --pin-self-base-hover-background-width: 48px;
+  --pin-self-base-hover-border-radius: var(--radius-none);
+  --pin-self-base-hover-logo-color: var(--color-reference-normal-secondary);
+  --pin-self-base-hover-logo-height: 24px;
+  --pin-self-base-hover-logo-width: 24px;
+  --pin-self-base-hover-shadow: var(--shadow-primary);
+
+  /* - - X L A R G E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 1440px) {
+    /* default */
+    --pin-self-base-default-background-height: 48px;
+    --pin-self-base-default-background-width: 48px;
+    --pin-self-base-default-logo-height: 24px;
+    --pin-self-base-default-logo-width: 24px;
+    /* hover */
+    --pin-self-base-hover-background-height: 56px;
+    --pin-self-base-hover-background-width: 56px;
+    --pin-self-base-hover-logo-height: 32px;
+    --pin-self-base-hover-logo-width: 32px;
+  }
+}

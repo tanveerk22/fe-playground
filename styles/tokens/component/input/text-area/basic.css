@@ -1,0 +1,70 @@
+.ap-text-area-basic {
+  /* default */
+  --text-area-self-base-default-border-radius: var(--radius-none);
+  --text-area-self-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --text-area-self-base-default-label-color: var(--color-reference-normal-neutral2);
+  --text-area-self-base-default-label-font: var(--font-primary-label-sm);
+  --text-area-self-base-default-label-letter-spacing: var(--letter-spacing-md);
+  --text-area-self-base-default-min-height: 230px;
+  --text-area-self-base-default-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --text-area-self-base-default-placeholder-color: var(--color-reference-normal-neutral2);
+  --text-area-self-base-default-text-font: var(--font-primary-body-lg);
+  --text-area-self-filled-default-border-radius: var(--radius-none);
+  --text-area-self-filled-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --text-area-self-filled-default-label-color: var(--color-reference-normal-neutral2);
+  --text-area-self-filled-default-label-font: var(--font-primary-label-sm);
+  --text-area-self-filled-default-label-letter-spacing: var(--letter-spacing-md);
+  --text-area-self-filled-default-min-height: 230px;
+  --text-area-self-filled-default-padding: var(--text-area-self-base-default-padding);
+  --text-area-self-filled-default-text-color: var(--color-reference-normal-primary);
+  --text-area-self-filled-default-text-font: var(--font-primary-body-lg);
+  --text-area-self-filling-default-border-radius: var(--radius-none);
+  --text-area-self-filling-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --text-area-self-filling-default-label-color: var(--color-reference-normal-primary);
+  --text-area-self-filling-default-label-font: var(--font-primary-label-sm);
+  --text-area-self-filling-default-label-letter-spacing: var(--letter-spacing-md);
+  --text-area-self-filling-default-min-height: 230px;
+  --text-area-self-filling-default-padding: var(--text-area-self-base-default-padding);
+  --text-area-self-filling-default-placeholder-color: var(--color-reference-normal-neutral2);
+  --text-area-self-filling-default-text-color: var(--color-reference-normal-primary);
+  --text-area-self-filling-default-text-font: var(--font-primary-body-lg);
+  /* disabled */
+  --text-area-self-base-disabled-border-radius: var(--radius-none);
+  --text-area-self-base-disabled-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --text-area-self-base-disabled-label-color: var(--color-reference-normal-neutral5);
+  --text-area-self-base-disabled-label-font: var(--font-primary-label-sm);
+  --text-area-self-base-disabled-label-letter-spacing: var(--letter-spacing-md);
+  --text-area-self-base-disabled-min-height: 230px;
+  --text-area-self-base-disabled-padding: var(--text-area-self-base-default-padding);
+  --text-area-self-base-disabled-placeholder-color: var(--color-reference-normal-neutral5);
+  --text-area-self-base-disabled-text-font: var(--font-primary-body-lg);
+  --text-area-self-filled-disabled-border-radius: var(--radius-none);
+  --text-area-self-filled-disabled-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --text-area-self-filled-disabled-label-color: var(--color-reference-normal-neutral5);
+  --text-area-self-filled-disabled-label-font: var(--font-primary-label-sm);
+  --text-area-self-filled-disabled-label-letter-spacing: var(--letter-spacing-md);
+  --text-area-self-filled-disabled-min-height: 230px;
+  --text-area-self-filled-disabled-padding: var(--text-area-self-base-default-padding);
+  --text-area-self-filled-disabled-text-color: var(--color-reference-normal-neutral5);
+  --text-area-self-filled-disabled-text-font: var(--font-primary-body-lg);
+  /* active */
+  --text-area-self-filled-active-border-radius: var(--radius-none);
+  --text-area-self-filled-active-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --text-area-self-filled-active-label-color: var(--color-reference-normal-primary);
+  --text-area-self-filled-active-label-font: var(--font-primary-label-sm);
+  --text-area-self-filled-active-label-letter-spacing: var(--letter-spacing-md);
+  --text-area-self-filled-active-min-height: 230px;
+  --text-area-self-filled-active-padding: var(--text-area-self-base-default-padding);
+  --text-area-self-filled-active-text-color: var(--color-reference-normal-primary);
+  --text-area-self-filled-active-text-font: var(--font-primary-body-lg);
+  /* error */
+  --text-area-self-filled-error-border-radius: var(--radius-none);
+  --text-area-self-filled-error-border: var(--border-width-sm) solid var(--color-reference-normal-error);
+  --text-area-self-filled-error-label-color: var(--color-reference-normal-neutral2);
+  --text-area-self-filled-error-label-font: var(--font-primary-label-sm);
+  --text-area-self-filled-error-label-letter-spacing: var(--letter-spacing-md);
+  --text-area-self-filled-error-min-height: 230px;
+  --text-area-self-filled-error-padding: var(--text-area-self-base-default-padding);
+  --text-area-self-filled-error-text-color: var(--color-reference-normal-primary);
+  --text-area-self-filled-error-text-font: var(--font-primary-body-lg);
+}

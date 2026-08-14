@@ -1,37 +1,217 @@
-.hero-container .hero-wrapper {
+/* Full-bleed: override the global `main > .section > div { max-width:1200px }`
+   constraint so the hero (image or video) spans edge to edge. */
+main > .section.hero-container > .hero-wrapper {
   max-width: unset;
+  margin: 0;
   padding: 0;
+}
+
+/* Remove the global 40px vertical section margin around hero sections so the
+   heroes stack flush with no blank gaps between them. */
+main > .section.hero-container {
+  margin: 0;
 }
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
-}
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
+  /* Full-bleed breakout — span the viewport regardless of the constrained
+     (max-width:1200px) section wrapper. */
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding-bottom: 55px;
   box-sizing: border-box;
 }
 
-.hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+/* Video heroes (AP home slides 2 & 3) top-align their content — heading,
+   body and CTA read downward from the top-left, matching the live site,
+   rather than the bottom-anchored still-image hero. */
+.hero:has(.hero-video) {
+  height: auto;
+  min-height: 60vh;
+  justify-content: flex-start;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
-@media (width >= 900px) {
+/* Hero content wrapper - contains title and subtitle */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Background image / video — break the media out to the full viewport width
+   and centre it, so it fills edge-to-edge even if an ancestor is constrained.
+   left:50% + margin-left:-50vw pins it to the viewport regardless of the
+   containing block's width. */
+.hero picture,
+.hero img,
+.hero .hero-video {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+
+  /* Anchor the media's left edge to the viewport's left edge: the parent's
+     offset (50%) minus half the viewport (50vw). Fills 100vw edge-to-edge
+     regardless of how wide/offset the .hero's containing block is. */
+  left: calc(50% - 50vw);
+  width: 100vw;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hero call-to-action — minimalist underlined link, matching the site. */
+.hero .hero-cta:any-link {
+  display: inline-block;
+  font-size: var(--link-font-size);
+  font-weight: var(--link-font-weight);
+  letter-spacing: var(--link-letter-spacing);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ap-white);
+  border-bottom: var(--border-width-md) solid currentcolor;
+  padding-bottom: var(--spacing-xs, 8px);
+  margin-top: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero > div > div {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Hero title styling - Audemars Piguet style */
+.hero h1,
+.hero > .hero-subtitle-row:nth-child(2) p {
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 40px;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+  margin: 28px 0;
+  color: var(--ap-white);
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 em,
+.hero h2 em {
+  font-family: var(--legacy-font-secondary-display-sm);
+  font-style: italic;
+  font-weight: 200;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero > .hero-subtitle-row:nth-child(2) p em {
+  font-family: var(--legacy-font-secondary-display-sm);
+  font-style: italic;
+  font-weight: 200;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero h2 {
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 40px;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--ap-white);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-subtitle,
+.hero .hero-subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.49;
+  letter-spacing: 0.21px;
+  color: var(--ap-white);
+  color: #fff;
+  margin: 17px 0 0;
+
+  /* Constrain the body copy to a narrow measure so it wraps on the left
+     instead of flowing to the centre of the hero. */
+  max-width: 420px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (width >= 767px) {
   .hero {
-    padding: 40px 32px;
+    height: 900px;
+    min-height: 900px;
+    justify-content: center;
+    padding-bottom: 0;
   }
+
+  /* Keep video heroes top-aligned and shorter than the full still-image hero. */
+  .hero:has(.hero-video) {
+    height: auto;
+    min-height: 640px;
+    justify-content: flex-start;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .hero-content {
+    padding: 0 32px;
+  }
+
+
+  .hero > div > div {
+    padding-left: 92px;
+    padding-right: 92px;
+  }
+
+  .hero h1,
+  .hero > .hero-subtitle-row:nth-child(2) p {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.56px;
+    margin: 40px 0;
+  }
+
+  .hero h2 {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.56px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+    line-height: 1.35;
+    letter-spacing: 0.26px;
+  }
+}
+
+/* Light theme hero text */
+body.theme-light .hero h1,
+body.theme-light .hero-subtitle {
+  color: var(--ap-black);
+}
+
+/* Hide the original subtitle source hero block after JS moves it */
+.hero-wrapper.hero-subtitle-source {
+  display: none;
 }

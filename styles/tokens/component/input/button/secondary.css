@@ -1,0 +1,133 @@
+.ap-button-secondary--normal {
+  /* default */
+  --button-self-base-default-background-color: var(--color-reference-none);
+  --button-self-base-default-border-radius: var(--radius-none);
+  --button-self-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --button-self-base-default-icon-color: var(--button-self-base-default-text-color);
+  --button-self-base-default-max-width: unset;
+  --button-self-base-default-min-height: 64px;
+  --button-self-base-default-min-width: unset;
+  --button-self-base-default-padding: 20px var(--spacing-3xs) 20px var(--spacing-3xs);
+  --button-self-base-default-text-color: var(--color-reference-normal-primary);
+  --button-self-base-default-text-font: var(--font-primary-label-md);
+  --button-self-base-default-width: 100%;
+  /* hover */
+  --button-self-base-hover-background-color: var(--color-reference-none);
+  --button-self-base-hover-border-radius: var(--radius-none);
+  --button-self-base-hover-border: var(--border-width-sm) solid var(--color-reference-normal-neutral2);
+  --button-self-base-hover-icon-color: var(--button-self-base-hover-text-color);
+  --button-self-base-hover-max-width: unset;
+  --button-self-base-hover-min-height: 64px;
+  --button-self-base-hover-min-width: unset;
+  --button-self-base-hover-padding: 20px var(--spacing-3xs) 20px var(--spacing-3xs);
+  --button-self-base-hover-text-color: var(--color-reference-normal-neutral2);
+  --button-self-base-hover-text-font: var(--font-primary-label-md);
+  --button-self-base-hover-width: 100%;
+  /* active */
+  --button-self-base-active-background-color: var(--color-reference-none);
+  --button-self-base-active-border-radius: var(--radius-none);
+  --button-self-base-active-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --button-self-base-active-icon-color: var(--button-self-base-active-text-color);
+  --button-self-base-active-max-width: unset;
+  --button-self-base-active-min-height: 64px;
+  --button-self-base-active-min-width: unset;
+  --button-self-base-active-padding: 20px var(--spacing-3xs) 20px var(--spacing-3xs);
+  --button-self-base-active-text-color: var(--color-reference-normal-primary);
+  --button-self-base-active-text-font: var(--font-primary-label-md);
+  --button-self-base-active-width: 100%;
+  /* disabled */
+  --button-self-base-disabled-background-color: var(--color-reference-none);
+  --button-self-base-disabled-border-radius: var(--radius-none);
+  --button-self-base-disabled-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --button-self-base-disabled-icon-color: var(--button-self-base-disabled-text-color);
+  --button-self-base-disabled-max-width: unset;
+  --button-self-base-disabled-min-height: 64px;
+  --button-self-base-disabled-min-width: unset;
+  --button-self-base-disabled-padding: 20px var(--spacing-3xs) 20px var(--spacing-3xs);
+  --button-self-base-disabled-text-color: var(--color-reference-normal-neutral5);
+  --button-self-base-disabled-text-font: var(--font-primary-label-md);
+  --button-self-base-disabled-width: 100%;
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --button-self-base-default-max-width: 320px;
+    --button-self-base-default-min-width: 260px;
+    /* hover */
+    --button-self-base-hover-max-width: 320px;
+    --button-self-base-hover-min-width: 260px;
+    /* active */
+    --button-self-base-active-max-width: 320px;
+    --button-self-base-active-min-width: 260px;
+    /* disabled */
+    --button-self-base-disabled-max-width: 320px;
+    --button-self-base-disabled-min-width: 260px;
+  }
+}
+
+.ap-button-secondary--contrast {
+  /* default */
+  --button-self-base-default-background-color: var(--color-reference-none);
+  --button-self-base-default-border-radius: var(--radius-none);
+  --button-self-base-default-border: var(--border-width-sm) solid var(--color-reference-contrast-primary);
+  --button-self-base-default-icon-color: var(--button-self-base-default-text-color);
+  --button-self-base-default-max-width: unset;
+  --button-self-base-default-min-height: 64px;
+  --button-self-base-default-min-width: unset;
+  --button-self-base-default-padding: 20px var(--spacing-3xs) 20px var(--spacing-3xs);
+  --button-self-base-default-text-color: var(--color-reference-contrast-primary);
+  --button-self-base-default-text-font: var(--font-primary-label-md);
+  --button-self-base-default-width: 100%;
+  /* hover */
+  --button-self-base-hover-background-color: var(--color-reference-none);
+  --button-self-base-hover-border-radius: var(--radius-none);
+  --button-self-base-hover-border: var(--border-width-sm) solid var(--color-reference-contrast-neutral2);
+  --button-self-base-hover-icon-color: var(--button-self-base-hover-text-color);
+  --button-self-base-hover-max-width: unset;
+  --button-self-base-hover-min-height: 64px;
+  --button-self-base-hover-min-width: unset;
+  --button-self-base-hover-padding: 20px var(--spacing-3xs) 20px var(--spacing-3xs);
+  --button-self-base-hover-text-color: var(--color-reference-contrast-neutral2);
+  --button-self-base-hover-text-font: var(--font-primary-label-md);
+  --button-self-base-hover-width: 100%;
+  /* active */
+  --button-self-base-active-background-color: var(--color-reference-none);
+  --button-self-base-active-border-radius: var(--radius-none);
+  --button-self-base-active-border: var(--border-width-sm) solid var(--color-reference-contrast-primary);
+  --button-self-base-active-icon-color: var(--button-self-base-active-text-color);
+  --button-self-base-active-max-width: unset;
+  --button-self-base-active-min-height: 64px;
+  --button-self-base-active-min-width: unset;
+  --button-self-base-active-padding: 20px var(--spacing-3xs) 20px var(--spacing-3xs);
+  --button-self-base-active-text-color: var(--color-reference-contrast-primary);
+  --button-self-base-active-text-font: var(--font-primary-label-md);
+  --button-self-base-active-width: 100%;
+  /* disabled */
+  --button-self-base-disabled-background-color: var(--color-reference-none);
+  --button-self-base-disabled-border-radius: var(--radius-none);
+  --button-self-base-disabled-border: var(--border-width-sm) solid var(--color-reference-contrast-neutral5);
+  --button-self-base-disabled-icon-color: var(--button-self-base-disabled-text-color);
+  --button-self-base-disabled-max-width: unset;
+  --button-self-base-disabled-min-height: 64px;
+  --button-self-base-disabled-min-width: unset;
+  --button-self-base-disabled-padding: 20px var(--spacing-3xs) 20px var(--spacing-3xs);
+  --button-self-base-disabled-text-color: var(--color-reference-contrast-neutral5);
+  --button-self-base-disabled-text-font: var(--font-primary-label-md);
+  --button-self-base-disabled-width: 100%;
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --button-self-base-default-max-width: 320px;
+    --button-self-base-default-min-width: 260px;
+    /* hover */
+    --button-self-base-hover-max-width: 320px;
+    --button-self-base-hover-min-width: 260px;
+    /* active */
+    --button-self-base-active-max-width: 320px;
+    --button-self-base-active-min-width: 260px;
+    /* disabled */
+    --button-self-base-disabled-max-width: 320px;
+    --button-self-base-disabled-min-width: 260px;
+  }
+}

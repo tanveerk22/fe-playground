@@ -1,0 +1,7 @@
+.ap-message-error {
+  /* default */
+  --message-self-base-default-icon-color: var(--color-reference-normal-error);
+  --message-self-base-default-icon-gap: var(--spacing-4xs);
+  --message-self-base-default-text-color: var(--color-reference-normal-error);
+  --message-self-base-default-text-font: var(--font-primary-body-sm);
+}

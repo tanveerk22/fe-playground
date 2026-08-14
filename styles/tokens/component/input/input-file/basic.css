@@ -1,0 +1,60 @@
+.ap-input-file-basic {
+  /* default */
+  --input-file-button-base-default-background-color: var(--color-reference-none);
+  --input-file-button-base-default-border-radius: var(--radius-none);
+  --input-file-button-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-file-button-base-default-max-width: 340px;
+  --input-file-button-base-default-min-height: 56px;
+  --input-file-button-base-default-min-width: 240px;
+  --input-file-button-base-default-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --input-file-button-base-default-text-color: var(--color-reference-normal-primary);
+  --input-file-button-base-default-text-font: var(--font-primary-label-md);
+  --input-file-hint-base-default-background-color: var(--color-reference-normal-neutral7);
+  --input-file-hint-base-default-max-width: 236px;
+  --input-file-hint-base-default-padding: var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs);
+  --input-file-preview-base-default-background-color: var(--color-reference-normal-neutral7);
+  --input-file-preview-base-default-border-radius: var(--radius-none);
+  --input-file-preview-base-default-icon-color: var(--color-reference-normal-primary);
+  --input-file-preview-base-default-image-size: 48px;
+  --input-file-preview-base-default-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --input-file-preview-base-default-text-color: var(--color-reference-normal-primary);
+  --input-file-preview-base-default-text-font: var(--font-primary-body-lg);
+  --input-file-self-base-default-description-color: var(--color-reference-normal-primary);
+  --input-file-self-base-default-description-font: var(--font-primary-body-lg);
+  --input-file-self-base-default-label-color: var(--color-reference-normal-primary);
+  --input-file-self-base-default-label-font: var(--font-primary-label-sm);
+  --input-file-self-base-default-label-letter-spacing: var(--letter-spacing-md);
+  /* hover */
+  --input-file-button-base-hover-background-color: var(--color-reference-none);
+  --input-file-button-base-hover-border-radius: var(--radius-none);
+  --input-file-button-base-hover-border: var(--border-width-sm) solid var(--color-reference-normal-neutral2);
+  --input-file-button-base-hover-max-width: 340px;
+  --input-file-button-base-hover-min-height: 56px;
+  --input-file-button-base-hover-min-width: 240px;
+  --input-file-button-base-hover-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --input-file-button-base-hover-text-color: var(--color-reference-normal-neutral2);
+  --input-file-button-base-hover-text-font: var(--font-primary-label-md);
+  /* active */
+  --input-file-button-base-active-background-color: var(--color-reference-none);
+  --input-file-button-base-active-border-radius: var(--radius-none);
+  --input-file-button-base-active-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-file-button-base-active-max-width: 340px;
+  --input-file-button-base-active-min-height: 56px;
+  --input-file-button-base-active-min-width: 240px;
+  --input-file-button-base-active-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --input-file-button-base-active-text-color: var(--color-reference-normal-primary);
+  --input-file-button-base-active-text-font: var(--font-primary-label-md);
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --input-file-hint-base-default-max-width: 400px;
+    --input-file-preview-base-default-padding: var(--spacing-2xs);
+  }
+
+  /* - - X L A R G E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 1440px) {
+    /* default */
+    --input-file-hint-base-default-max-width: 448px;
+  }
+}

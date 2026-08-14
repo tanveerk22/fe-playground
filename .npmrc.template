@@ -1,0 +1,7 @@
+@audemarspiguet:registry=https://git.idweaver.com/api/v4/packages/npm/
+//git.idweaver.com/api/v4/packages/npm/:_authToken=${GITLAB_PAT}
+//git.idweaver.com/api/v4/projects/589/packages/npm/:_authToken=${GITLAB_PAT}
+# Copy this file to .npmrc and export GITLAB_PAT in your shell (a GitLab
+# personal access token with `read_api` / `read_package_registry` scope).
+# npm interpolates ${GITLAB_PAT} from the environment at install time, so no
+# secret needs to be written to disk.

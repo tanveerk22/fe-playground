@@ -1,1 +1,200 @@
-/* stylelint-disable no-empty-source */
+main > .section {
+  margin:0;
+}
+
+.fragment-wrapper .columns-wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.fragment-wrapper .columns-wrapper > div {
+  max-width: unset;
+  padding: 0;
+}
+
+.fragment-wrapper .columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 50px 0;
+  max-width: 100%;
+}
+
+.fragment-wrapper .columns.col-50-50 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 50px 0;
+  max-width: 100%;
+}
+
+.fragment-wrapper .columns picture {
+  display: block;
+  width: 100%;
+}
+
+.fragment-wrapper .columns.col-50-50 picture {
+  display: block;
+  width: 100%;
+  margin-top: 33px;
+}
+
+.fragment-wrapper .columns img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fragment-wrapper .columns.col-50-50 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fragment-wrapper .columns > div > div:not(.columns-img-col) {
+  order: 1;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.fragment-wrapper .columns.col-50-50 > div > div:not(.columns-img-col) {
+  order: 1;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.fragment-wrapper .columns > div > .columns-img-col {
+  order: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.fragment-wrapper .columns.col-50-50 > div > .columns-img-col {
+  order: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.fragment-wrapper .columns > div > .columns-img-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fragment-wrapper .columns.col-50-50 > div > .columns-img-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fragment-wrapper .columns > div > div:not(.columns-img-col) h2 {
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+}
+
+.fragment-wrapper .columns.col-50-50 > div > div:not(.columns-img-col) h2 {
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+
+.fragment-wrapper .columns > div > div:not(.columns-img-col) h2 em {
+  font-family: var(--legacy-font-secondary-display-sm);
+  font-style: italic;
+  font-weight: 200;
+  display: block;
+}
+
+.fragment-wrapper .columns.col-50-50 > div > div:not(.columns-img-col) h2 em {
+  font-family: var(--legacy-font-secondary-display-sm);
+  font-style: italic;
+  font-weight: 200;
+  display: block;
+}
+
+@media (width >= 768px) {
+  .fragment-wrapper .columns.col-50-50 > div {
+    flex-direction: column-reverse;
+      margin-left: 8.3333%;
+      width: 83.3333%;
+    }
+  }
+
+
+@media (width >= 1024px) {
+  .fragment-wrapper .columns-wrapper {
+    padding: 0;
+    max-width: 100%;
+  }
+  
+
+  .fragment-wrapper .columns > div {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 100px 0;
+    align-items: stretch;
+  }
+
+  .fragment-wrapper .columns.col-50-50 > div {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 100px 0;
+    align-items: center;
+    margin-left: 0;
+    width: unset;
+  }
+
+  .fragment-wrapper .columns.col-50-50 picture {
+    margin-top: 0;
+  }
+
+  .fragment-wrapper .columns > div > .columns-img-col {
+    grid-column: 3 / span 7;
+    order: unset;
+  }
+
+  .fragment-wrapper .columns > div > div:not(.columns-img-col) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: unset;
+  }
+
+  .fragment-wrapper .columns.col-50-50 > div > div:not(.columns-img-col) {
+    grid-column: 2 / span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: unset;
+  }
+
+  .fragment-wrapper .columns.col-50-50 > div > .columns-img-col {
+    grid-column: 7 / span 5;
+    order: unset;
+  }
+
+  .fragment-wrapper .columns > div > div:not(.columns-img-col) h2 {
+    font-size: 56px;
+    letter-spacing: -0.56px;
+  }
+
+  .fragment-wrapper .columns.col-50-50 > div > div:not(.columns-img-col) h2 {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.56px;
+    margin: 46px 0;
+  }
+}
+
+@media (width >= 1440px) {
+  .fragment-wrapper .columns-wrapper.columns.col-50-50 {
+    margin-top: 0;
+  }
+}

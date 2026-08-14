@@ -1,0 +1,45 @@
+.ap-link-tertiary--normal {
+  /* default */
+  --link-self-base-default-gap: var(--spacing-5xs);
+  --link-self-base-default-icon-color: var(--link-self-base-default-text-color);
+  --link-self-base-default-text-color: var(--color-reference-normal-primary);
+  --link-self-base-default-text-font: var(--font-primary-label-md);
+  /* hover */
+  --link-self-base-hover-gap: var(--link-self-base-default-gap);
+  --link-self-base-hover-icon-color: var(--link-self-base-hover-text-color);
+  --link-self-base-hover-text-color: var(--color-reference-normal-neutral2);
+  --link-self-base-hover-text-font: var(--link-self-base-default-text-font);
+  /* active */
+  --link-self-base-active-gap: var(--link-self-base-default-gap);
+  --link-self-base-active-icon-color: var(--link-self-base-active-text-color);
+  --link-self-base-active-text-color: var(--color-reference-normal-primary);
+  --link-self-base-active-text-font: var(--link-self-base-default-text-font);
+  /* disabled */
+  --link-self-base-disabled-gap: var(--link-self-base-default-gap);
+  --link-self-base-disabled-icon-color: var(--link-self-base-disabled-text-color);
+  --link-self-base-disabled-text-color: var(--color-reference-normal-neutral5);
+  --link-self-base-disabled-text-font: var(--link-self-base-default-text-font);
+}
+
+.ap-link-tertiary--contrast {
+  /* default */
+  --link-self-base-default-gap: var(--spacing-5xs);
+  --link-self-base-default-icon-color: var(--link-self-base-default-text-color);
+  --link-self-base-default-text-color: var(--color-reference-contrast-primary);
+  --link-self-base-default-text-font: var(--font-primary-label-md);
+  /* hover */
+  --link-self-base-hover-gap: var(--link-self-base-default-gap);
+  --link-self-base-hover-icon-color: var(--link-self-base-hover-text-color);
+  --link-self-base-hover-text-color: var(--color-reference-contrast-neutral2);
+  --link-self-base-hover-text-font: var(--link-self-base-default-text-font);
+  /* active */
+  --link-self-base-active-gap: var(--link-self-base-default-gap);
+  --link-self-base-active-icon-color: var(--link-self-base-active-text-color);
+  --link-self-base-active-text-color: var(--color-reference-contrast-primary);
+  --link-self-base-active-text-font: var(--link-self-base-default-text-font);
+  /* disabled */
+  --link-self-base-disabled-gap: var(--link-self-base-default-gap);
+  --link-self-base-disabled-icon-color: var(--link-self-base-disabled-text-color);
+  --link-self-base-disabled-text-color: var(--color-reference-contrast-neutral5);
+  --link-self-base-disabled-text-font: var(--link-self-base-default-text-font);
+}

@@ -1,0 +1,57 @@
+.ap-boutique-card-variant--normal {
+  /* default */
+  --boutique-card-container-base-default-background-color: var(--color-reference-normal-primary);
+  --boutique-card-container-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-secondary);
+  --boutique-card-container-item-base-default-day-color: var(--color-reference-normal-secondary);
+  --boutique-card-container-item-base-default-day-font: var(--font-primary-body-sm);
+  --boutique-card-container-item-base-default-hours-color: var(--color-reference-normal-secondary);
+  --boutique-card-container-item-base-default-hours-font: var(--font-primary-body-sm);
+  --boutique-card-container-item-checked-default-day-color: var(--color-reference-normal-secondary);
+  --boutique-card-container-item-checked-default-day-font: var(--font-primary-body-md);
+  --boutique-card-container-item-checked-default-hours-color: var(--color-reference-normal-secondary);
+  --boutique-card-container-item-checked-default-hours-font: var(--font-primary-body-md);
+  --boutique-card-dropdown-base-default-hours-color: var(--color-reference-normal-secondary);
+  --boutique-card-dropdown-base-default-hours-font: var(--font-primary-body-sm);
+  --boutique-card-dropdown-base-default-icon-color: var(--color-reference-normal-secondary);
+  --boutique-card-dropdown-base-default-title-color: var(--color-reference-normal-secondary);
+  --boutique-card-dropdown-base-default-title-font: var(--font-primary-body-sm);
+  --boutique-card-self-base-default-background-color: var(--color-reference-normal-primary);
+  --boutique-card-self-base-default-description-color: var(--color-reference-normal-secondary);
+  --boutique-card-self-base-default-description-font: var(--font-primary-body-sm);
+  --boutique-card-self-base-default-hint-color: var(--color-reference-normal-neutral3);
+  --boutique-card-self-base-default-hint-font: var(--font-primary-body-lg);
+  --boutique-card-self-base-default-padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-3xs) var(--spacing-xs);
+  --boutique-card-self-base-default-subtitle-color: var(--color-reference-normal-secondary);
+  --boutique-card-self-base-default-subtitle-font: var(--font-primary-label-sm);
+  --boutique-card-self-base-default-title-color: var(--color-reference-normal-secondary);
+  --boutique-card-self-base-default-title-font: var(--font-primary-title-lg);
+}
+
+.ap-boutique-card-variant--contrast {
+  /* default */
+  --boutique-card-container-base-default-background-color: var(--color-reference-contrast-primary);
+  --boutique-card-container-base-default-border: var(--border-width-sm) solid var(--color-reference-contrast-secondary);
+  --boutique-card-container-item-base-default-day-color: var(--color-reference-contrast-secondary);
+  --boutique-card-container-item-base-default-day-font: var(--font-primary-body-sm);
+  --boutique-card-container-item-base-default-hours-color: var(--color-reference-contrast-secondary);
+  --boutique-card-container-item-base-default-hours-font: var(--font-primary-body-sm);
+  --boutique-card-container-item-checked-default-day-color: var(--color-reference-contrast-secondary);
+  --boutique-card-container-item-checked-default-day-font: var(--font-primary-body-md);
+  --boutique-card-container-item-checked-default-hours-color: var(--color-reference-contrast-secondary);
+  --boutique-card-container-item-checked-default-hours-font: var(--font-primary-body-md);
+  --boutique-card-dropdown-base-default-hours-color: var(--color-reference-contrast-secondary);
+  --boutique-card-dropdown-base-default-hours-font: var(--font-primary-body-sm);
+  --boutique-card-dropdown-base-default-icon-color: var(--color-reference-contrast-secondary);
+  --boutique-card-dropdown-base-default-title-color: var(--color-reference-contrast-secondary);
+  --boutique-card-dropdown-base-default-title-font: var(--font-primary-body-sm);
+  --boutique-card-self-base-default-background-color: var(--color-reference-contrast-primary);
+  --boutique-card-self-base-default-description-color: var(--color-reference-contrast-secondary);
+  --boutique-card-self-base-default-description-font: var(--font-primary-body-sm);
+  --boutique-card-self-base-default-hint-color: var(--color-reference-contrast-neutral5);
+  --boutique-card-self-base-default-hint-font: var(--font-primary-body-lg);
+  --boutique-card-self-base-default-padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-3xs) var(--spacing-xs);
+  --boutique-card-self-base-default-subtitle-color: var(--color-reference-contrast-secondary);
+  --boutique-card-self-base-default-subtitle-font: var(--font-primary-label-sm);
+  --boutique-card-self-base-default-title-color: var(--color-reference-contrast-secondary);
+  --boutique-card-self-base-default-title-font: var(--font-primary-title-lg);
+}

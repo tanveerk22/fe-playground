@@ -1,0 +1,77 @@
+.ap-button-huge--normal {
+  /* default */
+  --button-self-base-default-background-color: var(--color-reference-none);
+  --button-self-base-default-border-radius: var(--radius-none);
+  --button-self-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --button-self-base-default-icon-color: var(--button-self-base-default-text-color);
+  --button-self-base-default-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --button-self-base-default-text-color: var(--color-reference-normal-primary);
+  --button-self-base-default-text-font: var(--font-primary-label-md);
+  --button-self-base-default-width: 100%;
+  /* hover */
+  --button-self-base-hover-background-color: var(--color-reference-none);
+  --button-self-base-hover-border-radius: var(--radius-none);
+  --button-self-base-hover-border: var(--border-width-sm) solid var(--color-reference-normal-neutral2);
+  --button-self-base-hover-icon-color: var(--button-self-base-hover-text-color);
+  --button-self-base-hover-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --button-self-base-hover-text-color: var(--color-reference-normal-neutral2);
+  --button-self-base-hover-text-font: var(--font-primary-label-md);
+  --button-self-base-hover-width: 100%;
+  /* active */
+  --button-self-base-active-background-color: var(--color-reference-none);
+  --button-self-base-active-border-radius: var(--radius-none);
+  --button-self-base-active-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --button-self-base-active-icon-color: var(--button-self-base-active-text-color);
+  --button-self-base-active-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --button-self-base-active-text-color: var(--color-reference-normal-primary);
+  --button-self-base-active-text-font: var(--font-primary-label-md);
+  --button-self-base-active-width: 100%;
+  /* disabled */
+  --button-self-base-disabled-background-color: var(--color-reference-none);
+  --button-self-base-disabled-border-radius: var(--radius-none);
+  --button-self-base-disabled-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --button-self-base-disabled-icon-color: var(--button-self-base-disabled-text-color);
+  --button-self-base-disabled-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --button-self-base-disabled-text-color: var(--color-reference-normal-neutral5);
+  --button-self-base-disabled-text-font: var(--font-primary-label-md);
+  --button-self-base-disabled-width: 100%;
+}
+
+.ap-button-huge--contrast {
+  /* default */
+  --button-self-base-default-background-color: var(--color-reference-none);
+  --button-self-base-default-border-radius: var(--radius-none);
+  --button-self-base-default-border: var(--border-width-sm) solid var(--color-reference-contrast-primary);
+  --button-self-base-default-icon-color: var(--button-self-base-default-text-color);
+  --button-self-base-default-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --button-self-base-default-text-color: var(--color-reference-contrast-primary);
+  --button-self-base-default-text-font: var(--font-primary-label-md);
+  --button-self-base-default-width: 100%;
+  /* hover */
+  --button-self-base-hover-background-color: var(--color-reference-none);
+  --button-self-base-hover-border-radius: var(--radius-none);
+  --button-self-base-hover-border: var(--border-width-sm) solid var(--color-reference-contrast-neutral2);
+  --button-self-base-hover-icon-color: var(--button-self-base-hover-text-color);
+  --button-self-base-hover-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --button-self-base-hover-text-color: var(--color-reference-contrast-neutral2);
+  --button-self-base-hover-text-font: var(--font-primary-label-md);
+  --button-self-base-hover-width: 100%;
+  /* active */
+  --button-self-base-active-background-color: var(--color-reference-none);
+  --button-self-base-active-border-radius: var(--radius-none);
+  --button-self-base-active-border: var(--border-width-sm) solid var(--color-reference-contrast-primary);
+  --button-self-base-active-icon-color: var(--button-self-base-active-text-color);
+  --button-self-base-active-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --button-self-base-active-text-color: var(--color-reference-contrast-primary);
+  --button-self-base-active-text-font: var(--font-primary-label-md);
+  --button-self-base-active-width: 100%;
+  /* disabled */
+  --button-self-base-disabled-background-color: var(--color-reference-none);
+  --button-self-base-disabled-border-radius: var(--radius-none);
+  --button-self-base-disabled-border: var(--border-width-sm) solid var(--color-reference-contrast-neutral5);
+  --button-self-base-disabled-icon-color: var(--button-self-base-disabled-text-color);
+  --button-self-base-disabled-padding: var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs) var(--spacing-3xs);
+  --button-self-base-disabled-text-color: var(--color-reference-contrast-neutral5);
+  --button-self-base-disabled-text-font: var(--font-primary-label-md);
+  --button-self-base-disabled-width: 100%;
+}

@@ -1,0 +1,5 @@
+.ap-collection-card-clickable {
+  /* default */
+  --collection-card-self-base-default-padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-4xs);
+  --collection-card-self-base-default-vertical-gap: var(--spacing-3xs);
+}

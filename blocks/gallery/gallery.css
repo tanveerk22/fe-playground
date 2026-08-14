@@ -1,0 +1,172 @@
+/*
+ * Gallery block — image/video mosaic ("lookbook"), reused for several AP
+ * home page sections (e.g. Yoon & Verbal "Revealing Time", Crafting Time).
+ * Dark surface, full-bleed background but NOT full-bleed content — the
+ * live site insets the grid itself with responsive side padding (20px
+ * mobile / 32px tablet / 92.5px desktop from ≥1440px), matching its
+ * "grid-container" gutter. It reads as full-bleed at a glance because the
+ * dark background runs edge to edge; only the tiles are inset.
+ *
+ * Layout matches the live site's staggered 5-tile mosaic: a lead tile
+ * (video or image) spanning the left half at full height, with the
+ * remaining four tiles filling the right half in an offset 2x2 pattern
+ * (portrait1 top-left/landscape1 bottom-left, landscape2 top-right/
+ * portrait2 bottom-right of that half). Fewer than 5 authored tiles is
+ * fine — unused grid areas simply stay empty.
+ *
+ * Variant `center` (author the block as "Gallery (center)"): on desktop
+ * only, the lead tile sits in the middle two columns instead of the left
+ * two, with portrait1/landscape1 on the far left and landscape2/portrait2
+ * on the far right — matching the live "Crafting Time" lookbook, which
+ * uses this arrangement instead of the Yoon & Verbal one. Mobile layout is
+ * identical for both variants.
+ */
+
+/* Full-bleed background: escape the 1200px section constraint and remove
+   section margin. Scoped to any section containing a gallery block
+   (rather than a specific section-metadata style name) so every instance
+   gets this treatment automatically, with no extra authoring step per
+   section. */
+main > .section:has(> .gallery-wrapper) {
+  margin: 0;
+  background-color: var(--ap-dark-bg, #131313);
+}
+
+main > .section:has(> .gallery-wrapper) > div {
+  max-width: unset;
+  margin: 0;
+  padding: 0 20px;
+}
+
+/* Mobile — lead tile spans both columns at full height; the remaining
+   four tiles fill an offset 2-column pattern below it. */
+.gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 94px;
+  grid-template-areas:
+    'lead lead'
+    'lead lead'
+    'lead lead'
+    'portrait1 landscape2'
+    'portrait1 portrait2'
+    'landscape1 portrait2';
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--ap-dark-bg, #131313);
+}
+
+.gallery .gallery-item {
+  position: relative;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.gallery .gallery-item--lead { grid-area: lead; }
+.gallery .gallery-item--portrait1 { grid-area: portrait1; }
+.gallery .gallery-item--landscape1 { grid-area: landscape1; }
+.gallery .gallery-item--landscape2 { grid-area: landscape2; }
+.gallery .gallery-item--portrait2 { grid-area: portrait2; }
+
+.gallery .gallery-item img,
+.gallery .gallery-item picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Video tile — same full-bleed cover treatment as an image, plus a
+   play/pause toggle overlaid at the bottom-right corner. */
+.gallery .gallery-media--video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .gallery-media--video video {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  display: block;
+}
+
+.gallery .gallery-video-toggle {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Pause icon (default, playing state): two bars. */
+.gallery .gallery-video-toggle::before,
+.gallery .gallery-video-toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 14px;
+  background-color: var(--ap-white);
+  transform: translate(-6px, -50%);
+}
+
+.gallery .gallery-video-toggle::after {
+  transform: translate(3px, -50%);
+}
+
+/* Play icon (paused state): a single triangle, drawn with borders. */
+.gallery .gallery-video-toggle.is-paused::before {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid var(--ap-white);
+  transform: translate(-4px, -50%);
+}
+
+.gallery .gallery-video-toggle.is-paused::after {
+  content: none;
+}
+
+/* Desktop — a magazine-style mosaic: a wide lead tile on the left spanning
+   the full height, the remaining four tiles in an offset 2x2 pattern on
+   the right, matching the live lookbook rhythm. */
+@media (width >= 768px) {
+  main > .section:has(> .gallery-wrapper) > div {
+    padding: 0 var(--spacing-l, 32px);
+  }
+
+  .gallery .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 170px;
+    grid-template-areas:
+      'lead lead portrait1 landscape2'
+      'lead lead portrait1 portrait2'
+      'lead lead landscape1 portrait2';
+  }
+
+  /* `center` variant — lead tile in the middle two columns, images split
+     one pair per outer column. */
+  .gallery.center .gallery-grid {
+    grid-template-areas:
+      'portrait1 lead lead landscape2'
+      'portrait1 lead lead portrait2'
+      'landscape1 lead lead portrait2';
+  }
+}
+
+/* Desktop — wider gutter, matching the live site's grid-container inset. */
+@media (width >= 1440px) {
+  main > .section:has(> .gallery-wrapper) > div {
+    padding: 0 92.5px;
+  }
+}

@@ -1,0 +1,35 @@
+.ap-language-select-basic--normal {
+  /* default */
+  --language-select-self-base-default-horizontal-gap: var(--spacing-4xs);
+  --language-select-self-base-default-icon-color: var(--language-select-self-base-default-text-color);
+  --language-select-self-base-default-text-color: var(--color-reference-normal-primary);
+  --language-select-self-base-default-text-font: var(--font-primary-body-md);
+  /* hover */
+  --language-select-self-base-hover-horizontal-gap: var(--language-select-self-base-default-horizontal-gap);
+  --language-select-self-base-hover-icon-color: var(--language-select-self-base-hover-text-color);
+  --language-select-self-base-hover-text-color: var(--color-reference-normal-primary-50);
+  --language-select-self-base-hover-text-font: var(--language-select-self-base-default-text-font);
+  /* active */
+  --language-select-self-base-active-horizontal-gap: var(--language-select-self-base-default-horizontal-gap);
+  --language-select-self-base-active-icon-color: var(--language-select-self-base-active-text-color);
+  --language-select-self-base-active-text-color: var(--color-reference-normal-primary);
+  --language-select-self-base-active-text-font: var(--language-select-self-base-default-text-font);
+}
+
+.ap-language-select-basic--contrast {
+  /* default */
+  --language-select-self-base-default-horizontal-gap: var(--spacing-4xs);
+  --language-select-self-base-default-icon-color: var(--language-select-self-base-default-text-color);
+  --language-select-self-base-default-text-color: var(--color-reference-contrast-primary);
+  --language-select-self-base-default-text-font: var(--font-primary-body-md);
+  /* hover */
+  --language-select-self-base-hover-horizontal-gap: var(--language-select-self-base-default-horizontal-gap);
+  --language-select-self-base-hover-icon-color: var(--language-select-self-base-hover-text-color);
+  --language-select-self-base-hover-text-color: var(--color-reference-contrast-primary-50);
+  --language-select-self-base-hover-text-font: var(--language-select-self-base-default-text-font);
+  /* active */
+  --language-select-self-base-active-horizontal-gap: var(--language-select-self-base-default-horizontal-gap);
+  --language-select-self-base-active-icon-color: var(--language-select-self-base-active-text-color);
+  --language-select-self-base-active-text-color: var(--color-reference-contrast-primary);
+  --language-select-self-base-active-text-font: var(--language-select-self-base-default-text-font);
+}

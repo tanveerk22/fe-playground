@@ -1,0 +1,57 @@
+.ap-product-card-basic--normal {
+  /* default */
+  --product-card-self-base-default-background-color: var(--color-reference-normal-neutral7);
+  --product-card-self-base-default-icon-color: var(--color-reference-normal-neutral3);
+  --product-card-self-base-default-informations-color: var(--color-reference-normal-neutral3);
+  --product-card-self-base-default-informations-font: var(--font-primary-body-sm);
+  --product-card-self-base-default-model-color: var(--color-reference-normal-primary);
+  --product-card-self-base-default-model-font: var(--font-primary-body-lg);
+  --product-card-self-base-default-number-color: var(--color-reference-normal-neutral3);
+  --product-card-self-base-default-number-font: var(--font-primary-label-sm);
+  --product-card-self-base-default-number-letter-spacing: var(--letter-spacing-md);
+  --product-card-self-base-default-padding: var(--spacing-sm) var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs);
+  --product-card-self-base-default-product-color: var(--color-reference-normal-primary);
+  --product-card-self-base-default-product-font: var(--font-primary-body-xl);
+  /* hover */
+  --product-card-self-base-hover-background-color: var(--color-reference-normal-neutral7-50);
+  --product-card-self-base-hover-icon-color: var(--color-reference-normal-neutral4);
+  --product-card-self-base-hover-informations-color: var(--color-reference-normal-neutral3);
+  --product-card-self-base-hover-informations-font: var(--font-primary-body-sm);
+  --product-card-self-base-hover-model-color: var(--color-reference-normal-primary);
+  --product-card-self-base-hover-model-font: var(--font-primary-body-lg);
+  --product-card-self-base-hover-number-color: var(--color-reference-normal-neutral3);
+  --product-card-self-base-hover-number-font: var(--font-primary-label-sm);
+  --product-card-self-base-hover-number-letter-spacing: var(--letter-spacing-md);
+  --product-card-self-base-hover-padding: var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs);
+  --product-card-self-base-hover-product-color: var(--color-reference-normal-primary);
+  --product-card-self-base-hover-product-font: var(--font-primary-body-xl);
+}
+
+.ap-product-card-basic--contrast {
+  /* default */
+  --product-card-self-base-default-background-color: var(--color-reference-contrast-neutral7);
+  --product-card-self-base-default-icon-color: var(--color-reference-contrast-neutral3);
+  --product-card-self-base-default-informations-color: var(--color-reference-contrast-neutral3);
+  --product-card-self-base-default-informations-font: var(--font-primary-body-sm);
+  --product-card-self-base-default-model-color: var(--color-reference-contrast-primary);
+  --product-card-self-base-default-model-font: var(--font-primary-body-lg);
+  --product-card-self-base-default-number-color: var(--color-reference-contrast-neutral3);
+  --product-card-self-base-default-number-font: var(--font-primary-label-sm);
+  --product-card-self-base-default-number-letter-spacing: var(--letter-spacing-md);
+  --product-card-self-base-default-padding: var(--spacing-sm) var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs);
+  --product-card-self-base-default-product-color: var(--color-reference-contrast-primary);
+  --product-card-self-base-default-product-font: var(--font-primary-body-xl);
+  /* hover */
+  --product-card-self-base-hover-background-color: var(--color-reference-contrast-neutral7-50);
+  --product-card-self-base-hover-icon-color: var(--color-reference-contrast-neutral4);
+  --product-card-self-base-hover-informations-color: var(--color-reference-contrast-neutral3);
+  --product-card-self-base-hover-informations-font: var(--font-primary-body-sm);
+  --product-card-self-base-hover-model-color: var(--color-reference-contrast-primary);
+  --product-card-self-base-hover-model-font: var(--font-primary-body-lg);
+  --product-card-self-base-hover-number-color: var(--color-reference-contrast-neutral3);
+  --product-card-self-base-hover-number-font: var(--font-primary-label-sm);
+  --product-card-self-base-hover-number-letter-spacing: var(--letter-spacing-md);
+  --product-card-self-base-hover-padding: var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs);
+  --product-card-self-base-hover-product-color: var(--color-reference-contrast-primary);
+  --product-card-self-base-hover-product-font: var(--font-primary-body-xl);
+}

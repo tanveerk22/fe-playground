@@ -1,0 +1,31 @@
+.ap-tooltip-basic--normal {
+  /* default */
+  --tooltip-self-base-default-background-color: var(--color-reference-normal-neutral1);
+  --tooltip-self-base-default-border-radius: var(--radius-none);
+  --tooltip-self-base-default-max-width: 70vw;
+  --tooltip-self-base-default-padding: var(--spacing-3xs) var(--spacing-2xs) var(--spacing-3xs) var(--spacing-2xs);
+  --tooltip-self-base-default-text-color: var(--color-reference-normal-secondary);
+  --tooltip-self-base-default-text-font: var(--font-primary-body-sm);
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --tooltip-self-base-default-max-width: 200px;
+  }
+}
+
+.ap-tooltip-basic--contrast {
+  /* default */
+  --tooltip-self-base-default-background-color: var(--color-reference-contrast-neutral1);
+  --tooltip-self-base-default-border-radius: var(--radius-none);
+  --tooltip-self-base-default-max-width: 70vw;
+  --tooltip-self-base-default-padding: var(--spacing-3xs) var(--spacing-2xs) var(--spacing-3xs) var(--spacing-2xs);
+  --tooltip-self-base-default-text-color: var(--color-reference-contrast-secondary);
+  --tooltip-self-base-default-text-font: var(--font-primary-body-sm);
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --tooltip-self-base-default-max-width: 200px;
+  }
+}

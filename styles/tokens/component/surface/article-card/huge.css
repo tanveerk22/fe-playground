@@ -1,0 +1,33 @@
+.ap-article-card-huge--normal {
+  /* default */
+  --article-card-self-base-default-background-color: var(--color-reference-none);
+  --article-card-self-base-default-text-color: var(--color-reference-normal-primary);
+  --article-card-self-base-default-text-font: var(--font-primary-body-lg);
+  --article-card-self-base-default-title-color: var(--color-reference-normal-primary);
+  --article-card-self-base-default-title-font: var(--font-primary-display-sm);
+  --article-card-self-base-default-vertical-gap: var(--spacing-3xs);
+  /* hover */
+  --article-card-self-base-hover-background-color: var(--color-reference-none);
+  --article-card-self-base-hover-text-color: var(--color-reference-normal-primary);
+  --article-card-self-base-hover-text-font: var(--font-primary-body-lg);
+  --article-card-self-base-hover-title-color: var(--color-reference-normal-neutral2);
+  --article-card-self-base-hover-title-font: var(--font-primary-display-sm);
+  --article-card-self-base-hover-vertical-gap: var(--spacing-3xs);
+}
+
+.ap-article-card-huge--contrast {
+  /* default */
+  --article-card-self-base-default-background-color: var(--color-reference-none);
+  --article-card-self-base-default-text-color: var(--color-reference-contrast-primary);
+  --article-card-self-base-default-text-font: var(--font-primary-body-lg);
+  --article-card-self-base-default-title-color: var(--color-reference-contrast-primary);
+  --article-card-self-base-default-title-font: var(--font-primary-display-sm);
+  --article-card-self-base-default-vertical-gap: var(--spacing-3xs);
+  /* hover */
+  --article-card-self-base-hover-background-color: var(--color-reference-none);
+  --article-card-self-base-hover-text-color: var(--color-reference-contrast-primary);
+  --article-card-self-base-hover-text-font: var(--font-primary-body-lg);
+  --article-card-self-base-hover-title-color: var(--color-reference-contrast-neutral2);
+  --article-card-self-base-hover-title-font: var(--font-primary-display-sm);
+  --article-card-self-base-hover-vertical-gap: var(--spacing-3xs);
+}

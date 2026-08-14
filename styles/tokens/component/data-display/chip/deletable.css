@@ -1,0 +1,35 @@
+.ap-chip-deletable {
+  /* default */
+  --chip-self-base-default-background-color: var(--color-reference-none);
+  --chip-self-base-default-border-radius: var(--radius-none);
+  --chip-self-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --chip-self-base-default-height: 32px;
+  --chip-self-base-default-icon-color: var(--color-reference-normal-primary);
+  --chip-self-base-default-icon-gap: var(--spacing-4xs);
+  --chip-self-base-default-letter-spacing: var(--letter-spacing-md);
+  --chip-self-base-default-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-base-default-text-color: var(--color-reference-normal-primary);
+  --chip-self-base-default-text-font: var(--font-primary-label-sm);
+  /* hover */
+  --chip-self-base-hover-background-color: var(--color-reference-none);
+  --chip-self-base-hover-border-radius: var(--radius-none);
+  --chip-self-base-hover-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --chip-self-base-hover-height: 32px;
+  --chip-self-base-hover-icon-color: var(--color-reference-normal-neutral2);
+  --chip-self-base-hover-icon-gap: var(--spacing-4xs);
+  --chip-self-base-hover-letter-spacing: var(--letter-spacing-md);
+  --chip-self-base-hover-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-base-hover-text-color: var(--color-reference-normal-neutral2);
+  --chip-self-base-hover-text-font: var(--font-primary-label-sm);
+  /* disabled */
+  --chip-self-base-disabled-background-color: var(--color-reference-none);
+  --chip-self-base-disabled-border-radius: var(--radius-none);
+  --chip-self-base-disabled-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --chip-self-base-disabled-height: 32px;
+  --chip-self-base-disabled-icon-color: var(--color-reference-normal-neutral5);
+  --chip-self-base-disabled-icon-gap: var(--spacing-4xs);
+  --chip-self-base-disabled-letter-spacing: var(--letter-spacing-md);
+  --chip-self-base-disabled-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-base-disabled-text-color: var(--color-reference-normal-neutral5);
+  --chip-self-base-disabled-text-font: var(--font-primary-label-sm);
+}

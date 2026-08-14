@@ -1,0 +1,23 @@
+.ap-chip-primary--normal {
+  /* default */
+  --chip-self-base-default-background-color: var(--color-reference-none);
+  --chip-self-base-default-border-radius: var(--radius-none);
+  --chip-self-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --chip-self-base-default-height: 32px;
+  --chip-self-base-default-letter-spacing: var(--letter-spacing-md);
+  --chip-self-base-default-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-base-default-text-color: var(--color-reference-normal-primary);
+  --chip-self-base-default-text-font: var(--font-primary-label-sm);
+}
+
+.ap-chip-primary--contrast {
+  /* default */
+  --chip-self-base-default-background-color: var(--color-reference-none);
+  --chip-self-base-default-border-radius: var(--radius-none);
+  --chip-self-base-default-border: var(--border-width-sm) solid var(--color-reference-contrast-neutral5);
+  --chip-self-base-default-height: 32px;
+  --chip-self-base-default-letter-spacing: var(--letter-spacing-md);
+  --chip-self-base-default-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-base-default-text-color: var(--color-reference-contrast-primary);
+  --chip-self-base-default-text-font: var(--font-primary-label-sm);
+}

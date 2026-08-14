@@ -1,0 +1,27 @@
+/*
+ * Global design-token layer. Hand-authored — sibling to styles/tokens/, never
+ * inside it (tools/scripts/sync-design-tokens.mjs wipes styles/tokens/ on
+ * every resync, so anything placed there would be deleted).
+ *
+ * Only the branding/core/theme layers are imported here: they are the
+ * primitive and semantic tokens (palette, radius, shadow, spacing scale,
+ * typography scale, day-theme color aliases) that are safe to make
+ * available site-wide. Component-level tokens (styles/tokens/component/**)
+ * stay out of this file on purpose — each is already scoped to a class
+ * selector (e.g. .ap-button-primary--normal) and should be @import'ed only
+ * by the specific block that needs it, to avoid shipping unused CSS to
+ * every page. See docs/design-tokens-poc.md for the full convention.
+ *
+ * Each import is assigned to the ap-tokens layer via the `layer(...)`
+ * import modifier (not a wrapping @layer block — @import must be the
+ * first rules in a stylesheet and cannot be nested inside a block
+ * statement, so `@layer ap-tokens { @import ...; }` is invalid and the
+ * imports silently never apply). Layering them means that if a future
+ * token version reintroduces a name collision with styles.css's own
+ * custom properties, styles.css (loaded after this file, and therefore
+ * unlayered/higher-priority) wins instead of silently regressing.
+ */
+@import url('/styles/tokens/branding/default.css') layer(ap-tokens);
+@import url('/styles/tokens/theme/day.css') layer(ap-tokens);
+@import url('/styles/tokens/core/spacing.css') layer(ap-tokens);
+@import url('/styles/tokens/core/typography.css') layer(ap-tokens);

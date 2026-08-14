@@ -1,0 +1,17 @@
+.ap-indicator-carousel--normal {
+  /* default */
+  --indicator-self-base-default-border-radius: var(--radius-sm);
+  --indicator-self-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  /* active */
+  --indicator-self-base-active-border-radius: var(--radius-sm);
+  --indicator-self-base-active-border: var(--border-width-md) solid var(--color-reference-normal-primary);
+}
+
+.ap-indicator-carousel--contrast {
+  /* default */
+  --indicator-self-base-default-border-radius: var(--radius-sm);
+  --indicator-self-base-default-border: var(--border-width-sm) solid var(--color-reference-contrast-primary);
+  /* active */
+  --indicator-self-base-active-border-radius: var(--radius-sm);
+  --indicator-self-base-active-border: var(--border-width-md) solid var(--color-reference-contrast-primary);
+}

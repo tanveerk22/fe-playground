@@ -1,0 +1,4 @@
+.ap-lookbook-basic {
+  /* default */
+  --lookbook-self-base-default-gap: var(--spacing-4xs);
+}

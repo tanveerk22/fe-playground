@@ -1,0 +1,17 @@
+.ap-menu-main {
+  /* default */
+  --menu-self-base-default-background-color: var(--color-reference-normal-secondary);
+  --menu-self-base-default-padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-xs);
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --menu-self-base-default-padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-xs);
+  }
+
+  /* - - X L A R G E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 1440px) {
+    /* default */
+    --menu-self-base-default-padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-md);
+  }
+}

@@ -1,0 +1,6 @@
+.ap-progress-basic {
+  /* default */
+  --progress-self-base-default-background-color: var(--color-reference-normal-secondary);
+  --progress-self-base-default-foreground-color: var(--color-reference-normal-primary);
+  --progress-self-base-default-height: 2px;
+}

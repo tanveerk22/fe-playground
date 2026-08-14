@@ -1,0 +1,262 @@
+/*
+ * Novelties block — horizontal watch-card scroller for the AP home page
+ * "Our 2026 Novelties" section. Design tokens from styles/styles.css.
+ */
+
+/* Full-bleed section: override the global 1200px section constraint so the
+   heading and the card track share the same left inset and the cards can
+   extend/peek off the right edge, matching the live site. */
+main > .section.novelties-container > div {
+  max-width: unset;
+  margin: 0;
+  padding-left: var(--spacing-m, 24px);
+  padding-right: 0;
+}
+
+/* Heading + "Explore our novelties" link block — left aligned to the inset. */
+main > .section.novelties-container > .default-content-wrapper {
+  text-align: left;
+}
+
+/* Carousel title — bigger and responsive, unlike the site's generic h1/h2
+   default (fixed 48px). Scoped to this section so the shared h1 em/h2 em
+   italic-accent pattern used by hero/columns/fragment stays untouched. */
+.novelties-container h1,
+.novelties-container h2 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.novelties-container h1 em,
+.novelties-container h2 em {
+  font-size: 44px;
+  line-height: 0.83;
+  font-weight: 250;
+}
+
+/* "Explore our novelties" — plain link with a leading dash-line, matching
+   the card CTAs below. */
+.novelties-container .default-content-wrapper a.button {
+  display: grid;
+  grid-template-columns: 48px auto;
+  align-items: center;
+  gap: var(--spacing-xs, 8px);
+  text-align: left;
+}
+
+.novelties-container .default-content-wrapper a.button::before {
+  content: '';
+  width: 48px;
+  height: 1px;
+  background-color: currentcolor;
+}
+
+.novelties {
+  position: relative;
+}
+
+/* Horizontal scroll track. Cards align flush-left with the heading (the
+   section wrapper supplies the left inset); the last card can peek off the
+   right edge. */
+.novelties .novelties-track {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 var(--spacing-m, 24px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.novelties .novelties-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each card. */
+.novelties .novelties-card {
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.novelties .novelties-card-image {
+  line-height: 0;
+  background-color: var(--ap-light-bg, #f8f8f8);
+}
+
+.novelties .novelties-card-image img {
+  width: 100%;
+  height: 397px;
+  object-fit: cover;
+  display: block;
+}
+
+.novelties .novelties-card-body {
+  padding: var(--spacing-s, 16px) 0 0;
+}
+
+/* Watch name — matches the live card: 16px, medium weight, mixed case. The
+   section is dark by default (--text-color: #fff), so the card copy is
+   explicitly white to stay legible against the card imagery. */
+.novelties .novelties-card-body h2,
+.novelties .novelties-card-body h3,
+.novelties .novelties-card-body h4 {
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.21px;
+  text-transform: none;
+  margin: 0 0 8px;
+  color: var(--ap-white);
+}
+
+/* Description — 16px light, same measure and colour as the live card. */
+.novelties .novelties-card-body p {
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.21px;
+  color: var(--ap-white);
+  margin: 0 0 16px;
+}
+
+/* CTA — "Discover more" link with a leading dash-line (matches live). */
+.novelties .novelties-cta:any-link {
+  display: grid;
+  grid-template-columns: 48px auto;
+  align-items: center;
+  gap: var(--spacing-xs, 8px);
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.21px;
+  text-transform: none;
+  text-decoration: none;
+  color: var(--ap-white);
+}
+
+.novelties .novelties-cta:any-link::before {
+  content: '';
+  width: 48px;
+  height: 1px;
+  background-color: currentcolor;
+}
+
+/* Prev/next controls — hidden on mobile (swipe/touch only, matching live);
+   re-enabled from tablet up. */
+.novelties .novelties-nav {
+  display: none;
+  position: absolute;
+  top: 198px;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  justify-content: space-between;
+  padding: 0 var(--spacing-xs, 8px);
+  pointer-events: none;
+}
+
+.novelties .novelties-nav button {
+  pointer-events: auto;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.2s;
+}
+
+.novelties .novelties-nav button:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.novelties .novelties-nav button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--ap-white);
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.novelties .novelties-prev::after {
+  transform: translate(-30%, -50%) rotate(-135deg);
+}
+
+.novelties .novelties-next::after {
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+
+/* Tablet and up — smaller, denser cards revealing more of the row at once,
+   wider left inset to match the site gutter, larger heading. */
+@media (width >= 768px) {
+  main > .section.novelties-container > div {
+    padding-left: var(--spacing-l, 32px);
+  }
+
+  .novelties-container h1,
+  .novelties-container h2 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .novelties-container h1 em,
+  .novelties-container h2 em {
+    font-size: 52px;
+  }
+
+  .novelties .novelties-card {
+    width: 196px;
+  }
+
+  .novelties .novelties-card-image img {
+    height: 260px;
+  }
+
+  .novelties .novelties-nav {
+    display: flex;
+    top: 130px;
+  }
+}
+
+/* Desktop — largest heading size; heading/link column sits beside the
+   carousel in the same row (roughly 25%/75%), matching the live site. Below
+   this the columns stack (the carousel is too narrow to share the row). */
+@media (width >= 1024px) {
+  .novelties-container h1,
+  .novelties-container h2 {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  .novelties-container h1 em,
+  .novelties-container h2 em {
+    font-size: 60px;
+  }
+
+  main > .section.novelties-container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  main > .section.novelties-container > .default-content-wrapper {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  main > .section.novelties-container > .novelties-wrapper {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-left: 0;
+  }
+}

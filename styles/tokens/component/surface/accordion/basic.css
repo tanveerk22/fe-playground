@@ -1,0 +1,23 @@
+.ap-accordion-basic--normal {
+  /* default */
+  --accordion-item-base-default-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral3);
+  --accordion-item-base-default-description-color: var(--color-reference-normal-neutral2);
+  --accordion-item-base-default-description-font: var(--font-primary-body-lg);
+  --accordion-item-base-default-icon-color: var(--color-reference-normal-primary);
+  --accordion-item-base-default-padding: var(--spacing-none) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --accordion-item-base-default-title-color: var(--color-reference-normal-primary);
+  --accordion-item-base-default-title-font: var(--font-primary-body-lg);
+  --accordion-self-base-default-item-gap: var(--spacing-2xs);
+}
+
+.ap-accordion-basic--contrast {
+  /* default */
+  --accordion-item-base-default-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral3);
+  --accordion-item-base-default-description-color: var(--color-reference-contrast-neutral2);
+  --accordion-item-base-default-description-font: var(--font-primary-body-lg);
+  --accordion-item-base-default-icon-color: var(--color-reference-contrast-primary);
+  --accordion-item-base-default-padding: var(--spacing-none) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --accordion-item-base-default-title-color: var(--color-reference-contrast-primary);
+  --accordion-item-base-default-title-font: var(--font-primary-body-lg);
+  --accordion-self-base-default-item-gap: var(--spacing-2xs);
+}

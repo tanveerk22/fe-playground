@@ -1,0 +1,8 @@
+.ap-radio-group {
+  /* default */
+  --radio-self-base-default-item-gap: var(--spacing-xs);
+  --radio-self-base-default-label-color: var(--color-reference-normal-neutral2);
+  --radio-self-base-default-label-font: var(--font-primary-label-sm);
+  --radio-self-base-default-label-letter-spacing: var(--letter-spacing-md);
+  --radio-self-base-default-label-spacing: var(--spacing-2xs);
+}

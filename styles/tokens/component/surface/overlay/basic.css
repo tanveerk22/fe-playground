@@ -1,0 +1,18 @@
+.ap-overlay-basic {
+  /* default */
+  --overlay-self-base-default-background: var(--color-reference-normal-secondary);
+  --overlay-self-base-default-foreground: var(--color-reference-normal-primary-80);
+  --overlay-self-base-default-max-height: 600px;
+  --overlay-self-base-default-max-width: 327px;
+  --overlay-self-base-default-padding: var(--spacing-2xs) var(--spacing-2xs) var(--spacing-xs) var(--spacing-2xs);
+  --overlay-self-base-default-vertical-gap: var(--spacing-2xs);
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --overlay-self-base-default-max-height: 640px;
+    --overlay-self-base-default-max-width: 608px;
+    --overlay-self-base-default-padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-xs);
+    --overlay-self-base-default-vertical-gap: var(--spacing-xs);
+  }
+}

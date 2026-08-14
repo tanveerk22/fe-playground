@@ -1,0 +1,7 @@
+.ap-message-hint {
+  /* default */
+  --message-self-base-default-icon-color: var(--color-reference-normal-neutral2);
+  --message-self-base-default-icon-gap: var(--spacing-4xs);
+  --message-self-base-default-text-color: var(--color-reference-normal-neutral2);
+  --message-self-base-default-text-font: var(--font-primary-body-sm);
+}

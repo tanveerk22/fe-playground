@@ -1,0 +1,29 @@
+.ap-drawer-basic {
+  /* default */
+  --drawer-self-base-default-background: var(--color-reference-normal-secondary);
+  --drawer-self-base-default-clear-color: var(--color-reference-normal-neutral5);
+  --drawer-self-base-default-clear-font: var(--font-primary-body-md);
+  --drawer-self-base-default-horizontal-gap: var(--spacing-none);
+  --drawer-self-base-default-max-width: none;
+  --drawer-self-base-default-padding-content: var(--spacing-xs) var(--spacing-2xs) var(--spacing-xs) var(--spacing-2xs);
+  --drawer-self-base-default-padding-footer: var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs);
+  --drawer-self-base-default-padding-head: var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs);
+  --drawer-self-base-default-title-color: var(--color-reference-normal-primary);
+  --drawer-self-base-default-title-font: var(--font-primary-body-lg);
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --drawer-self-base-default-horizontal-gap: var(--spacing-xs);
+    --drawer-self-base-default-max-width: none;
+    --drawer-self-base-default-padding-content: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-xs);
+    --drawer-self-base-default-padding-footer: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-xs);
+    --drawer-self-base-default-padding-head: var(--spacing-2xs) var(--spacing-xs) var(--spacing-2xs) var(--spacing-xs);
+  }
+
+  /* - - X L A R G E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 1440px) {
+    /* default */
+    --drawer-self-base-default-max-width: 768px;
+  }
+}

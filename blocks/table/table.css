@@ -1,0 +1,127 @@
+/* Table block - Audemars Piguet style
+ * Scoped to main .table to follow EDS best practices
+ */
+
+/* ========================================
+   Default Table Styling (liste-filiales)
+   ======================================== */
+:root {
+    /* Table Spacing */
+  --table-spacing-s: 10px;
+  --table-spacing-m: 30px;
+  --table-spacing-xxl: 150px;
+  --table-no-border-font-size: 17px;
+}
+
+main .table {
+  width: 100%;
+  overflow-x: auto;
+  display: table;
+  border: 1px outset rgb(128 128 128);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: var(--body-font-weight);
+  line-height: 1.5;
+  letter-spacing: 0.21px;
+  color: var(--ap-black);
+}
+
+/* Rows */
+main .table > div {
+  display: table-row;
+}
+
+/* Cells */
+main .table > div > div {
+  display: table-cell;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px inset rgb(128 128 128);
+  line-height: normal;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Remove paragraph margins in cells */
+main .table > div > div p {
+  margin: 0;
+}
+
+/* ========================================
+   No-Border Variant (cookie tables)
+   ======================================== */
+
+/* Base table block */
+main .table.no-border {
+  width: 100%;
+  margin-block: 0 var(--table-spacing-s);
+  border: unset;
+  border-block-end: 1px solid rgb(215 215 215 / 100%);
+}
+
+/* Row container - grid layout (mobile-first: single column) */
+main .table.no-border > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-block-end: 30px;
+}
+
+/* Individual cell styling */
+main .table.no-border > div > div {
+  font-size: var(--table-no-border-font-size);
+  text-align: left;
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  word-break: normal;
+  color: var(--ap-black);
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+/* Field labels - add spacing between fields */
+main .table.no-border > div > div p > strong {
+  display: inline-block;
+  margin-block-start: var(--table-spacing-m);
+  font-weight: 600;
+}
+
+/* First field label - no top margin */
+main .table.no-border > div > div p > strong:first-child {
+  margin-block-start: 0;
+}
+
+/* Links inside table cells */
+main .table.no-border > div > div a:any-link {
+  text-decoration: none;
+  transition: var(--link-transition);
+}
+
+main .table.no-border > div > div a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Empty cells - hide them */
+main .table.no-border > div > div:empty {
+  display: none;
+}
+
+/* Tablet - 768px */
+@media (width >= 768px) {
+  /* Tablet adjustments can be added here */
+}
+
+/* Desktop - 1025px */
+@media (width >= 1025px) {
+  main .table.no-border > div {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--table-spacing-xxl);
+  }
+}
+
+/* Large Desktop - 1440px */
+@media (width >= 1440px) {
+  /* Large desktop adjustments can be added here */
+}

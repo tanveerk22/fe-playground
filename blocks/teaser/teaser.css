@@ -1,0 +1,428 @@
+/*
+ * Teaser block — editorial / editorial-dark / split variants.
+ * All colours, spacing, typography and transitions reference the runtime
+ * design tokens declared in styles/styles.css (:root). No hardcoded values.
+ */
+
+/* Full-bleed section: let the teaser span edge to edge. */
+.teaser-container .teaser-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+/* Remove the global 40px vertical section margin so teasers stack flush with
+   the heroes and each other — no blank gaps between blocks. */
+main > .section.teaser-container {
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------- *
+ * EDITORIAL (default): a text-only editorial statement on a dark
+ * surface — heading + body copy, left-aligned within a constrained
+ * measure, matching the AP home page "Crafting time since 1875" block.
+ * When an image IS authored, the variant flips to a full-bleed image
+ * with the text overlaid (see the :has() rule below).
+ * ---------------------------------------------------------------- */
+.teaser {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.teaser .teaser-content {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.teaser.editorial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+  background-color: var(--ap-dark-bg);
+  color: var(--ap-white);
+}
+
+.teaser.editorial .teaser-content {
+  max-width: 640px;
+  width: 100%;
+}
+
+/* Image authored → full-bleed hero with the text overlaid at the bottom.
+   Both the default editorial-with-image and editorial-dark share this
+   treatment; each establishes a positioning context so the absolutely
+   positioned .teaser-image is contained within the block. */
+.teaser.editorial:has(.teaser-image),
+.teaser.editorial-dark {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-end;
+  min-height: 70vh;
+  padding: var(--spacing-xl) var(--spacing-m);
+  background-color: transparent;
+  color: var(--ap-white);
+}
+
+.teaser .teaser-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  line-height: 0;
+}
+
+.teaser .teaser-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.teaser .teaser-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* stylelint-disable no-descending-specificity */
+.teaser.editorial:has(.teaser-image) .teaser-content,
+.teaser.editorial-dark .teaser-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* stylelint-enable no-descending-specificity */
+
+/* Heading size is responsive (40px mobile / 48px tablet / 56px desktop) —
+   confirmed against multiple live instances (Crafting Time, Revealing
+   Time, AP Chronicles) that all share this exact scale; not the site's
+   generic fixed 48px h1/h2 default. */
+.teaser .teaser-content h1,
+.teaser .teaser-content h2,
+.teaser .teaser-content h3 {
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: var(--heading-font-weight);
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: var(--heading-text-transform);
+  margin: 0 0 var(--spacing-m);
+  color: inherit;
+}
+
+/* Italic serif emphasis — Times Now, matching the AP editorial style.
+   Sized explicitly (rather than via the --font-secondary-display-sm
+   shorthand token) so it tracks the heading's own 40/48/56 scale exactly
+   — the token's built-in breakpoints (2.4rem/3rem/3.2rem) land close but
+   not on the same values. Uppercase is inherited from the heading (live
+   renders both lines uppercase, e.g. "SINCE 1875" / "REVEALING TIME" —
+   the thin italic serif just reads as mixed-case at a glance). */
+.teaser .teaser-content h1 em,
+.teaser .teaser-content h2 em,
+.teaser .teaser-content h3 em {
+  font-family: var(--font-family-secondary, 'Times Now', serif);
+  font-style: italic;
+  font-weight: 250;
+  font-size: 44px;
+  line-height: 0.83;
+  display: block;
+  letter-spacing: normal;
+}
+
+.teaser .teaser-content p {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  letter-spacing: var(--body-letter-spacing);
+  margin: 0 0 var(--spacing-m);
+  color: inherit;
+}
+
+/* CTA — a leading dash-line + "Discover more", matching the site's
+   editorial link treatment (same pattern as the novelties carousel CTA). */
+.teaser .teaser-cta:any-link {
+  display: grid;
+  grid-template-columns: 48px auto;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-align: left;
+  font-family: var(--body-font-family);
+  font-size: var(--link-font-size);
+  font-weight: var(--link-font-weight);
+  letter-spacing: var(--link-letter-spacing);
+  text-transform: none;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--link-transition);
+}
+
+.teaser .teaser-cta:any-link::before {
+  content: '';
+  width: 48px;
+  height: 1px;
+  background-color: currentcolor;
+  transition: var(--link-transition);
+}
+
+.teaser .teaser-cta:any-link:hover {
+  color: var(--link-hover-color);
+}
+
+/* ---------------------------------------------------------------- *
+ * EDITORIAL-DARK: full-bleed dark image hero with light overlaid text.
+ * Layout is shared with `.teaser.editorial:has(.teaser-image)` above;
+ * this fallback background keeps the text legible before the image loads.
+ * ---------------------------------------------------------------- */
+.teaser.editorial-dark:not(:has(.teaser-image)) {
+  background-color: var(--ap-dark-bg);
+}
+
+/* ---------------------------------------------------------------- *
+ * SPLIT: image and text side by side (image left by default).
+ * ---------------------------------------------------------------- */
+.teaser.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: unset;
+  padding: 0;
+  color: var(--ap-black);
+  background-color: var(--ap-light-bg);
+}
+
+.teaser.split .teaser-image {
+  position: relative;
+  inset: unset;
+}
+
+.teaser.split .teaser-image img {
+  aspect-ratio: 4 / 3;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.teaser.split .teaser-content {
+  margin: 0;
+  max-width: unset;
+  padding: var(--spacing-xl) var(--spacing-m);
+  align-self: center;
+}
+
+/* ---------------------------------------------------------------- *
+ * STACKED (author as "Teaser (stacked)"): dark surface, image on top
+ * (fixed 3:2 ratio, full column width) with heading/body/CTA flowing
+ * below — matching the live "Musée Atelier" / "Watchmaking Experiences"
+ * pattern. Two stacked teasers authored in the SAME section sit side by
+ * side as a 2-column row from desktop up (see the :has() rule below);
+ * a single one just stacks full-width like any other teaser.
+ * ---------------------------------------------------------------- */
+.teaser.stacked {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: var(--ap-dark-bg);
+  color: var(--ap-white);
+}
+
+.teaser.stacked .teaser-image {
+  position: relative;
+  inset: unset;
+}
+
+.teaser.stacked .teaser-image img {
+  aspect-ratio: 3 / 2;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.teaser.stacked .teaser-content {
+  max-width: unset;
+  padding: var(--spacing-l) var(--spacing-m);
+}
+
+/* Inset the whole row (not each column) with the site's grid-container
+   gutter — matching the live "Musée Atelier" / "Watchmaking Experiences"
+   section, which is NOT full-bleed like the rest of the teaser variants.
+   The two columns still touch with no gap between them; only the outer
+   edges get this padding. Responsive tiers (20/32/92.5px) match the
+   gallery block's identical grid-container gutter measurements. */
+main > .section.teaser-container:has(> .teaser-wrapper + .teaser-wrapper) {
+  box-sizing: border-box;
+  padding: 0 var(--spacing-s, 20px);
+}
+
+/* Two stacked teasers sharing a section — lay them out as a 2-column row,
+   matching the live site's breakpoint (Foundation's "large", 1024px). */
+@media (width >= 1024px) {
+  main > .section.teaser-container:has(> .teaser-wrapper + .teaser-wrapper) {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  main > .section.teaser-container:has(> .teaser-wrapper + .teaser-wrapper) > .teaser-wrapper {
+    flex: 1 1 50%;
+    min-width: 0;
+
+    /* The global `main > .section > div { margin: auto }` only centers
+       horizontally in normal block flow, but once this becomes a flex
+       item its vertical auto margins take over too — the flex algorithm
+       centers the shorter teaser instead of top-aligning it. Reset. */
+    margin: 4px;
+  }
+}
+
+/* ---------------------------------------------------------------- *
+ * ASIDE (author as "Teaser (aside)"): dark surface, a narrow text column
+ * beside a wider, gapped, boxed image (fixed 3:2 ratio — NOT full-bleed
+ * or full-height like editorial-dark) — matching the live "Find a
+ * boutique" pattern (image on the left, the side it's authored on by
+ * default). Add the `image-right` modifier to flip sides, matching "AP
+ * Chronicles". Below desktop it just stacks full-width, image on top
+ * (same as STACKED above).
+ *
+ * The 13.7% / 21.8% / 14.5% / 36.3% / 13.7% split (margin / text / gap /
+ * image / margin) is measured directly off the live "AP Chronicles" /
+ * "Find a boutique" sections at 1440px and holds as percentages so it
+ * scales cleanly rather than needing per-breakpoint pixel overrides.
+ * ---------------------------------------------------------------- */
+.teaser.aside {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: var(--ap-dark-bg);
+  color: var(--ap-white);
+}
+
+.teaser.aside .teaser-image {
+  position: relative;
+  inset: unset;
+}
+
+.teaser.aside .teaser-image img {
+  aspect-ratio: 3 / 2;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.teaser.aside .teaser-content {
+  max-width: unset;
+  padding: var(--spacing-l) var(--spacing-m);
+}
+
+@media (width >= 1024px) {
+  .teaser.aside {
+    flex-direction: row;
+    align-items: center;
+    gap: 14.5%;
+    padding: var(--spacing-xxl) 13.7%;
+  }
+
+  .teaser.aside .teaser-content {
+    flex: 0 0 21.8%;
+    padding: 0;
+  }
+
+  .teaser.aside .teaser-image {
+    flex: 0 0 36.3%;
+  }
+
+  /* image-right (AP Chronicles) — both rows are authored image-first, so
+     flipping the flex direction is enough to swap visual sides; the
+     column widths above stay assigned to the same elements either way. */
+  .teaser.aside.image-right {
+    flex-direction: row-reverse;
+  }
+}
+
+/* ---------------------------------------------------------------- *
+ * MOBILE (375px baseline) — tighten spacing and headline scale.
+ * ---------------------------------------------------------------- */
+@media (width <= 767px) {
+  .teaser.editorial:has(.teaser-image),
+  .teaser.editorial-dark {
+    min-height: 60vh;
+    padding: var(--spacing-l) var(--spacing-m);
+  }
+
+  .teaser .teaser-content h1,
+  .teaser .teaser-content h2,
+  .teaser .teaser-content h3 {
+    margin-bottom: var(--spacing-s);
+  }
+
+  .teaser .teaser-content p {
+    font-size: var(--body-font-size-s);
+    margin-bottom: var(--spacing-s);
+  }
+
+  .teaser.split .teaser-content {
+    padding: var(--spacing-l) var(--spacing-m);
+  }
+}
+
+/* ---------------------------------------------------------------- *
+ * DESKTOP — larger headline, side-by-side split, image-right flip.
+ * ---------------------------------------------------------------- */
+@media (width >= 768px) {
+  main > .section.teaser-container:has(> .teaser-wrapper + .teaser-wrapper) {
+    padding: var(--spacing-l, 32px);
+  }
+
+  .teaser.editorial:has(.teaser-image),
+  .teaser.editorial-dark {
+    min-height: 90vh;
+    justify-content: flex-end;
+  }
+
+  .teaser .teaser-content h1,
+  .teaser .teaser-content h2,
+  .teaser .teaser-content h3 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .teaser .teaser-content h1 em,
+  .teaser .teaser-content h2 em,
+  .teaser .teaser-content h3 em {
+    font-size: 52px;
+  }
+
+  .teaser .teaser-content p {
+    max-width: 40ch;
+  }
+
+  .teaser.split {
+    grid-template-columns: 1fr 1fr;
+    min-height: unset;
+  }
+
+  /* Flip: text column first, image second. */
+  .teaser.split.image-right .teaser-image {
+    order: 2;
+  }
+
+  .teaser.split.image-right .teaser-content {
+    order: 1;
+  }
+}
+
+/* Desktop — largest heading size, matching the live site. */
+@media (width >= 1024px) {
+  .teaser .teaser-content h1,
+  .teaser .teaser-content h2,
+  .teaser .teaser-content h3 {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  .teaser .teaser-content h1 em,
+  .teaser .teaser-content h2 em,
+  .teaser .teaser-content h3 em {
+    font-size: 60px;
+  }
+}
+
+/* Desktop — wider gutter, matching the live site's grid-container inset
+   (same measurement as the gallery block). */
+
+/* @media (width >= 1440px) {
+  main > .section.teaser-container:has(> .teaser-wrapper + .teaser-wrapper) {
+    padding: 0 92.5px;
+  }
+} */

@@ -1,0 +1,53 @@
+.ap-button-link-accent--normal {
+  /* default */
+  --button-self-base-default-line-color: var(--color-reference-normal-accent);
+  --button-self-base-default-line-height: 1px;
+  --button-self-base-default-line-width: 48px;
+  --button-self-base-default-text-color: var(--color-reference-normal-primary);
+  --button-self-base-default-text-font: var(--font-primary-label-md);
+  /* hover */
+  --button-self-base-hover-line-color: var(--color-reference-normal-accent);
+  --button-self-base-hover-line-height: 1px;
+  --button-self-base-hover-line-width: 12px;
+  --button-self-base-hover-text-color: var(--color-reference-normal-primary);
+  --button-self-base-hover-text-font: var(--font-primary-label-md);
+  /* active */
+  --button-self-base-active-line-color: var(--color-reference-normal-accent);
+  --button-self-base-active-line-height: 1px;
+  --button-self-base-active-line-width: 12px;
+  --button-self-base-active-text-color: var(--color-reference-normal-primary);
+  --button-self-base-active-text-font: var(--font-primary-label-md);
+  /* disabled */
+  --button-self-base-disabled-line-color: var(--color-reference-normal-neutral5);
+  --button-self-base-disabled-line-height: 1px;
+  --button-self-base-disabled-line-width: 48px;
+  --button-self-base-disabled-text-color: var(--color-reference-normal-neutral5);
+  --button-self-base-disabled-text-font: var(--font-primary-label-md);
+}
+
+.ap-button-link-accent--contrast {
+  /* default */
+  --button-self-base-default-line-color: var(--color-reference-contrast-accent);
+  --button-self-base-default-line-height: 1px;
+  --button-self-base-default-line-width: 48px;
+  --button-self-base-default-text-color: var(--color-reference-contrast-primary);
+  --button-self-base-default-text-font: var(--font-primary-label-md);
+  /* hover */
+  --button-self-base-hover-line-color: var(--color-reference-contrast-accent);
+  --button-self-base-hover-line-height: 1px;
+  --button-self-base-hover-line-width: 12px;
+  --button-self-base-hover-text-color: var(--color-reference-contrast-primary);
+  --button-self-base-hover-text-font: var(--font-primary-label-md);
+  /* active */
+  --button-self-base-active-line-color: var(--color-reference-contrast-accent);
+  --button-self-base-active-line-height: 1px;
+  --button-self-base-active-line-width: 12px;
+  --button-self-base-active-text-color: var(--color-reference-contrast-primary);
+  --button-self-base-active-text-font: var(--font-primary-label-md);
+  /* disabled */
+  --button-self-base-disabled-line-color: var(--color-reference-contrast-neutral5);
+  --button-self-base-disabled-line-height: 1px;
+  --button-self-base-disabled-line-width: 48px;
+  --button-self-base-disabled-text-color: var(--color-reference-contrast-neutral5);
+  --button-self-base-disabled-text-font: var(--font-primary-label-md);
+}

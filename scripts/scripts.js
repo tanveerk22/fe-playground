@@ -1,6 +1,8 @@
 import {
+  buildBlock,
   loadHeader,
   loadFooter,
+  decorateButtons,
   decorateIcons,
   decorateSections,
   decorateBlocks,
@@ -9,32 +11,25 @@ import {
   loadSection,
   loadSections,
   loadCSS,
-  buildBlock,
 } from './aem.js';
 
-if (window.trustedTypes && window.trustedTypes.createPolicy) {
-  const innerTT = window.trustedTypes.createPolicy('tt-inner', {
-    createHTML: (s) => s, // avoid stack overflow
-  });
-
-  window.trustedTypes.createPolicy('default', {
-    createHTML: (input, type, sink) => {
-      let processedInput = input;
-      if (/srcdoc\s*=/i.test(processedInput)) {
-        const doc = new DOMParser().parseFromString(innerTT.createHTML(processedInput), 'text/html');
-        doc.querySelectorAll('iframe[srcdoc]').forEach((el) => el.removeAttribute('srcdoc'));
-        processedInput = doc.body.innerHTML;
-      }
-      if (sink.includes('createContextualFragment') || sink.includes('Document write')) {
-        const doc = new DOMParser().parseFromString(innerTT.createHTML(processedInput), 'text/html');
-        doc.querySelectorAll('script').forEach((el) => el.remove());
-        processedInput = doc.body.innerHTML;
-      }
-      return processedInput;
-    },
-    createScriptURL: (input) => input,
-    createScript: (input) => input,
-  });
+/**
+ * Builds hero block and prepends to main in a new section.
+ * @param {Element} main The container element
+ */
+function buildHeroBlock(main) {
+  // Skip auto-blocking when the page already authors an explicit hero block
+  // (e.g. the AP home page). Otherwise the auto-blocker would tear the first
+  // picture + h1 out of the authored hero and orphan its body copy.
+  if (main.querySelector('.hero')) return;
+  const h1 = main.querySelector('h1');
+  const picture = main.querySelector('picture');
+  // eslint-disable-next-line no-bitwise
+  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+    const section = document.createElement('div');
+    section.append(buildBlock('hero', { elems: [picture, h1] }));
+    main.prepend(section);
+  }
 }
 
 /**
@@ -50,37 +45,13 @@ async function loadFonts() {
 }
 
 /**
- * Turns `/widgets/...` links into widget blocks.
- * @param {Element} main The container element
- */
-function buildWidgetAutoBlocks(main) {
-  const widgetLinks = [...main.querySelectorAll('a[href*="/widgets/"]')];
-  widgetLinks.forEach((link) => {
-    if (link.closest('.widget')) return;
-    const newLink = link.cloneNode(true);
-    const widgetBlock = buildBlock('widget', { elems: [newLink] });
-    const p = link.closest('p');
-    if (
-      p
-      && p.querySelectorAll('a').length === 1
-      && p.querySelector('a') === link
-      && p.textContent.trim() === link.textContent.trim()
-    ) {
-      p.replaceWith(widgetBlock);
-    } else {
-      link.replaceWith(widgetBlock);
-    }
-  });
-}
-
-/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
 function buildAutoBlocks(main) {
   try {
-    // auto load `*/fragments/*` references
-    const fragments = [...main.querySelectorAll('a[href*="/fragments/"]')].filter((f) => !f.closest('.fragment'));
+    // auto block `*/fragments/*` references
+    const fragments = main.querySelectorAll('a[href*="/fragments/"]');
     if (fragments.length > 0) {
       // eslint-disable-next-line import/no-cycle
       import('../blocks/fragment/fragment.js').then(({ loadFragment }) => {
@@ -88,7 +59,7 @@ function buildAutoBlocks(main) {
           try {
             const { pathname } = new URL(fragment.href);
             const frag = await loadFragment(pathname);
-            fragment.parentElement.replaceWith(...frag.children);
+            fragment.parentElement.replaceWith(frag.firstElementChild);
           } catch (error) {
             // eslint-disable-next-line no-console
             console.error('Fragment loading failed', error);
@@ -96,7 +67,8 @@ function buildAutoBlocks(main) {
         });
       });
     }
-    buildWidgetAutoBlocks(main);
+
+    buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
@@ -104,41 +76,68 @@ function buildAutoBlocks(main) {
 }
 
 /**
- * Decorates formatted links to style them as buttons.
- * @param {HTMLElement} main The main container element
+ * Creates wrappers around adjacent h2s and accordions.
+ * @param {Element} main The main element
  */
-function decorateButtons(main) {
-  main.querySelectorAll('p a[href]').forEach((a) => {
-    a.title = a.title || a.textContent;
-    const p = a.closest('p');
-    const text = a.textContent.trim();
+function createWrapper(main) {
+  const sections = main.querySelectorAll('.section');
 
-    // quick structural checks
-    if (a.querySelector('img') || p.textContent.trim() !== text) return;
+  sections.forEach((section) => {
+    const children = Array.from(section.children);
+    let wrapper = null;
+    let wrapperInserted = false;
 
-    // skip URL display links
-    try {
-      if (new URL(a.href).href === new URL(text, window.location).href) return;
-    } catch { /* continue */ }
+    children.forEach((child) => {
+      let isH2 = false;
+      let isAccordion = false;
+      let h2Element = null;
+      let isDefaultWrapper = false;
 
-    // require authored formatting for buttonization
-    const strong = a.closest('strong');
-    const em = a.closest('em');
-    if (!strong && !em) return;
+      // Check if child is H2 or contains H2 in default-content-wrapper
+      if (child.tagName === 'H2') {
+        isH2 = true;
+        h2Element = child;
+      } else if (child.classList.contains('default-content-wrapper')) {
+        isDefaultWrapper = true;
+        const h2 = child.querySelector('h2');
+        if (h2) {
+          isH2 = true;
+          h2Element = h2;
+        }
+      }
 
-    p.className = 'button-wrapper';
-    a.className = 'button';
-    if (strong && em) { // high-impact call-to-action
-      a.classList.add('accent');
-      const outer = strong.contains(em) ? strong : em;
-      outer.replaceWith(a);
-    } else if (strong) {
-      a.classList.add('primary');
-      strong.replaceWith(a);
-    } else {
-      a.classList.add('secondary');
-      em.replaceWith(a);
-    }
+      // Check if accordion
+      if (child.classList.contains('accordion-wrapper')) {
+        isAccordion = true;
+      }
+
+      if (isH2 || isAccordion) {
+        if (!wrapper) {
+          wrapper = document.createElement('div');
+          wrapper.className = 'faq-wrapper';
+          wrapperInserted = false;
+        }
+
+        // If h2 is inside default-content-wrapper, extract it and insert wrapper after
+        if (h2Element && isDefaultWrapper) {
+          wrapper.appendChild(h2Element);
+          if (!wrapperInserted) {
+            section.insertBefore(wrapper, child.nextSibling);
+            wrapperInserted = true;
+          }
+        } else {
+          // For bare h2 or accordion
+          if (!wrapperInserted) {
+            section.insertBefore(wrapper, child);
+            wrapperInserted = true;
+          }
+          wrapper.appendChild(child);
+        }
+      } else {
+        wrapper = null;
+        wrapperInserted = false;
+      }
+    });
   });
 }
 
@@ -148,11 +147,12 @@ function decorateButtons(main) {
  */
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
+  // hopefully forward compatible button decoration
+  decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
-  decorateButtons(main);
 }
 
 /**
@@ -167,6 +167,11 @@ async function loadEager(doc) {
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
+
+    // Create FAQ wrappers if page has both 'legal' and 'faq' classes
+    if (document.body.classList.contains('legal') && document.body.classList.contains('faq')) {
+      createWrapper(main);
+    }
   }
 
   try {
@@ -184,8 +189,6 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
-  loadHeader(doc.querySelector('body > header'));
-
   const main = doc.querySelector('main');
   await loadSections(main);
 
@@ -193,7 +196,8 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadFooter(doc.querySelector('body > footer'));
+  loadHeader(doc.querySelector('header'));
+  loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
@@ -204,7 +208,8 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
-  import('./consent-check.js');
+  // eslint-disable-next-line import/no-cycle
+  window.setTimeout(() => import('./delayed.js'), 3000);
   // load anything that can be postponed to the latest here
 }
 

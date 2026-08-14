@@ -1,0 +1,119 @@
+/* Accordion Block - Audemars Piguet Style */
+.accordion > div {
+  border-bottom: 1px solid rgb(139 140 140);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: var(--body-font-weight);
+  line-height: 1.5;
+  color: var(--ap-black);
+  letter-spacing: 0.21px;
+}
+
+.accordion-header:hover {
+  opacity: 0.7;
+}
+
+.accordion-header:focus {
+  outline: none;
+}
+
+.accordion-header:focus-visible {
+  outline: 2px solid var(--ap-black);
+  outline-offset: 2px;
+}
+
+.accordion-title {
+  flex: 1;
+  padding-right: var(--spacing-s);
+}
+
+.accordion-icon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+/* Plus icon - horizontal line */
+.accordion-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--ap-black);
+  transform: translateY(-50%);
+}
+
+/* Plus icon - vertical line (hidden when open) */
+.accordion-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: var(--ap-black);
+  transform: translateX(-50%);
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* When open, hide vertical line to show minus */
+.accordion-header[aria-expanded="true"] .accordion-icon::after {
+  transform: translateX(-50%) scaleY(0);
+  opacity: 0;
+}
+
+.accordion-content {
+  display: none;
+  overflow: hidden;
+  margin-bottom: var(--spacing-m);
+}
+
+.accordion-header[aria-expanded="true"] + .accordion-content {
+  display: block;
+}
+
+.accordion-content p {
+  margin: 0 0 16px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: var(--body-font-weight);
+  line-height: 1.44;
+  color: rgb(117 117 117);
+  letter-spacing: 0.26px;
+}
+
+.accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-content a {
+  color: rgb(117 117 117);
+  text-decoration: underline;
+}
+
+.accordion-content a:hover {
+  opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (width >= 768px) {
+  .accordion-header {
+    padding: 24px 0;
+  }
+}

@@ -1,0 +1,42 @@
+.ap-input-search-small {
+  /* default */
+  --input-search-container-base-default-background-color: var(--color-reference-normal-secondary);
+  --input-search-container-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-search-container-item-base-default-background-color: var(--color-reference-none);
+  --input-search-container-item-base-default-padding: 14px var(--spacing-3xs) 14px var(--spacing-3xs);
+  --input-search-container-item-base-default-text-color: var(--color-reference-normal-primary);
+  --input-search-container-item-base-default-text-font: var(--font-primary-body-sm);
+  --input-search-self-base-default-background-color: var(--color-reference-none);
+  --input-search-self-base-default-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral3);
+  --input-search-self-base-default-icon-color: var(--color-reference-normal-primary);
+  --input-search-self-base-default-icon-gap: var(--spacing-3xs);
+  --input-search-self-base-default-padding: var(--spacing-4xs) var(--spacing-none) var(--spacing-4xs) var(--spacing-none);
+  --input-search-self-base-default-placeholder-color: var(--color-reference-normal-neutral5);
+  --input-search-self-base-default-placeholder-font: var(--font-primary-label-lg);
+  --input-search-self-base-default-text-color: var(--color-reference-normal-primary);
+  --input-search-self-base-default-text-font: var(--font-primary-label-lg);
+  /* active */
+  --input-search-self-base-active-background-color: var(--color-reference-none);
+  --input-search-self-base-active-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-search-self-base-active-icon-color: var(--color-reference-normal-primary);
+  --input-search-self-base-active-icon-gap: var(--spacing-3xs);
+  --input-search-self-base-active-padding: var(--spacing-4xs) var(--spacing-none) var(--spacing-4xs) var(--spacing-none);
+  --input-search-self-base-active-placeholder-color: var(--color-reference-normal-neutral5);
+  --input-search-self-base-active-placeholder-font: var(--font-primary-label-lg);
+  --input-search-self-base-active-text-color: var(--color-reference-normal-primary);
+  --input-search-self-base-active-text-font: var(--font-primary-label-lg);
+  /* hover */
+  --input-search-container-item-base-hover-background-color: var(--color-reference-normal-neutral7);
+  --input-search-container-item-base-hover-padding: 14px var(--spacing-3xs) 14px var(--spacing-3xs);
+  --input-search-container-item-base-hover-text-color: var(--color-reference-normal-primary);
+  --input-search-container-item-base-hover-text-font: var(--font-primary-body-sm);
+  --input-search-self-base-hover-background-color: var(--color-reference-none);
+  --input-search-self-base-hover-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral3);
+  --input-search-self-base-hover-icon-color: var(--color-reference-normal-neutral2);
+  --input-search-self-base-hover-icon-gap: var(--spacing-3xs);
+  --input-search-self-base-hover-padding: var(--spacing-4xs) var(--spacing-none) var(--spacing-4xs) var(--spacing-none);
+  --input-search-self-base-hover-placeholder-color: var(--color-reference-normal-neutral5);
+  --input-search-self-base-hover-placeholder-font: var(--font-primary-label-lg);
+  --input-search-self-base-hover-text-color: var(--color-reference-normal-primary);
+  --input-search-self-base-hover-text-font: var(--font-primary-label-lg);
+}

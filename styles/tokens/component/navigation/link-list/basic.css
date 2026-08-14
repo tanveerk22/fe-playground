@@ -1,0 +1,47 @@
+.ap-link-list-basic--normal {
+  /* default */
+  --link-list-item-base-default-text-color: var(--color-reference-normal-primary);
+  --link-list-item-base-default-text-font: var(--font-primary-body-sm);
+  --link-list-self-base-default-item-vertical-gap: var(--spacing-4xs);
+  --link-list-self-base-default-title-color: var(--color-reference-normal-primary);
+  --link-list-self-base-default-title-font: var(--font-primary-label-sm);
+  --link-list-self-base-default-title-vertical-gap: var(--spacing-3xs);
+  /* hover */
+  --link-list-item-base-hover-text-color: var(--color-reference-normal-primary-50);
+  --link-list-item-base-hover-text-font: var(--font-primary-body-sm);
+  --link-list-self-base-hover-item-vertical-gap: var(--spacing-4xs);
+  --link-list-self-base-hover-title-color: var(--color-reference-normal-primary-50);
+  --link-list-self-base-hover-title-font: var(--font-primary-label-sm);
+  --link-list-self-base-hover-title-vertical-gap: var(--spacing-3xs);
+  /* active */
+  --link-list-item-base-active-text-color: var(--color-reference-normal-primary);
+  --link-list-item-base-active-text-font: var(--font-primary-body-sm);
+  --link-list-self-base-active-item-vertical-gap: var(--spacing-4xs);
+  --link-list-self-base-active-title-color: var(--color-reference-normal-primary);
+  --link-list-self-base-active-title-font: var(--font-primary-label-sm);
+  --link-list-self-base-active-title-vertical-gap: var(--spacing-3xs);
+}
+
+.ap-link-list-basic--contrast {
+  /* default */
+  --link-list-item-base-default-text-color: var(--color-reference-contrast-primary);
+  --link-list-item-base-default-text-font: var(--font-primary-body-sm);
+  --link-list-self-base-default-item-vertical-gap: var(--spacing-4xs);
+  --link-list-self-base-default-title-color: var(--color-reference-contrast-primary);
+  --link-list-self-base-default-title-font: var(--font-primary-label-sm);
+  --link-list-self-base-default-title-vertical-gap: var(--spacing-3xs);
+  /* hover */
+  --link-list-item-base-hover-text-color: var(--color-reference-contrast-primary-50);
+  --link-list-item-base-hover-text-font: var(--font-primary-body-sm);
+  --link-list-self-base-hover-item-vertical-gap: var(--spacing-4xs);
+  --link-list-self-base-hover-title-color: var(--color-reference-contrast-primary-50);
+  --link-list-self-base-hover-title-font: var(--font-primary-label-sm);
+  --link-list-self-base-hover-title-vertical-gap: var(--spacing-3xs);
+  /* active */
+  --link-list-item-base-active-text-color: var(--color-reference-contrast-primary);
+  --link-list-item-base-active-text-font: var(--font-primary-body-sm);
+  --link-list-self-base-active-item-vertical-gap: var(--spacing-4xs);
+  --link-list-self-base-active-title-color: var(--color-reference-contrast-primary);
+  --link-list-self-base-active-title-font: var(--font-primary-label-sm);
+  --link-list-self-base-active-title-vertical-gap: var(--spacing-3xs);
+}

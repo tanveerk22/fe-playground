@@ -1,0 +1,37 @@
+html,
+html.theme-day {
+  --color-reference-none: #00000000;
+  --color-reference-contrast-neutral7-50: #0e0e0e;
+  --color-reference-normal-neutral7-50: #fbfaf9;
+  --color-reference-contrast-focus: var(--color-palette-blue38);
+  --color-reference-contrast-error: var(--color-palette-red42);
+  --color-reference-contrast-neutral7: var(--color-palette-grey11);
+  --color-reference-contrast-neutral6: var(--color-palette-beige89);
+  --color-reference-contrast-neutral5: var(--color-palette-grey55);
+  --color-reference-contrast-neutral4: var(--color-palette-grey46);
+  --color-reference-contrast-neutral3: var(--color-palette-grey77);
+  --color-reference-contrast-neutral2: var(--color-palette-grey75);
+  --color-reference-contrast-neutral1: var(--color-palette-beige96);
+  --color-reference-contrast-accent: var(--color-palette-green24);
+  --color-reference-contrast-secondary: var(--color-palette-red90);
+  --color-reference-contrast-primary: var(--color-palette-red50);
+  --color-reference-normal-focus: var(--color-palette-blue38);
+  --color-reference-normal-error: var(--color-palette-red42);
+  --color-reference-normal-neutral7: var(--color-palette-beige96);
+  --color-reference-normal-neutral6: var(--color-palette-beige89);
+  --color-reference-normal-neutral5: var(--color-palette-grey77);
+  --color-reference-normal-neutral4: var(--color-palette-grey75);
+  --color-reference-normal-neutral3: var(--color-palette-grey55);
+  --color-reference-normal-neutral2: var(--color-palette-grey46);
+  --color-reference-normal-neutral1: var(--color-palette-grey11);
+  --color-reference-normal-accent: var(--color-palette-green24);
+  --color-reference-normal-secondary: var(--color-palette-red90);
+  --color-reference-normal-primary: var(--color-palette-red50);
+  --color-reference-contrast-secondary-50: color-mix(in lch, var(--color-reference-contrast-secondary) 50%, transparent);
+  --color-reference-contrast-secondary-30: color-mix(in lch, var(--color-reference-contrast-secondary) 30%, transparent);
+  --color-reference-contrast-primary-50: color-mix(in lch, var(--color-reference-contrast-primary) 50%, transparent);
+  --color-reference-normal-secondary-50: color-mix(in lch, var(--color-reference-normal-secondary) 50%, transparent);
+  --color-reference-normal-secondary-30: color-mix(in lch, var(--color-reference-normal-secondary) 30%, transparent);
+  --color-reference-normal-primary-80: color-mix(in lch, var(--color-reference-normal-primary) 80%, transparent);
+  --color-reference-normal-primary-50: color-mix(in lch, var(--color-reference-normal-primary) 50%, transparent);
+}

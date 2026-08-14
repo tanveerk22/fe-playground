@@ -1,0 +1,57 @@
+.ap-standard-card-basic--normal {
+  /* default */
+  --standard-card-self-base-default-background-color: var(--color-reference-none);
+  --standard-card-self-base-default-icon-color: var(--color-reference-normal-primary);
+  --standard-card-self-base-default-image-opacity: 1;
+  --standard-card-self-base-default-price-color: var(--color-reference-normal-primary);
+  --standard-card-self-base-default-price-font: var(--font-primary-body-md);
+  --standard-card-self-base-default-price-gap: var(--spacing-4xs);
+  --standard-card-self-base-default-price-height: 24px;
+  --standard-card-self-base-default-text-color: var(--color-reference-normal-primary);
+  --standard-card-self-base-default-text-font: var(--font-primary-body-lg);
+  --standard-card-self-base-default-title-color: var(--color-reference-normal-primary);
+  --standard-card-self-base-default-title-font: var(--font-primary-body-xl);
+  --standard-card-self-base-default-vertical-gap: var(--spacing-3xs);
+  /* hover */
+  --standard-card-self-base-hover-background-color: var(--color-reference-none);
+  --standard-card-self-base-hover-icon-color: var(--color-reference-normal-neutral2);
+  --standard-card-self-base-hover-image-opacity: 0.56;
+  --standard-card-self-base-hover-price-color: var(--color-reference-normal-neutral2);
+  --standard-card-self-base-hover-price-font: var(--font-primary-body-md);
+  --standard-card-self-base-hover-price-gap: var(--spacing-4xs);
+  --standard-card-self-base-hover-price-height: var(--standard-card-self-base-default-price-height);
+  --standard-card-self-base-hover-text-color: var(--color-reference-normal-primary);
+  --standard-card-self-base-hover-text-font: var(--font-primary-body-lg);
+  --standard-card-self-base-hover-title-color: var(--color-reference-normal-neutral2);
+  --standard-card-self-base-hover-title-font: var(--font-primary-body-xl);
+  --standard-card-self-base-hover-vertical-gap: var(--spacing-3xs);
+}
+
+.ap-standard-card-basic--contrast {
+  /* default */
+  --standard-card-self-base-default-background-color: var(--color-reference-none);
+  --standard-card-self-base-default-icon-color: var(--color-reference-contrast-primary);
+  --standard-card-self-base-default-image-opacity: 1;
+  --standard-card-self-base-default-price-color: var(--color-reference-contrast-primary);
+  --standard-card-self-base-default-price-font: var(--font-primary-body-md);
+  --standard-card-self-base-default-price-gap: var(--spacing-4xs);
+  --standard-card-self-base-default-price-height: 24px;
+  --standard-card-self-base-default-text-color: var(--color-reference-contrast-primary);
+  --standard-card-self-base-default-text-font: var(--font-primary-body-lg);
+  --standard-card-self-base-default-title-color: var(--color-reference-contrast-primary);
+  --standard-card-self-base-default-title-font: var(--font-primary-body-xl);
+  --standard-card-self-base-default-vertical-gap: var(--spacing-3xs);
+  /* hover */
+  --standard-card-self-base-hover-background-color: var(--color-reference-none);
+  --standard-card-self-base-hover-icon-color: var(--color-reference-contrast-neutral2);
+  --standard-card-self-base-hover-image-opacity: 0.56;
+  --standard-card-self-base-hover-price-color: var(--color-reference-contrast-neutral2);
+  --standard-card-self-base-hover-price-font: var(--font-primary-body-md);
+  --standard-card-self-base-hover-price-gap: var(--spacing-4xs);
+  --standard-card-self-base-hover-price-height: var(--standard-card-self-base-default-price-height);
+  --standard-card-self-base-hover-text-color: var(--color-reference-contrast-primary);
+  --standard-card-self-base-hover-text-font: var(--font-primary-body-lg);
+  --standard-card-self-base-hover-title-color: var(--color-reference-contrast-neutral2);
+  --standard-card-self-base-hover-title-font: var(--font-primary-body-xl);
+  --standard-card-self-base-hover-vertical-gap: var(--spacing-3xs);
+}

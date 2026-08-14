@@ -1,0 +1,23 @@
+.ap-video-player-basic {
+  /* default */
+  --video-player-button-base-default-background-color: var(--color-reference-normal-primary-50);
+  --video-player-button-base-default-border-radius: 24px;
+  --video-player-button-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-secondary);
+  --video-player-button-base-default-height: 48px;
+  --video-player-button-base-default-icon-color: var(--color-reference-normal-secondary);
+  --video-player-button-base-default-width: 48px;
+  --video-player-playback-bar-base-default-bar-background-color: var(--color-reference-normal-primary);
+  --video-player-playback-bar-base-default-bar-load-color: var(--color-reference-normal-neutral2);
+  --video-player-playback-bar-base-default-bar-progress-color: var(--color-reference-normal-secondary);
+  --video-player-playback-bar-base-default-gap: var(--spacing-3xs);
+  --video-player-playback-bar-base-default-height: 1px;
+  --video-player-playback-bar-base-default-icon-color: var(--color-reference-normal-secondary);
+  --video-player-player-control-base-default-background-color: linear-gradient(0deg, #00000090 0%, #00000000 100%);
+  --video-player-player-control-base-default-height: 80px;
+  --video-player-player-control-base-default-padding: var(--spacing-none) var(--spacing-sm) var(--spacing-none) var(--spacing-sm);
+  --video-player-volume-bar-base-default-bar-background-color: var(--color-reference-normal-primary);
+  --video-player-volume-bar-base-default-bar-progress-color: var(--color-reference-normal-secondary);
+  --video-player-volume-bar-base-default-gap: var(--spacing-3xs);
+  --video-player-volume-bar-base-default-height: 1px;
+  --video-player-volume-bar-base-default-icon-color: var(--color-reference-normal-secondary);
+}

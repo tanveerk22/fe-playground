@@ -1,0 +1,10 @@
+.ap-carousel-basic {
+  /* default */
+  --carousel-self-base-default-gap: var(--spacing-4xs);
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --carousel-self-base-default-gap: var(--spacing-3xs);
+  }
+}

@@ -1,0 +1,22 @@
+.ap-tab-basic {
+  /* default */
+  --tab-item-checked-default-border-bottom: 2px solid var(--color-reference-normal-primary);
+  --tab-item-checked-default-padding: var(--spacing-3xs) var(--spacing-4xs) var(--spacing-3xs) var(--spacing-4xs);
+  --tab-item-checked-default-text-color: var(--color-reference-normal-primary);
+  --tab-item-checked-default-text-font: var(--font-primary-body-md);
+  --tab-item-unchecked-default-border-bottom: 2px solid var(--color-reference-none);
+  --tab-item-unchecked-default-padding: var(--spacing-3xs) var(--spacing-4xs) var(--spacing-3xs) var(--spacing-4xs);
+  --tab-item-unchecked-default-text-color: var(--color-reference-normal-neutral2);
+  --tab-item-unchecked-default-text-font: var(--font-primary-body-md);
+  --tab-self-basic-default-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --tab-self-basic-default-horizontal-gap: var(--spacing-md);
+  /* hover */
+  --tab-item-checked-hover-border-bottom: 2px solid var(--color-reference-normal-primary);
+  --tab-item-checked-hover-padding: var(--spacing-3xs) var(--spacing-4xs) var(--spacing-3xs) var(--spacing-4xs);
+  --tab-item-checked-hover-text-color: var(--color-reference-normal-neutral2);
+  --tab-item-checked-hover-text-font: var(--font-primary-body-md);
+  --tab-item-unchecked-hover-border-bottom: 2px solid var(--color-reference-normal-neutral2);
+  --tab-item-unchecked-hover-padding: var(--spacing-3xs) var(--spacing-4xs) var(--spacing-3xs) var(--spacing-4xs);
+  --tab-item-unchecked-hover-text-color: var(--color-reference-normal-neutral2);
+  --tab-item-unchecked-hover-text-font: var(--font-primary-body-md);
+}

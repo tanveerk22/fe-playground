@@ -1,0 +1,11 @@
+.ap-skeleton-basic--normal {
+  /* default */
+  --skeleton-self-base-default-background-color: var(--color-reference-normal-neutral5);
+  --skeleton-self-base-default-foreground-color: linear-gradient(90deg, #ffffff00 0%, #ffffff20 20%, #ffffff50 60%, #ffffff00 100%);
+}
+
+.ap-skeleton-basic--contrast {
+  /* default */
+  --skeleton-self-base-default-background-color: var(--color-reference-contrast-secondary);
+  --skeleton-self-base-default-foreground-color: linear-gradient(90deg, #62626100 0%, #62626120 20%, #62626150 60%, #62626100 100%);
+}

@@ -1,0 +1,53 @@
+.ap-chip-clickable {
+  /* default */
+  --chip-self-checked-default-background-color: var(--color-reference-normal-primary);
+  --chip-self-checked-default-border-radius: var(--radius-none);
+  --chip-self-checked-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --chip-self-checked-default-height: 32px;
+  --chip-self-checked-default-letter-spacing: var(--letter-spacing-md);
+  --chip-self-checked-default-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-checked-default-text-color: var(--color-reference-normal-secondary);
+  --chip-self-checked-default-text-font: var(--font-primary-label-sm);
+  --chip-self-unchecked-default-background-color: var(--color-reference-none);
+  --chip-self-unchecked-default-border-radius: var(--radius-none);
+  --chip-self-unchecked-default-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --chip-self-unchecked-default-height: 32px;
+  --chip-self-unchecked-default-letter-spacing: var(--letter-spacing-md);
+  --chip-self-unchecked-default-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-unchecked-default-text-color: var(--color-reference-normal-primary);
+  --chip-self-unchecked-default-text-font: var(--font-primary-label-sm);
+  /* hover */
+  --chip-self-checked-hover-background-color: var(--color-reference-none);
+  --chip-self-checked-hover-border-radius: var(--radius-none);
+  --chip-self-checked-hover-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --chip-self-checked-hover-height: 32px;
+  --chip-self-checked-hover-letter-spacing: var(--letter-spacing-md);
+  --chip-self-checked-hover-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-checked-hover-text-color: var(--color-reference-normal-primary);
+  --chip-self-checked-hover-text-font: var(--font-primary-label-sm);
+  --chip-self-unchecked-hover-background-color: var(--color-reference-none);
+  --chip-self-unchecked-hover-border-radius: var(--radius-none);
+  --chip-self-unchecked-hover-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --chip-self-unchecked-hover-height: 32px;
+  --chip-self-unchecked-hover-letter-spacing: var(--letter-spacing-md);
+  --chip-self-unchecked-hover-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-unchecked-hover-text-color: var(--color-reference-normal-primary);
+  --chip-self-unchecked-hover-text-font: var(--font-primary-label-sm);
+  /* disabled */
+  --chip-self-checked-disabled-background-color: var(--color-reference-normal-neutral5);
+  --chip-self-checked-disabled-border-radius: var(--radius-none);
+  --chip-self-checked-disabled-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --chip-self-checked-disabled-height: 32px;
+  --chip-self-checked-disabled-letter-spacing: var(--letter-spacing-md);
+  --chip-self-checked-disabled-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-checked-disabled-text-color: var(--color-reference-normal-neutral3);
+  --chip-self-checked-disabled-text-font: var(--font-primary-label-sm);
+  --chip-self-unchecked-disabled-background-color: var(--color-reference-none);
+  --chip-self-unchecked-disabled-border-radius: var(--radius-none);
+  --chip-self-unchecked-disabled-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --chip-self-unchecked-disabled-height: 32px;
+  --chip-self-unchecked-disabled-letter-spacing: var(--letter-spacing-md);
+  --chip-self-unchecked-disabled-padding: var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs) var(--spacing-4xs);
+  --chip-self-unchecked-disabled-text-color: var(--color-reference-normal-neutral5);
+  --chip-self-unchecked-disabled-text-font: var(--font-primary-label-sm);
+}

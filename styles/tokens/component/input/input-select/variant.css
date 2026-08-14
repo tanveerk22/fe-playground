@@ -1,0 +1,73 @@
+.ap-input-select-variant {
+  /* default */
+  --input-select-container-base-default-background-color: var(--color-reference-normal-neutral7);
+  --input-select-container-base-default-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --input-select-container-item-base-default-background-color: var(--color-reference-none);
+  --input-select-container-item-base-default-padding: 14px var(--spacing-2xs) 14px var(--spacing-2xs);
+  --input-select-container-item-base-default-text-color: var(--color-reference-normal-primary);
+  --input-select-container-item-base-default-text-font: var(--font-primary-body-sm);
+  --input-select-self-base-default-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-select-self-base-default-icon-color: var(--color-reference-normal-neutral2);
+  --input-select-self-base-default-label-color: var(--color-reference-normal-neutral2);
+  --input-select-self-base-default-label-font: var(--font-primary-label-sm);
+  --input-select-self-base-default-label-letter-spacing: var(--letter-spacing-md);
+  --input-select-self-base-default-padding: var(--spacing-5xs) var(--spacing-none) var(--spacing-5xs) var(--spacing-none);
+  --input-select-self-base-default-placeholder-color: var(--color-reference-normal-neutral2);
+  --input-select-self-base-default-placeholder-font: var(--font-primary-body-lg);
+  --input-select-self-filled-default-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-select-self-filled-default-icon-color: var(--color-reference-normal-primary);
+  --input-select-self-filled-default-label-color: var(--color-reference-normal-primary);
+  --input-select-self-filled-default-label-font: var(--font-primary-label-sm);
+  --input-select-self-filled-default-label-letter-spacing: var(--letter-spacing-md);
+  --input-select-self-filled-default-padding: var(--spacing-5xs) var(--spacing-none) var(--spacing-5xs) var(--spacing-none);
+  --input-select-self-filled-default-text-color: var(--color-reference-normal-primary);
+  --input-select-self-filled-default-text-font: var(--font-primary-body-lg);
+  --input-select-self-filling-default-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --input-select-self-filling-default-icon-color: var(--color-reference-normal-primary);
+  --input-select-self-filling-default-label-color: var(--color-reference-normal-primary);
+  --input-select-self-filling-default-label-font: var(--font-primary-label-sm);
+  --input-select-self-filling-default-label-letter-spacing: var(--letter-spacing-md);
+  --input-select-self-filling-default-padding: var(--spacing-5xs) var(--spacing-none) var(--spacing-5xs) var(--spacing-none);
+  --input-select-self-filling-default-placeholder-color: var(--color-reference-normal-neutral2);
+  --input-select-self-filling-default-placeholder-font: var(--font-primary-body-lg);
+  /* hover */
+  --input-select-container-item-base-hover-background-color: var(--color-reference-normal-neutral6);
+  --input-select-container-item-base-hover-padding: 14px var(--spacing-2xs) 14px var(--spacing-2xs);
+  --input-select-container-item-base-hover-text-color: var(--color-reference-normal-primary);
+  --input-select-container-item-base-hover-text-font: var(--font-primary-body-sm);
+  /* disabled */
+  --input-select-self-base-disabled-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --input-select-self-base-disabled-icon-color: var(--color-reference-normal-neutral5);
+  --input-select-self-base-disabled-label-color: var(--color-reference-normal-neutral5);
+  --input-select-self-base-disabled-label-font: var(--font-primary-label-sm);
+  --input-select-self-base-disabled-label-letter-spacing: var(--letter-spacing-md);
+  --input-select-self-base-disabled-padding: var(--spacing-5xs) var(--spacing-none) var(--spacing-5xs) var(--spacing-none);
+  --input-select-self-base-disabled-placeholder-color: var(--color-reference-normal-neutral5);
+  --input-select-self-base-disabled-placeholder-font: var(--font-primary-body-lg);
+  --input-select-self-filled-disabled-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --input-select-self-filled-disabled-icon-color: var(--color-reference-normal-neutral5);
+  --input-select-self-filled-disabled-label-color: var(--color-reference-normal-neutral5);
+  --input-select-self-filled-disabled-label-font: var(--font-primary-label-sm);
+  --input-select-self-filled-disabled-label-letter-spacing: var(--letter-spacing-md);
+  --input-select-self-filled-disabled-padding: var(--spacing-5xs) var(--spacing-none) var(--spacing-5xs) var(--spacing-none);
+  --input-select-self-filled-disabled-text-color: var(--color-reference-normal-neutral5);
+  --input-select-self-filled-disabled-text-font: var(--font-primary-body-lg);
+  /* active */
+  --input-select-self-filled-active-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-select-self-filled-active-icon-color: var(--color-reference-normal-primary);
+  --input-select-self-filled-active-label-color: var(--color-reference-normal-primary);
+  --input-select-self-filled-active-label-font: var(--font-primary-label-sm);
+  --input-select-self-filled-active-label-letter-spacing: var(--letter-spacing-md);
+  --input-select-self-filled-active-padding: var(--spacing-5xs) var(--spacing-none) var(--spacing-5xs) var(--spacing-none);
+  --input-select-self-filled-active-text-color: var(--color-reference-normal-primary);
+  --input-select-self-filled-active-text-font: var(--font-primary-body-lg);
+  /* error */
+  --input-select-self-filled-error-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-error);
+  --input-select-self-filled-error-icon-color: var(--color-reference-normal-primary);
+  --input-select-self-filled-error-label-color: var(--color-reference-normal-primary);
+  --input-select-self-filled-error-label-font: var(--font-primary-label-sm);
+  --input-select-self-filled-error-label-letter-spacing: var(--letter-spacing-md);
+  --input-select-self-filled-error-padding: var(--spacing-5xs) var(--spacing-none) var(--spacing-5xs) var(--spacing-none);
+  --input-select-self-filled-error-text-color: var(--color-reference-normal-primary);
+  --input-select-self-filled-error-text-font: var(--font-primary-body-lg);
+}

@@ -1,0 +1,32 @@
+.ap-quote-secondary {
+  /* default */
+  --quote-self-base-default-background-color: var(--color-reference-normal-secondary);
+  --quote-self-base-default-border-radius: var(--radius-none);
+  --quote-self-base-default-padding: var(--spacing-md) var(--spacing-xs) var(--spacing-md) var(--spacing-xs);
+  --quote-self-base-default-quotation-mark-color: var(--color-reference-normal-primary);
+  --quote-self-base-default-signature-bar-color: var(--color-reference-normal-primary);
+  --quote-self-base-default-signature-bar-height: 1px;
+  --quote-self-base-default-signature-bar-width: 16px;
+  --quote-self-base-default-signature-horizontal-gap: var(--spacing-4xs);
+  --quote-self-base-default-signature-name-color: var(--color-reference-normal-primary);
+  --quote-self-base-default-signature-name-font: var(--font-primary-body-md);
+  --quote-self-base-default-signature-title-color: var(--color-reference-normal-primary);
+  --quote-self-base-default-signature-title-font: var(--font-primary-body-sm);
+  --quote-self-base-default-signature-vertical-gap: var(--spacing-5xs);
+  --quote-self-base-default-text-color: var(--color-reference-normal-primary);
+  --quote-self-base-default-text-font: var(--font-primary-headline-md);
+  --quote-self-base-default-vertical-gap: var(--spacing-sm);
+
+  /* - - M E D I U M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 768px) {
+    /* default */
+    --quote-self-base-default-padding: var(--spacing-sm) var(--spacing-xl) var(--spacing-sm) var(--spacing-xl);
+    --quote-self-base-default-vertical-gap: var(--spacing-xs);
+  }
+
+  /* - - X L A R G E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  @media only screen and (min-width: 1440px) {
+    /* default */
+    --quote-self-base-default-padding: var(--spacing-3xl) var(--spacing-4xl) var(--spacing-3xl) var(--spacing-4xl);
+  }
+}

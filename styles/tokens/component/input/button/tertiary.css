@@ -1,0 +1,61 @@
+.ap-button-tertiary--normal {
+  /* default */
+  --button-self-base-default-background-color: var(--color-reference-none);
+  --button-self-base-default-icon-color: var(--button-self-base-default-text-color);
+  --button-self-base-default-min-height: 64px;
+  --button-self-base-default-padding: var(--spacing-2xs) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --button-self-base-default-text-color: var(--color-reference-normal-primary);
+  --button-self-base-default-text-font: var(--font-primary-label-md);
+  /* hover */
+  --button-self-base-hover-background-color: var(--color-reference-none);
+  --button-self-base-hover-icon-color: var(--button-self-base-hover-text-color);
+  --button-self-base-hover-min-height: 64px;
+  --button-self-base-hover-padding: var(--spacing-2xs) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --button-self-base-hover-text-color: var(--color-reference-normal-neutral2);
+  --button-self-base-hover-text-font: var(--font-primary-label-md);
+  /* active */
+  --button-self-base-active-background-color: var(--color-reference-none);
+  --button-self-base-active-icon-color: var(--button-self-base-active-text-color);
+  --button-self-base-active-min-height: 64px;
+  --button-self-base-active-padding: var(--spacing-2xs) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --button-self-base-active-text-color: var(--color-reference-normal-primary);
+  --button-self-base-active-text-font: var(--font-primary-label-md);
+  /* disabled */
+  --button-self-base-disabled-background-color: var(--color-reference-none);
+  --button-self-base-disabled-icon-color: var(--button-self-base-disabled-text-color);
+  --button-self-base-disabled-min-height: 64px;
+  --button-self-base-disabled-padding: var(--spacing-2xs) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --button-self-base-disabled-text-color: var(--color-reference-normal-neutral5);
+  --button-self-base-disabled-text-font: var(--font-primary-label-md);
+}
+
+.ap-button-tertiary--contrast {
+  /* default */
+  --button-self-base-default-background-color: var(--color-reference-none);
+  --button-self-base-default-icon-color: var(--button-self-base-default-text-color);
+  --button-self-base-default-min-height: 64px;
+  --button-self-base-default-padding: var(--spacing-2xs) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --button-self-base-default-text-color: var(--color-reference-contrast-primary);
+  --button-self-base-default-text-font: var(--font-primary-label-md);
+  /* hover */
+  --button-self-base-hover-background-color: var(--color-reference-none);
+  --button-self-base-hover-icon-color: var(--button-self-base-hover-text-color);
+  --button-self-base-hover-min-height: 64px;
+  --button-self-base-hover-padding: var(--spacing-2xs) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --button-self-base-hover-text-color: var(--color-reference-contrast-neutral2);
+  --button-self-base-hover-text-font: var(--font-primary-label-md);
+  /* active */
+  --button-self-base-active-background-color: var(--color-reference-none);
+  --button-self-base-active-icon-color: var(--button-self-base-active-text-color);
+  --button-self-base-active-min-height: 64px;
+  --button-self-base-active-padding: var(--spacing-2xs) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --button-self-base-active-text-color: var(--color-reference-contrast-primary);
+  --button-self-base-active-text-font: var(--font-primary-label-md);
+  /* disabled */
+  --button-self-base-disabled-background-color: var(--color-reference-none);
+  --button-self-base-disabled-icon-color: var(--button-self-base-disabled-text-color);
+  --button-self-base-disabled-min-height: 64px;
+  --button-self-base-disabled-padding: var(--spacing-2xs) var(--spacing-none) var(--spacing-2xs) var(--spacing-none);
+  --button-self-base-disabled-text-color: var(--color-reference-contrast-neutral5);
+  --button-self-base-disabled-text-font: var(--font-primary-label-md);
+}

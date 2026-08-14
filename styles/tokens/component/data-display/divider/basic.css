@@ -1,0 +1,11 @@
+.ap-divider-basic--normal {
+  /* default */
+  --divider-self-base-default-color: var(--color-reference-normal-neutral3);
+  --divider-self-base-default-height: 1px;
+}
+
+.ap-divider-basic--contrast {
+  /* default */
+  --divider-self-base-default-color: var(--color-reference-contrast-neutral3);
+  --divider-self-base-default-height: 1px;
+}

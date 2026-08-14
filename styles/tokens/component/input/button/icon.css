@@ -1,0 +1,47 @@
+.ap-button-icon--normal {
+  /* default */
+  --button-self-base-default-background-color: var(--color-reference-normal-secondary-30);
+  --button-self-base-default-border-radius: 24px;
+  --button-self-base-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --button-self-base-default-height: 48px;
+  --button-self-base-default-icon-color: var(--color-reference-normal-primary);
+  --button-self-base-default-width: 48px;
+  /* hover */
+  --button-self-base-hover-background-color: var(--color-reference-normal-secondary-50);
+  --button-self-base-hover-border-radius: 24px;
+  --button-self-base-hover-border: var(--border-width-sm) solid var(--color-reference-normal-neutral2);
+  --button-self-base-hover-height: 48px;
+  --button-self-base-hover-icon-color: var(--color-reference-normal-neutral2);
+  --button-self-base-hover-width: 48px;
+  /* disabled */
+  --button-self-base-disabled-background-color: var(--color-reference-normal-secondary-30);
+  --button-self-base-disabled-border-radius: 24px;
+  --button-self-base-disabled-border: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --button-self-base-disabled-height: 48px;
+  --button-self-base-disabled-icon-color: var(--color-reference-normal-neutral5);
+  --button-self-base-disabled-width: 48px;
+}
+
+.ap-button-icon--contrast {
+  /* default */
+  --button-self-base-default-background-color: var(--color-reference-contrast-secondary-30);
+  --button-self-base-default-border-radius: 24px;
+  --button-self-base-default-border: var(--border-width-sm) solid var(--color-reference-contrast-primary);
+  --button-self-base-default-height: 48px;
+  --button-self-base-default-icon-color: var(--color-reference-contrast-primary);
+  --button-self-base-default-width: 48px;
+  /* hover */
+  --button-self-base-hover-background-color: var(--color-reference-contrast-secondary-50);
+  --button-self-base-hover-border-radius: 24px;
+  --button-self-base-hover-border: var(--border-width-sm) solid var(--color-reference-contrast-neutral2);
+  --button-self-base-hover-height: 48px;
+  --button-self-base-hover-icon-color: var(--color-reference-contrast-neutral2);
+  --button-self-base-hover-width: 48px;
+  /* disabled */
+  --button-self-base-disabled-background-color: var(--color-reference-contrast-secondary-30);
+  --button-self-base-disabled-border-radius: 24px;
+  --button-self-base-disabled-border: var(--border-width-sm) solid var(--color-reference-contrast-neutral5);
+  --button-self-base-disabled-height: 48px;
+  --button-self-base-disabled-icon-color: var(--color-reference-contrast-neutral5);
+  --button-self-base-disabled-width: 48px;
+}

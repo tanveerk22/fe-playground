@@ -1,0 +1,8 @@
+.ap-checkbox-group {
+  /* default */
+  --checkbox-self-base-default-item-gap: var(--spacing-xs);
+  --checkbox-self-base-default-label-color: var(--color-reference-normal-neutral2);
+  --checkbox-self-base-default-label-font: var(--font-primary-label-sm);
+  --checkbox-self-base-default-label-letter-spacing: var(--letter-spacing-md);
+  --checkbox-self-base-default-label-spacing: var(--spacing-2xs);
+}

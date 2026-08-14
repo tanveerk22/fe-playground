@@ -1,33 +1,145 @@
-.columns > div {
+.columns-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.columns-wrapper > div {
+  max-width: unset;
+  padding: 0;
+}
+
+.columns > div,
+.columns.two-col-60-40 > div {
   display: flex;
   flex-direction: column;
+  gap: 0;
+  padding: 50px 0;
 }
 
-.columns img {
+.columns > div > .columns-img-col,
+.columns.two-col-60-40 > div > .columns-img-col {
   width: 100%;
-}
-
-.columns > div > div {
-  order: 1;
-}
-
-.columns > div > .columns-img-col {
   order: 0;
 }
 
-.columns > div > .columns-img-col img {
+
+.columns.two-col-60-40 > div > .columns-img-col h2 {
+  margin: 0;
+}
+
+  .columns.two-col-60-40 > div > div:not(.columns-img-col) h2 {
+    font-size: 40px;
+    margin: 48px 0;
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: -0.32px;
+    text-transform: uppercase;
+  }
+
+  .columns > div > div:not(.columns-img-col),
+  .columns.two-col-60-40 > div > div:not(.columns-img-col) {
+    order: 1;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+/* Tablet and up (>=767px): Text on top, Image below */
+@media (width >= 767px) {
+  .columns.two-col-60-40 > div {
+    flex-direction: column-reverse;
+    margin-left: 8.3333%;
+    width: 83.3333%;
+  }
+}
+
+.columns > div > div:not(.columns-img-col) h2 em,
+.columns.two-col-60-40 > div > div:not(.columns-img-col) h2 em {
+  font-family: var(--legacy-font-secondary-display-sm);
+  font-style: italic;
+  font-weight: 200;
   display: block;
 }
 
-@media (width >= 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+.columns > div > div:not(.columns-img-col) a,
+.columns.two-col-60-40 > div > div:not(.columns-img-col) a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.21px;
+  margin-top: 16px;
+}
+
+.columns > div > div:not(.columns-img-col) a::before,
+.columns.two-col-60-40 > div > div:not(.columns-img-col) a::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 1px;
+  background-color: var(--ap-teal, currentcolor);
+  margin-right: 16px;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: right center;
+}
+
+.columns > div > div:not(.columns-img-col) a:hover::before,
+.columns.two-col-60-40 > div > div:not(.columns-img-col) a:hover::before {
+  transform: scaleX(0.3);
+}
+
+.columns.two-col-60-40 picture {
+  display: block;
+  width: 100%;
+  margin-top: 33px;
+}
+
+.columns img,
+.columns.two-col-60-40 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (width >= 1025px) {
+  .columns-wrapper {
+    padding: 0;
+    max-width: 100%;
   }
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
+  .columns.two-col-60-40 > div {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 100px 0;
+    align-items: start;
+    margin-left: 0;
+    width: unset;
+  }
+
+  .columns > div > .columns-img-col,
+  .columns.two-col-60-40 > div > .columns-img-col {
+    grid-column: span 7;
+    margin-top: 0;
+  }
+
+  .columns > div > div:not(.columns-img-col),
+  .columns.two-col-60-40 > div > div:not(.columns-img-col) {
+    grid-column: 9 / span 3;
+  }
+
+  .columns > div > div:not(.columns-img-col) h2,
+  .columns.two-col-60-40 > div > div:not(.columns-img-col) h2 {
+    font-size: 56px;
+    letter-spacing: -0.56px;
+    margin: 48px 0;
+  }
+}
+
+@media (width >= 1440px) {
+  .columns-wrapper.columns.two-col-60-40 {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
   }
 }

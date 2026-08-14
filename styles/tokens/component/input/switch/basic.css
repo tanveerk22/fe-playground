@@ -1,0 +1,59 @@
+.ap-switch-basic {
+  /* default */
+  --switch-self-checked-default-background-border-radius: 14px;
+  --switch-self-checked-default-background-color: var(--color-reference-normal-primary);
+  --switch-self-checked-default-background-height: 28px;
+  --switch-self-checked-default-background-width: 48px;
+  --switch-self-checked-default-foreground-border-radius: 12px;
+  --switch-self-checked-default-foreground-color: var(--color-reference-normal-secondary);
+  --switch-self-checked-default-foreground-height: 24px;
+  --switch-self-checked-default-foreground-shadow: var(--shadow-secondary);
+  --switch-self-checked-default-foreground-width: 24px;
+  --switch-self-unchecked-default-background-border-radius: 14px;
+  --switch-self-unchecked-default-background-color: var(--color-reference-normal-neutral5);
+  --switch-self-unchecked-default-background-height: 28px;
+  --switch-self-unchecked-default-background-width: 48px;
+  --switch-self-unchecked-default-foreground-border-radius: 12px;
+  --switch-self-unchecked-default-foreground-color: var(--color-reference-normal-secondary);
+  --switch-self-unchecked-default-foreground-height: 24px;
+  --switch-self-unchecked-default-foreground-shadow: var(--shadow-secondary);
+  --switch-self-unchecked-default-foreground-width: 24px;
+  /* hover */
+  --switch-self-checked-hover-background-border-radius: 14px;
+  --switch-self-checked-hover-background-color: var(--color-reference-normal-primary);
+  --switch-self-checked-hover-background-height: 28px;
+  --switch-self-checked-hover-background-width: 48px;
+  --switch-self-checked-hover-foreground-border-radius: 12px;
+  --switch-self-checked-hover-foreground-color: var(--color-reference-normal-secondary);
+  --switch-self-checked-hover-foreground-height: 24px;
+  --switch-self-checked-hover-foreground-shadow: var(--shadow-secondary);
+  --switch-self-checked-hover-foreground-width: 24px;
+  --switch-self-unchecked-hover-background-border-radius: 14px;
+  --switch-self-unchecked-hover-background-color: var(--color-reference-normal-neutral3);
+  --switch-self-unchecked-hover-background-height: 28px;
+  --switch-self-unchecked-hover-background-width: 48px;
+  --switch-self-unchecked-hover-foreground-border-radius: 12px;
+  --switch-self-unchecked-hover-foreground-color: var(--color-reference-normal-secondary);
+  --switch-self-unchecked-hover-foreground-height: 24px;
+  --switch-self-unchecked-hover-foreground-shadow: var(--shadow-secondary);
+  --switch-self-unchecked-hover-foreground-width: 24px;
+  /* disabled */
+  --switch-self-checked-disabled-background-border-radius: 14px;
+  --switch-self-checked-disabled-background-color: var(--color-reference-normal-neutral5);
+  --switch-self-checked-disabled-background-height: 28px;
+  --switch-self-checked-disabled-background-width: 48px;
+  --switch-self-checked-disabled-foreground-border-radius: 12px;
+  --switch-self-checked-disabled-foreground-color: var(--color-reference-normal-neutral3);
+  --switch-self-checked-disabled-foreground-height: 24px;
+  --switch-self-checked-disabled-foreground-shadow: var(--shadow-none);
+  --switch-self-checked-disabled-foreground-width: 24px;
+  --switch-self-unchecked-disabled-background-border-radius: 14px;
+  --switch-self-unchecked-disabled-background-color: var(--color-reference-normal-neutral5);
+  --switch-self-unchecked-disabled-background-height: 28px;
+  --switch-self-unchecked-disabled-background-width: 48px;
+  --switch-self-unchecked-disabled-foreground-border-radius: 12px;
+  --switch-self-unchecked-disabled-foreground-color: var(--color-reference-normal-neutral3);
+  --switch-self-unchecked-disabled-foreground-height: 24px;
+  --switch-self-unchecked-disabled-foreground-shadow: var(--shadow-none);
+  --switch-self-unchecked-disabled-foreground-width: 24px;
+}

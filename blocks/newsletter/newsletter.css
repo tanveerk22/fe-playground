@@ -1,0 +1,157 @@
+/*
+ * Newsletter block — "Get the Latest News" signup band, matching the AP
+ * home page. Light surface (white bg, black text) — NOT dark like the
+ * other teaser variants. 3-part flex row from tablet up: heading + body
+ * copy (grows), a solid black "Subscribe" button (fixed, right-aligned).
+ * Below that it stacks, button full-width. Tokens from styles/styles.css.
+ */
+
+/* Full-bleed background, scoped to any section containing a newsletter
+   block (rather than a specific section-metadata style name) so it works
+   with no extra authoring step, matching the gallery/teaser pattern. */
+main > .section:has(> .newsletter-wrapper) {
+  margin: 0;
+  background-color: var(--ap-white, #fff);
+}
+
+main > .section:has(> .newsletter-wrapper) > div {
+  max-width: unset;
+  margin: 0;
+  padding: 50px 20px;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m, 24px);
+  color: var(--ap-black, #000);
+}
+
+.newsletter .newsletter-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m, 24px);
+}
+
+.newsletter h1,
+.newsletter h2,
+.newsletter h3 {
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: var(--heading-font-weight);
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: var(--heading-text-transform);
+  margin: 0;
+  color: inherit;
+}
+
+/* Italic serif emphasis — Times Now, matching the AP editorial style
+   (same responsive scale as the teaser block's heading em). */
+.newsletter h1 em,
+.newsletter h2 em,
+.newsletter h3 em {
+  font-family: var(--font-family-secondary, 'Times Now', serif);
+  font-style: italic;
+  font-weight: 250;
+  font-size: 44px;
+  line-height: 0.83;
+  display: block;
+  letter-spacing: normal;
+}
+
+.newsletter p {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m, 16px);
+  font-weight: var(--body-font-weight, 300);
+  line-height: var(--body-line-height, 1.49);
+  letter-spacing: var(--body-letter-spacing, 0.21px);
+  margin: 0;
+  color: inherit;
+}
+
+/* Subscribe CTA — a solid black button (not the sitewide dash-line link
+   treatment used elsewhere; this section is a deliberate exception on
+   the live site). */
+.newsletter .newsletter-button {
+  flex-shrink: 0;
+}
+
+.newsletter .newsletter-cta:any-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 64px;
+  padding: 20px 16px;
+  font-family: var(--body-font-family);
+  font-size: var(--link-font-size, 14px);
+  font-weight: var(--link-font-weight, 500);
+  letter-spacing: var(--link-letter-spacing, 0.21px);
+  text-transform: none;
+  text-decoration: none;
+  background-color: var(--ap-black, #000);
+  color: var(--ap-white, #fff);
+  transition: var(--link-transition);
+}
+
+.newsletter .newsletter-cta:any-link:hover {
+  opacity: 0.8;
+}
+
+@media (width >= 768px) {
+  main > .section:has(> .newsletter-wrapper) > div {
+    padding: 100px var(--spacing-l, 32px);
+  }
+
+  .newsletter {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .newsletter .newsletter-content {
+    flex-direction: row;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+
+  .newsletter h1,
+  .newsletter h2,
+  .newsletter h3 {
+    flex: 0 0 auto;
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .newsletter h1 em,
+  .newsletter h2 em,
+  .newsletter h3 em {
+    font-size: 52px;
+  }
+
+  .newsletter .newsletter-cta:any-link {
+    width: 320px;
+  }
+}
+
+@media (width >= 1024px) {
+  .newsletter h1,
+  .newsletter h2,
+  .newsletter h3 {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  .newsletter h1 em,
+  .newsletter h2 em,
+  .newsletter h3 em {
+    font-size: 60px;
+  }
+}
+
+@media (width >= 1440px) {
+  main > .section:has(> .newsletter-wrapper) > div {
+    padding: 140px 92.5px 180px;
+  }
+}

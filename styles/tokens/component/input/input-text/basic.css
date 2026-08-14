@@ -1,0 +1,71 @@
+.ap-input-text-basic {
+  /* default */
+  --input-text-self-base-default-action-color: var(--color-reference-normal-primary);
+  --input-text-self-base-default-action-font: var(--font-primary-label-md);
+  --input-text-self-base-default-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --input-text-self-base-default-icon-color: var(--color-reference-normal-primary);
+  --input-text-self-base-default-label-color: var(--color-reference-normal-neutral2);
+  --input-text-self-base-default-label-font: var(--font-primary-label-sm);
+  --input-text-self-base-default-label-letter-spacing: var(--letter-spacing-md);
+  --input-text-self-base-default-placeholder-color: var(--color-reference-normal-neutral2);
+  --input-text-self-base-default-placeholder-font: var(--font-primary-body-lg);
+  --input-text-self-filled-default-action-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-default-action-font: var(--font-primary-label-md);
+  --input-text-self-filled-default-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-text-self-filled-default-icon-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-default-label-color: var(--color-reference-normal-neutral2);
+  --input-text-self-filled-default-label-font: var(--font-primary-label-sm);
+  --input-text-self-filled-default-label-letter-spacing: var(--letter-spacing-md);
+  --input-text-self-filled-default-text-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-default-text-font: var(--font-primary-body-lg);
+  --input-text-self-filling-default-action-color: var(--color-reference-normal-primary);
+  --input-text-self-filling-default-action-font: var(--font-primary-label-md);
+  --input-text-self-filling-default-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-text-self-filling-default-icon-color: var(--color-reference-normal-primary);
+  --input-text-self-filling-default-label-color: var(--color-reference-normal-primary);
+  --input-text-self-filling-default-label-font: var(--font-primary-label-sm);
+  --input-text-self-filling-default-label-letter-spacing: var(--letter-spacing-md);
+  --input-text-self-filling-default-placeholder-color: var(--color-reference-normal-neutral2);
+  --input-text-self-filling-default-placeholder-font: var(--font-primary-body-lg);
+  --input-text-self-filling-default-text-color: var(--color-reference-normal-primary);
+  --input-text-self-filling-default-text-font: var(--font-primary-body-lg);
+  /* disabled */
+  --input-text-self-base-disabled-action-color: var(--color-reference-normal-neutral5);
+  --input-text-self-base-disabled-action-font: var(--font-primary-label-md);
+  --input-text-self-base-disabled-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --input-text-self-base-disabled-icon-color: var(--color-reference-normal-neutral5);
+  --input-text-self-base-disabled-label-color: var(--color-reference-normal-neutral5);
+  --input-text-self-base-disabled-label-font: var(--font-primary-label-sm);
+  --input-text-self-base-disabled-label-letter-spacing: var(--letter-spacing-md);
+  --input-text-self-base-disabled-placeholder-color: var(--color-reference-normal-neutral5);
+  --input-text-self-base-disabled-placeholder-font: var(--font-primary-body-lg);
+  --input-text-self-filled-disabled-action-color: var(--color-reference-normal-neutral5);
+  --input-text-self-filled-disabled-action-font: var(--font-primary-label-md);
+  --input-text-self-filled-disabled-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-neutral5);
+  --input-text-self-filled-disabled-icon-color: var(--color-reference-normal-neutral5);
+  --input-text-self-filled-disabled-label-color: var(--color-reference-normal-neutral5);
+  --input-text-self-filled-disabled-label-font: var(--font-primary-label-sm);
+  --input-text-self-filled-disabled-label-letter-spacing: var(--letter-spacing-md);
+  --input-text-self-filled-disabled-text-color: var(--color-reference-normal-neutral5);
+  --input-text-self-filled-disabled-text-font: var(--font-primary-body-lg);
+  /* active */
+  --input-text-self-filled-active-action-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-active-action-font: var(--font-primary-label-md);
+  --input-text-self-filled-active-border: var(--border-width-sm) solid var(--color-reference-normal-primary);
+  --input-text-self-filled-active-icon-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-active-label-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-active-label-font: var(--font-primary-label-sm);
+  --input-text-self-filled-active-label-letter-spacing: var(--letter-spacing-md);
+  --input-text-self-filled-active-text-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-active-text-font: var(--font-primary-body-lg);
+  /* error */
+  --input-text-self-filled-error-action-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-error-action-font: var(--font-primary-label-md);
+  --input-text-self-filled-error-border-bottom: var(--border-width-sm) solid var(--color-reference-normal-error);
+  --input-text-self-filled-error-icon-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-error-label-color: var(--color-reference-normal-neutral2);
+  --input-text-self-filled-error-label-font: var(--font-primary-label-sm);
+  --input-text-self-filled-error-label-letter-spacing: var(--letter-spacing-md);
+  --input-text-self-filled-error-text-color: var(--color-reference-normal-primary);
+  --input-text-self-filled-error-text-font: var(--font-primary-body-lg);
+}
