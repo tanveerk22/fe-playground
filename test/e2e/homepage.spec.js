@@ -1,5 +1,20 @@
 import { test, expect } from '@playwright/test';
 
+const NOVELTIES_API_HOST = 'brand-experience-api-test.audemarspiguet.com';
+
+// Checks the request/console-message host by parsing a real URL rather than
+// substring-matching text (substring matching would also match an attacker
+// or unrelated host that merely contains this string elsewhere in the URL).
+function matchesNoveltiesHost(text) {
+  const urlMatch = text.match(/https?:\/\/\S+/);
+  if (!urlMatch) return false;
+  try {
+    return new URL(urlMatch[0]).hostname === NOVELTIES_API_HOST;
+  } catch {
+    return false;
+  }
+}
+
 test.describe('Homepage', () => {
   test('renders the hero, novelties, teaser, gallery, and newsletter sections with no unexpected console errors', async ({ page }) => {
     // The novelties block's live API sits behind Cloudflare Access (see
@@ -10,10 +25,9 @@ test.describe('Homepage', () => {
     // generic "Failed to load resource"). Rather than hardcode the exact
     // wording, tie the exclusion to an actual observed failed request to
     // that host, so any other ERR_FAILED is still treated as a regression.
-    const NOVELTIES_API_HOST = 'brand-experience-api-test.audemarspiguet.com';
     let novelitiesRequestFailed = false;
     page.on('requestfailed', (request) => {
-      if (request.url().includes(NOVELTIES_API_HOST)) novelitiesRequestFailed = true;
+      if (matchesNoveltiesHost(request.url())) novelitiesRequestFailed = true;
     });
 
     const consoleErrors = [];
@@ -31,7 +45,7 @@ test.describe('Homepage', () => {
     await expect(page.locator('.newsletter.block')).toBeVisible();
 
     const unexpectedErrors = novelitiesRequestFailed
-      ? consoleErrors.filter((text) => !text.includes(NOVELTIES_API_HOST) && text !== 'Failed to load resource: net::ERR_FAILED')
+      ? consoleErrors.filter((text) => !matchesNoveltiesHost(text) && text !== 'Failed to load resource: net::ERR_FAILED')
       : consoleErrors;
     expect(unexpectedErrors).toEqual([]);
   });
