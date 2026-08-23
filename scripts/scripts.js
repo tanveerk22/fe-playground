@@ -219,4 +219,12 @@ async function loadPage() {
   loadDelayed();
 }
 
-loadPage();
+// Skip the real page-boot sequence under Vitest (import.meta.env.MODE is
+// 'test' there) — other modules (fragment.js, footer.js) import named
+// exports from this file, and ES modules run top-level side effects on
+// first import regardless of which export is used. Unset/undefined in a
+// real browser (this site ships unbundled, no Vite processing at runtime),
+// so production behavior is unchanged.
+if (import.meta.env?.MODE !== 'test') {
+  loadPage();
+}

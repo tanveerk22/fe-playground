@@ -1,5 +1,8 @@
 name: Build
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
 
 jobs:
   build:
@@ -19,3 +22,5 @@ jobs:
       env:
         GITLAB_PAT: ${{ secrets.GITLAB_PAT }}
     - run: npm run lint
+    - run: npm run test:coverage
+    - run: npm run check:size-budget

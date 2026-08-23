@@ -17,18 +17,35 @@ import { dirname, join, sep } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(__dirname, '..', '..');
-const source = join(repoRoot, 'node_modules', '@audemarspiguet', 'design-tokens', 'build', 'css');
-const destination = join(repoRoot, 'styles', 'tokens');
 
-if (!existsSync(source)) {
-  console.error('Could not find @audemarspiguet/design-tokens build output. Run `npm install` first.');
-  process.exit(1);
+export function buildPaths(root) {
+  return {
+    source: join(root, 'node_modules', '@audemarspiguet', 'design-tokens', 'build', 'css'),
+    destination: join(root, 'styles', 'tokens'),
+  };
 }
 
-rmSync(destination, { recursive: true, force: true });
-cpSync(source, destination, {
-  recursive: true,
-  filter: (src) => !src.split(sep).includes('fonts'),
-});
+// This repo has its own font pipeline (styles/fonts.css + /fonts) — never
+// vendor the package's fonts/ directory alongside its CSS.
+export function excludesFonts(src) {
+  return !src.split(sep).includes('fonts');
+}
 
-console.log(`Synced design tokens from @audemarspiguet/design-tokens into ${destination}`);
+// Only run the CLI sync when executed directly (`node sync-design-tokens.mjs`),
+// not when imported for its exported functions (e.g. by unit tests).
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const { source, destination } = buildPaths(repoRoot);
+
+  if (!existsSync(source)) {
+    console.error('Could not find @audemarspiguet/design-tokens build output. Run `npm install` first.');
+    process.exit(1);
+  }
+
+  rmSync(destination, { recursive: true, force: true });
+  cpSync(source, destination, {
+    recursive: true,
+    filter: excludesFonts,
+  });
+
+  console.log(`Synced design tokens from @audemarspiguet/design-tokens into ${destination}`);
+}
