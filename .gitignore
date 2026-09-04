@@ -15,3 +15,10 @@ helix-importer-ui
 .idea
 .npmrc
 .claude/
+tools/visual-tests/port.txt
+playwright-report/
+test-results/
+tools/visual-tests/playwright-report/
+tools/visual-tests/test-results/
+.env
+.env.local

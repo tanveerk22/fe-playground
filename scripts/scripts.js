@@ -11,6 +11,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  loadScript,
 } from './aem.js';
 
 /**
@@ -181,6 +182,10 @@ async function loadEager(doc) {
     }
   } catch (e) {
     // do nothing
+  }
+  if (document.body.classList.contains('sidekick-library')) {
+    loadScript(`${window.hlx.codeBasePath}/tools/visual-tests/visual-test.js`);
+    loadScript(`${window.hlx.codeBasePath}/tools/visual-overlay/index.js`, { type: 'module' });
   }
 }
 
