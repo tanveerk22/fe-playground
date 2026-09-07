@@ -98,9 +98,9 @@ main > .section.hero-container {
 /* Hero title styling - Audemars Piguet style */
 .hero h1,
 .hero > .hero-subtitle-row:nth-child(2) p {
-  font-size: 80px;
+  font-size: 40px;
   font-weight: 100;
-  line-height: 70px;
+  line-height: 40px;
   letter-spacing: -0.36px;
   text-transform: uppercase;
   margin: 28px 0;
