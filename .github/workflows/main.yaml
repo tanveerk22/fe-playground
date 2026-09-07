@@ -1,5 +1,8 @@
 name: Build
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
 
 jobs:
   build:
@@ -10,12 +13,8 @@ jobs:
       uses: actions/setup-node@v6
       with:
         node-version: 22
-    - name: Configure private registry auth
-      run: |
-        echo '@audemarspiguet:registry=https://git.idweaver.com/api/v4/packages/npm/' > .npmrc
-        echo '//git.idweaver.com/api/v4/packages/npm/:_authToken=${GITLAB_PAT}' >> .npmrc
     - name: Install dependencies
       run: npm ci
-      env:
-        GITLAB_PAT: ${{ secrets.GITLAB_PAT }}
     - run: npm run lint
+    - run: npm run test:coverage
+    - run: npm run check:size-budget

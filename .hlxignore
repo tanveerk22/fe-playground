@@ -1,7 +1,10 @@
 .*
 *.md
 karma.config.js
+vitest.config.js
+playwright.config.js
 LICENSE
 package.json
 package-lock.json
 test/*
+tools/visual-tests/*

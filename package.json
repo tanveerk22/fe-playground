@@ -8,8 +8,22 @@
     "lint:css": "stylelint \"blocks/**/*.css\" \"styles/*.css\"",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:fix": "npm run lint:js -- --fix && npm run lint:css -- --fix",
-    "build:tokens": "node tools/scripts/sync-design-tokens.mjs",
-    "check:token-collisions": "node tools/scripts/check-token-collisions.mjs"
+    "check:token-collisions": "node tools/scripts/check-token-collisions.mjs",
+    "check:size-budget": "node tools/scripts/check-file-size-budget.mjs",
+    "check:lighthouse": "node tools/scripts/generate-lighthouserc.mjs && npx --yes @lhci/cli@0.15.x autorun --config=./lighthouserc.generated.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "test:visual:figma": "node tools/visual-tests/figma-util.js",
+    "test:visual:report": "playwright show-report tools/visual-tests/playwright-report",
+    "test:visual:server": "node tools/visual-tests/start-visual-test-server.js",
+    "start": "concurrently -k \"npm run test:visual:server\" \"aem up\" --kill-others-on-fail",
+    "test:visual:build": "docker compose -f tools/visual-tests/docker-compose.yml build",
+    "test:visual": "docker compose -f tools/visual-tests/docker-compose.yml run --rm playwright",
+    "test:visual:update": "docker compose -f tools/visual-tests/docker-compose.yml run --rm playwright npx playwright test --config=tools/visual-tests/playwright.config.ts --update-snapshots",
+    "test:visual:block": "docker compose -f tools/visual-tests/docker-compose.yml run --rm playwright npx playwright test --config=tools/visual-tests/playwright.config.ts",
+    "test:visual:generate": "docker compose -f tools/visual-tests/docker-compose.yml run --rm playwright node tools/visual-tests/generate-visual-tests.js"
   },
   "repository": {
     "type": "git",
@@ -23,11 +37,23 @@
   "homepage": "https://github.com/adobe/aem-boilerplate#readme",
   "devDependencies": {
     "@babel/eslint-parser": "7.28.5",
-    "@audemarspiguet/design-tokens": "1.0.7-adobe-demo.2",
+    "@playwright/test": "^1.62.1",
+    "@vitest/coverage-v8": "^4.1.11",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.32.0",
+    "jsdom": "^29.1.1",
     "stylelint": "^16.26.1",
-    "stylelint-config-standard": "39.0.1"
+    "stylelint-config-standard": "39.0.1",
+    "vitest": "^4.1.11",
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.3"
+  },
+  "dependencies": {
+    "@playwright/test": "1.53.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "playwright": "^1.62.1"
   }
 }
