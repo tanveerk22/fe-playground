@@ -41,6 +41,11 @@ export default defineConfig({
   ],
   webServer: process.env.DOCKER ? undefined : {
     command: 'aem up',
+    // Relative to this config file's directory (tools/visual-tests/) — resolves
+    // to the repo root, where `.git` and `package.json` actually live. Without
+    // this, Playwright defaults cwd to the config's own directory and `aem up`
+    // fails with "aem up needs local git repository."
+    cwd: '../..',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
   },
