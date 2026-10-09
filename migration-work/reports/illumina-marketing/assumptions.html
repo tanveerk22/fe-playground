@@ -1,0 +1,77 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Assumptions — Illumina Marketing EDS</title><style>:root{--bg:#f4f8f9;--panel:#fff;--panel2:#eaf4f5;--line:#d6e3e6;--txt:#17252b;--mut:#5a6d74;--brand:#0a8f9c;--accent:#08808c;--hi:#c0392b;--me:#9a6a00;--lo:#1e8f5b}
+*{box-sizing:border-box}body{margin:0;font:14px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt)}
+a{color:var(--accent)}
+header.top{padding:22px 30px;background:linear-gradient(90deg,#045e68,#0a8f9c 55%,#3cbfc6);color:#fff}
+header.top h1{margin:0;font-size:21px}header.top p{margin:6px 0 0;opacity:.92;font-size:13px}
+nav.topnav{display:flex;gap:2px;background:var(--panel);border-bottom:1px solid var(--line);padding:0 14px;position:sticky;top:0;z-index:10;flex-wrap:wrap}
+nav.topnav a{color:var(--mut);padding:12px 13px;text-decoration:none;border-bottom:2px solid transparent;font-size:13px}
+nav.topnav a:hover{color:var(--txt)}nav.topnav a.active{color:var(--txt);border-bottom-color:var(--brand)}
+main{padding:24px 30px;max-width:1240px;margin:0 auto}
+h2{font-size:17px;margin:28px 0 10px;border-left:3px solid var(--brand);padding-left:10px}
+h3{font-size:14px;margin:18px 0 6px}
+p.lead{color:var(--mut);max-width:960px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;background:var(--panel)}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mut);font-weight:600;position:sticky;top:var(--navh,44px);background:var(--panel)}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:hover td{background:var(--panel2)}
+tr.total td{font-weight:700;background:var(--panel2)}
+.grid{display:grid;gap:14px}.g6{grid-template-columns:repeat(6,1fr)}.g5{grid-template-columns:repeat(5,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.g6,.g5,.g4,.g3{grid-template-columns:1fr 1fr}}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;text-align:center}
+.stat .n{font-size:23px;font-weight:700;white-space:nowrap}.stat .l{color:var(--mut);font-size:12px;margin-top:4px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
+.card.hl{border-color:var(--brand);background:rgba(10,143,156,.05)}
+.pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap}
+.High{background:rgba(192,57,43,.12);color:var(--hi)}.Medium{background:rgba(154,106,0,.14);color:var(--me)}.Low{background:rgba(30,143,91,.14);color:var(--lo)}
+.tag{font-family:ui-monospace,Menlo,monospace;font-size:11px;background:var(--panel2);padding:1px 6px;border-radius:4px;color:var(--accent)}
+.muted{color:var(--mut)}.warn{color:var(--hi);font-weight:600}.ok{color:var(--lo);font-weight:600}
+.bar{height:14px;border-radius:7px;background:var(--accent);min-width:2px}
+.barrow{display:flex;align-items:center;gap:10px;margin:5px 0}.barrow .lab{width:260px;font-size:12px;color:var(--mut);flex:none;text-align:right}.barrow .val{font-size:12px;width:80px}
+.badge{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;background:var(--panel2);color:var(--mut);margin:1px;white-space:nowrap}
+.ev-c{background:rgba(30,143,91,.14);color:var(--lo)}.ev-o{background:rgba(10,143,156,.12);color:var(--accent)}.ev-a{background:#eef0f3;color:#56606b}.ev-v{background:rgba(154,106,0,.14);color:var(--me)}
+footer{padding:20px 30px;color:var(--mut);font-size:12px;border-top:1px solid var(--line);margin-top:34px}
+.legend{font-size:12px;color:var(--mut);margin:4px 0 10px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.shots{grid-template-columns:1fr 1fr}}
+.shot{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.shot .cap{padding:8px 10px;font-size:12px;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.shot .cap a{text-decoration:none;font-weight:600}
+.shot .frame{height:420px;overflow:hidden;border-bottom:1px solid var(--line);background:var(--panel2)}
+.shot img{width:100%;height:auto;display:block}
+.shot .meta{padding:0 10px 10px;font-size:12px;color:var(--mut)}
+ul.tight{margin:6px 0;padding-left:20px}ul.tight li{margin:3px 0}
+.ref{font-size:11px;color:var(--mut)}
+.kpi-note{font-size:11px;color:var(--mut);margin-top:2px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.flow .step{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:12px;text-align:center}
+.flow .step b{display:block;font-size:16px}
+.flow .arr{color:var(--mut);font-size:18px}
+.cls{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:600;white-space:nowrap}
+.c-global{background:rgba(10,143,156,.12);color:var(--accent)}
+.c-mkt{background:rgba(43,79,216,.12);color:#2b4fd8}
+.c-sup{background:rgba(120,60,190,.12);color:#6a3cbe}
+.c-int{background:rgba(192,57,43,.10);color:var(--hi)}
+.c-reg{background:rgba(154,106,0,.14);color:var(--me)}
+.c-once{background:rgba(30,143,91,.14);color:var(--lo)}
+td.small,th.small{font-size:12px}
+.tw{overflow-x:auto;max-width:100%}
+.tw table{min-width:100%}
+th{position:static}
+.crit{background:rgba(192,57,43,.22);color:#8e1b10}
+</style></head><body>
+<header class="top"><h1>Illumina Marketing Family (www.illumina.com + SAPAC · EMEA · Japan · China · Korea) — EDS Migration Report</h1><p>26,502 sitemap URLs inventoried across 6 sites/locales · 59 pages deeply analyzed · 450 URLs template-classified live · 140 regional comparisons · AEM 6.5 (illumina-designs) → Adobe Edge Delivery Services</p></header>
+<nav class="topnav"><a href="index.html">Summary</a><a href="method.html">Method</a><a href="sections.html">Report per Section</a><a href="blocks.html">Blocks</a><a href="templates.html">Templates</a><a href="migration.html">Migration &amp; Validation</a><a href="visual-qa.html">Visual QA</a><a href="estimation.html">Estimation</a><a href="assumptions.html" class="active">Assumptions</a></nav>
+<main>
+<p class="lead">What the estimate depends on, what is unknown, and what would change it.</p>
+<h2>Assumptions</h2><ul class="tight"><li>Content source is Document Authoring (DA) with the standard EDS block model; Universal Editor (xwalk) would add ~10–15% to block effort. <span class="badge ev-a">Assumption</span></li><li>Existing JP/KR machine translations and CN localized content are migrated as-is; no full re-translation. <span class="badge ev-a">Assumption</span></li><li>PDFs remain in DAM/CDN at their current URLs. <span class="badge ev-a">Assumption</span></li><li>MyIllumina APIs (profile, cart) will accept CORS calls from the EDS origins. <span class="badge ev-v">Needs validation</span></li><li>Search keeps Google CSE (or Vertex) behind a serverless proxy; China gets a separate provider. <span class="badge ev-v">Needs validation</span></li><li>Redirected/retired URLs (~7%) are not migrated. <span class="badge ev-o">Observed</span></li><li>Korea is migrated as a folder of www (scope confirmed by user, priced as a separate increment). <span class="badge ev-c">Confirmed</span></li><li>Japan campaign folders (/destination, /on-domain) are low volume and use existing templates. <span class="badge ev-v">Needs validation</span></li><li>Kit-selector state URLs (EMEA/JP/CN) become app routes, not authored pages. <span class="badge ev-a">Assumption</span></li></ul>
+<h2>Unknowns requiring Illumina input</h2><div class="tw"><table class=""><thead><tr><th class="">Unknown / assumption</th><th class="">Why it matters</th><th class="">Estimate impact</th><th class="">Information required</th><th class="">Status</th></tr></thead><tbody><tr><td class=""><b>Source AEM access / content export</b></td><td class="">Structured fields (dates, tags, facets) and China content</td><td class="">±15% on migration</td><td class="">JCR/package export or Assets API access</td><td class=""><span class="badge ev-v">Needs validation</span></td></tr><tr><td class=""><b>China hosting approach</b></td><td class="">EDS has no mainland edge</td><td class="">China increment 120–280 h</td><td class="">China CDN partner, ICP owner, network team</td><td class=""><span class="badge ev-v">Needs validation</span></td></tr><tr><td class=""><b>MyIllumina commerce scope</b></td><td class="">Buy box, pricing, cart on PDP</td><td class="">±60 h</td><td class="">API docs, CORS, regional pricing</td><td class=""><span class="badge ev-v">Needs validation</span></td></tr><tr><td class=""><b>Search target (CSE vs Vertex)</b></td><td class="">Rebuild vs reuse</td><td class="">±40 h</td><td class="">Search roadmap (Vertex WIP Sep 2026)</td><td class=""><span class="badge ev-v">Needs validation</span></td></tr><tr><td class=""><b>Translation process / vendor</b></td><td class="">Workflow integration effort</td><td class="">±30 h</td><td class="">Current MT engine, TMS, vendor</td><td class=""><span class="badge ev-v">Needs validation</span></td></tr><tr><td class=""><b>Target / personalization activities</b></td><td class="">Which slots to rebuild</td><td class="">±30 h</td><td class="">Active activity list</td><td class=""><span class="badge ev-v">Needs validation</span></td></tr><tr><td class=""><b>Japan campaign folders volume</b></td><td class="">Not in sitemap</td><td class="">±40 h</td><td class="">Folder export</td><td class=""><span class="badge ev-v">Needs validation</span></td></tr><tr><td class=""><b>Regional governance / content ownership</b></td><td class="">Who signs off each locale</td><td class="">UAT duration</td><td class="">RACI per region</td><td class=""><span class="badge ev-v">Needs validation</span></td></tr><tr><td class=""><b>Veeva / DynamoDB tool exposure</b></td><td class="">Inventory lists them; not seen in sample</td><td class="">±40 h</td><td class="">Page list</td><td class=""><span class="badge ev-v">Needs validation</span></td></tr></tbody></table></div>
+<h2>Dependencies</h2><ul class="tight"><li>MyIllumina API team (CORS, profile/cart contracts)</li><li>Search team (CSE/Vertex)</li><li>China network/ICP owner and CDN vendor</li><li>Analytics team (data layer spec, report suites)</li><li>Translation vendor / MT engine</li><li>DNS/CDN team for five cutovers (Route 53, CloudFront, WAF)</li></ul>
+<h2>Exclusions</h2><ul class="tight"><li>Support family (separate report)</li><li>Full human re-translation of JP/KR/CN content</li><li>Creating missing regional equivalents of www pages</li><li>Redesign beyond converging legacy pages onto the rad design system</li><li>investor.illumina.com, careers (Workday), knowledge.illumina.com, MyIllumina application itself</li><li>Authenticated commerce checkout flows beyond add-to-cart</li><li>Ongoing content operations after hypercare</li></ul>
+<h2>Risk register</h2><div class="tw"><table class=""><thead><tr><th class="">Risk</th><th class="">Rating</th><th class="">Impact</th><th class="">Mitigation</th></tr></thead><tbody><tr><td class=""><b>China delivery path not decided early</b></td><td class=""><span class="pill High crit">Critical</span></td><td class="">China wave slips; possible separate infra</td><td class="">Start China CDN/ICP workstream in Wave 0</td></tr><tr><td class=""><b>MyIllumina CORS / API changes</b></td><td class=""><span class="pill High">High</span></td><td class="">Buy box and ribbon blocked</td><td class="">Early API spike; contract tests</td></tr><tr><td class=""><b>Search migration (CSE → Vertex) in flight</b></td><td class=""><span class="pill High">High</span></td><td class="">Rework of search block</td><td class="">Agree target before Wave 1 build</td></tr><tr><td class=""><b>Legacy Bootstrap pages vary more than sampled</b></td><td class=""><span class="pill Medium">Medium</span></td><td class="">More import remediation</td><td class="">Completeness scoring on every page</td></tr><tr><td class=""><b>Undocumented regional content (JP folders, CN-only pages)</b></td><td class=""><span class="pill Medium">Medium</span></td><td class="">Scope growth</td><td class="">Folder exports per region</td></tr><tr><td class=""><b>Personalization/Target dependencies on AEM markup</b></td><td class=""><span class="pill Medium">Medium</span></td><td class="">Activities break</td><td class="">Inventory activities; rebuild selectors</td></tr><tr><td class=""><b>SEO loss from URL changes across six locales</b></td><td class=""><span class="pill Medium">Medium</span></td><td class="">Traffic drop</td><td class="">Keep paths; redirect sheet; hreflang validation</td></tr><tr><td class=""><b>Accessibility of mega-nav / facets</b></td><td class=""><span class="pill Low">Low</span></td><td class="">Audit findings late</td><td class="">Block-level a11y tests</td></tr></tbody></table></div>
+<h2>Estimate sensitivity</h2><div class="tw"><table class=""><thead><tr><th class="">Driver</th><th class="">Change</th><th class="">Effect on most-likely total</th></tr></thead><tbody><tr><td class="">Universal Editor instead of DA</td><td class="">+10–15% blocks</td><td class="">+150 h</td></tr><tr><td class="">Full human re-translation (JP, KR)</td><td class="">Excluded today</td><td class="">+1,500–3,000 h (vendor cost separate)</td></tr><tr><td class="">China served from global EDS (no China CDN)</td><td class="">Lower China increment</td><td class="">−100 h (performance/compliance risk)</td></tr><tr><td class="">Drop Video Detail pages (link to YouTube)</td><td class="">944 × 4 sites fewer pages</td><td class="">−60 h</td></tr><tr><td class="">No AEM export (extraction only)</td><td class="">More remediation</td><td class="">+120 h</td></tr></tbody></table></div>
+<h2 id="architecture">Recommended EDS architecture</h2><ul class="tight"><li>One EDS code repo for the marketing family; content sources per locale (<span class="tag">/en-us</span>, <span class="tag">/en-au</span>, <span class="tag">/en-gb</span>, <span class="tag">/ja-jp</span>, <span class="tag">/zh-cn</span>, <span class="tag">/ko-kr</span>) mapped to domains via CDN.</li><li>Shared header/footer/placeholders per locale; metadata-driven regional footers and MT disclaimer.</li><li>Serverless layer (edge worker) replacing AEM servlets: search, Pardot prefill, contact info, ecommerce config, ribbon links.</li><li>Query indexes per locale for listings, video, documents, products.</li><li>China: in-China CDN/origin fronting EDS; China-specific tag and video configuration.</li></ul>
+<h2>Confidence</h2><p><b>Medium.</b> Template, block and regional equivalence findings are high confidence (live census + 140 comparisons). Integration and China estimates are lower confidence because backend contracts (MyIllumina, search, China hosting) were observed from outside only.</p>
+</main>
+<footer>Estimation report for the Illumina marketing site family, generated 9 October 2026 from sitemap inventories, a live template census, stratified deep analysis and regional equivalence testing. Read-only, public pages only. Companion report: Illumina Support family. Evidence labels: <span class="badge ev-c">Confirmed</span> <span class="badge ev-o">Observed</span> <span class="badge ev-o">Inferred</span> <span class="badge ev-a">Assumption</span> <span class="badge ev-v">Needs validation</span>. 1 person-day = 8 h.</footer>
+</body></html>
