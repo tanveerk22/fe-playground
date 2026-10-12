@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Method — Illumina Support EDS</title><style>:root{--bg:#f4f8f9;--panel:#fff;--panel2:#eaf4f5;--line:#d6e3e6;--txt:#17252b;--mut:#5a6d74;--brand:#0a8f9c;--accent:#08808c;--hi:#c0392b;--me:#9a6a00;--lo:#1e8f5b}
+*{box-sizing:border-box}body{margin:0;font:14px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt)}
+a{color:var(--accent)}
+header.top{padding:22px 30px;background:linear-gradient(90deg,#045e68,#0a8f9c 55%,#3cbfc6);color:#fff}
+header.top h1{margin:0;font-size:21px}header.top p{margin:6px 0 0;opacity:.92;font-size:13px}
+nav.topnav{display:flex;gap:2px;background:var(--panel);border-bottom:1px solid var(--line);padding:0 14px;position:sticky;top:0;z-index:10;flex-wrap:wrap}
+nav.topnav a{color:var(--mut);padding:12px 13px;text-decoration:none;border-bottom:2px solid transparent;font-size:13px}
+nav.topnav a:hover{color:var(--txt)}nav.topnav a.active{color:var(--txt);border-bottom-color:var(--brand)}
+main{padding:24px 30px;max-width:1240px;margin:0 auto}
+h2{font-size:17px;margin:28px 0 10px;border-left:3px solid var(--brand);padding-left:10px}
+h3{font-size:14px;margin:18px 0 6px}
+p.lead{color:var(--mut);max-width:960px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;background:var(--panel)}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mut);font-weight:600;position:sticky;top:var(--navh,44px);background:var(--panel)}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:hover td{background:var(--panel2)}
+tr.total td{font-weight:700;background:var(--panel2)}
+.grid{display:grid;gap:14px}.g6{grid-template-columns:repeat(6,1fr)}.g5{grid-template-columns:repeat(5,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.g6,.g5,.g4,.g3{grid-template-columns:1fr 1fr}}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;text-align:center}
+.stat .n{font-size:23px;font-weight:700;white-space:nowrap}.stat .l{color:var(--mut);font-size:12px;margin-top:4px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
+.card.hl{border-color:var(--brand);background:rgba(10,143,156,.05)}
+.pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap}
+.High{background:rgba(192,57,43,.12);color:var(--hi)}.Medium{background:rgba(154,106,0,.14);color:var(--me)}.Low{background:rgba(30,143,91,.14);color:var(--lo)}
+.tag{font-family:ui-monospace,Menlo,monospace;font-size:11px;background:var(--panel2);padding:1px 6px;border-radius:4px;color:var(--accent)}
+.muted{color:var(--mut)}.warn{color:var(--hi);font-weight:600}.ok{color:var(--lo);font-weight:600}
+.bar{height:14px;border-radius:7px;background:var(--accent);min-width:2px}
+.barrow{display:flex;align-items:center;gap:10px;margin:5px 0}.barrow .lab{width:260px;font-size:12px;color:var(--mut);flex:none;text-align:right}.barrow .val{font-size:12px;width:80px}
+.badge{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;background:var(--panel2);color:var(--mut);margin:1px;white-space:nowrap}
+.ev-c{background:rgba(30,143,91,.14);color:var(--lo)}.ev-o{background:rgba(10,143,156,.12);color:var(--accent)}.ev-a{background:#eef0f3;color:#56606b}.ev-v{background:rgba(154,106,0,.14);color:var(--me)}
+footer{padding:20px 30px;color:var(--mut);font-size:12px;border-top:1px solid var(--line);margin-top:34px}
+.legend{font-size:12px;color:var(--mut);margin:4px 0 10px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.shots{grid-template-columns:1fr 1fr}}
+.shot{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.shot .cap{padding:8px 10px;font-size:12px;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.shot .cap a{text-decoration:none;font-weight:600}
+.shot .frame{height:420px;overflow:hidden;border-bottom:1px solid var(--line);background:var(--panel2)}
+.shot img{width:100%;height:auto;display:block}
+.shot .meta{padding:0 10px 10px;font-size:12px;color:var(--mut)}
+ul.tight{margin:6px 0;padding-left:20px}ul.tight li{margin:3px 0}
+.ref{font-size:11px;color:var(--mut)}
+.kpi-note{font-size:11px;color:var(--mut);margin-top:2px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.flow .step{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:12px;text-align:center}
+.flow .step b{display:block;font-size:16px}
+.flow .arr{color:var(--mut);font-size:18px}
+.cls{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:600;white-space:nowrap}
+.c-global{background:rgba(10,143,156,.12);color:var(--accent)}
+.c-mkt{background:rgba(43,79,216,.12);color:#2b4fd8}
+.c-sup{background:rgba(120,60,190,.12);color:#6a3cbe}
+.c-int{background:rgba(192,57,43,.10);color:var(--hi)}
+.c-reg{background:rgba(154,106,0,.14);color:var(--me)}
+.c-once{background:rgba(30,143,91,.14);color:var(--lo)}
+td.small,th.small{font-size:12px}
+.tw{overflow-x:auto;max-width:100%}
+.tw table{min-width:100%}
+th{position:static}
+.crit{background:rgba(192,57,43,.22);color:#8e1b10}
+</style></head><body>
+<header class="top"><h1>Illumina Support Family (support.illumina.com + SAPAC · EMEA · Japan · China · Korea) — EDS Migration Report</h1><p>17,950 sitemap entries inventoried (15,138 content-bearing) · 48 pages deeply analyzed · 350 URLs template-classified live · 120 regional comparisons · AEM 6.5 (illumina-support) → Adobe Edge Delivery Services</p></header>
+<nav class="topnav"><a href="index.html">Summary</a><a href="method.html" class="active">Method</a><a href="sections.html">Report per Section</a><a href="blocks.html">Blocks</a><a href="templates.html">Templates</a><a href="migration.html">Migration &amp; Validation</a><a href="visual-qa.html">Visual QA</a><a href="estimation.html">Estimation</a><a href="assumptions.html">Assumptions</a></nav>
+<main>
+<p class="lead">Primary-site-first: support.illumina.com analyzed in depth; regional hosts tested for equivalence (including byte-level identity for the alias domains).</p>
+<h2>Discovery funnel</h2><div class="flow"><div class="step"><b>17,950</b>Sitemap entries (5 sitemaps)</div><div class="arr">→</div><div class="step"><b>15,138</b>Content-bearing</div><div class="arr">→</div><div class="step"><b>3,858</b>Primary URLs</div><div class="arr">→</div><div class="step"><b>829</b>Not pages (records/redirects)</div><div class="arr">→</div><div class="step"><b>258</b>Status-checked</div><div class="arr">→</div><div class="step"><b>350</b>Template-classified</div><div class="arr">→</div><div class="step"><b>48</b>Deep sample</div><div class="arr">→</div><div class="step"><b>120</b>Regional comparisons</div><div class="arr">→</div><div class="step"><b>12</b>Source templates</div><div class="arr">→</div><div class="step"><b>10</b>EDS templates</div><div class="arr">→</div><div class="step"><b>29</b>EDS blocks</div></div>
+<h2>Inventory vs analysis — what was actually done</h2>
+<div class="tw"><table class=""><thead><tr><th class="">Measure</th><th class="n">Count</th><th class="">How</th></tr></thead><tbody><tr><td class="">Sitemap entries inventoried</td><td class="n">17,950</td><td class="">support (3,858), ko-kr (3,546), jp (4,220), cn (3,514), EMEA alias (2,812); SAPAC has no sitemap</td></tr><tr><td class="">Content-bearing URLs (excl. aliases)</td><td class="n">15,138</td><td class="">Primary + JP + CN + KR</td></tr><tr><td class="">URLs mapped to EDS template (rule-based)</td><td class="n">17,950</td><td class="">Path rules calibrated on census</td></tr><tr><td class="">URLs status-checked</td><td class="n">258</td><td class="">Up to 6 per cluster; 25.6% non-200</td></tr><tr><td class="">URLs template-classified (live)</td><td class="n">350</td><td class=""><span class="tag">pageTemplate</span> meta</td></tr><tr><td class="">Pages deeply analyzed</td><td class="n">48</td><td class="">Stratified per cluster + tools/listings</td></tr><tr><td class="">Regional pages compared</td><td class="n">120</td><td class="">24 pairs × 5 regions</td></tr><tr><td class="">Gated pages (login redirect)</td><td class="n">136</td><td class="">product-security-portal documentation/patches</td></tr><tr><td class="">Redirect / retired</td><td class="n">~312</td><td class="">249 bulletins + 63 FAQ (+ alias domains)</td></tr><tr><td class="">Data records (not pages)</td><td class="n">517</td><td class="">/configuration/* (robots-disallowed)</td></tr></tbody></table></div>
+<p class="legend">URLs <b>inventoried</b> were read from sitemaps only. URLs <b>classified</b> were fetched live and their AEM template marker recorded. Pages <b>deeply analyzed</b> had their full HTML, components, integrations, media, forms and SEO tags extracted. <b>Regional comparisons</b> fetched the same path on each regional domain and compared it with the primary.</p>
+<h2>1 · Sitemap analysis and URL clustering</h2><p>robots.txt on every support host points to <span class="tag">sitemap-amr-support.xml</span> (+ Korean) except Japan and China, which have their own. SAPAC support's own sitemap URL returns a "Page Not Found" HTML page; EMEA support's sitemap is an older format without hreflang. URLs were clustered by section and product type and mapped to EDS templates by path (e.g. <span class="tag">/sequencing/sequencing_kits/&lt;product&gt;/documentation</span> → Product Support Tab).</p>
+<h2>2 · Primary-site selection and stratified sampling</h2><p>48 primary pages: product hubs (instrument, kit, software, array, clinical), each tab type (documentation, downloads, compatibility, questions), download detail, training, bulletins, PSP, list pages, support content, CoA/SDS tools, search. Browser network capture on downloads, CoA finder and search.</p>
+<h2>3 · Template discovery (source AEM templates)</h2><p>Legacy pages expose <span class="tag">pageTemplate</span> meta: summarydownloadspage (39% of census), onecolumnpage (21%), rightrailpage (7%), training (5%, configuration records), bootstrap4fullpage, widepage, bootstrapfullpage, supportbasepage, bulletinIndividualItemTemplate, supportlistpage, plus a few modern basicpage-template pages (PSP landing, CoA finder). 12 source templates → 10 EDS templates.</p>
+<h2>4 · Component and block discovery</h2><p>Components from parbase names (<span class="tag">productSelector</span>, <span class="tag">trainingSection</span>, <span class="tag">landingPageFeaturedTile</span>, <span class="tag">alertBanner</span>, <span class="tag">contactUsFooter</span>) and semantic classes (<span class="tag">pdp-documentation</span>, <span class="tag">resource-card-grid</span>, <span class="tag">tools-container</span>, <span class="tag">product-drawer-container</span>).</p>
+<h2>5 · Integration discovery</h2><p>HTML host scan, browser network capture, the supplied Third-Party Integrations Inventory and architecture diagram. Key discoveries: the SWD iframe on every download page, <span class="tag">/bin/search/documents.json</span>, <span class="tag">/bin/contact/info</span> (500), the CoA micro-frontend, and the login redirects on PSP.</p>
+<h2>6 · Regional equivalence test</h2><p class="lead">Same method as marketing, plus an HTML hash comparison to detect aliases.</p>
+<div class="tw"><table class=""><thead><tr><th class="">Region</th><th class="n">Template pairs compared</th><th class="n">Same source template</th><th class="n">Avg. class-set similarity</th><th class="n">Byte-identical HTML</th><th class="n">Machine-translation disclaimer</th><th class="n">China ICP footer</th><th class="n">GTM present</th><th class="">Classification</th></tr></thead><tbody><tr><td class="">SAPAC (alias)</td><td class="n">24</td><td class="n">24 / 24</td><td class="n">1.00</td><td class="n">19</td><td class="n">0</td><td class="n">0</td><td class="n">24</td><td class="">A (alias)</td></tr><tr><td class="">EMEA (alias)</td><td class="n">24</td><td class="n">24 / 24</td><td class="n">1.00</td><td class="n">22</td><td class="n">0</td><td class="n">0</td><td class="n">24</td><td class="">A (alias)</td></tr><tr><td class="">Japan (ja-JP)</td><td class="n">24</td><td class="n">23 / 24</td><td class="n">0.94</td><td class="n">0</td><td class="n">19</td><td class="n">0</td><td class="n">23</td><td class="">B</td></tr><tr><td class="">China (zh-CN)</td><td class="n">24 (4 × 404)</td><td class="n">19 / 20</td><td class="n">0.94</td><td class="n">0</td><td class="n">0</td><td class="n">18</td><td class="n">0</td><td class="">C</td></tr><tr><td class="">Korea (ko-KR)</td><td class="n">24 (2 × 404)</td><td class="n">22 / 22</td><td class="n">0.98</td><td class="n">0</td><td class="n">18</td><td class="n">0</td><td class="n">22</td><td class="">B</td></tr></tbody></table></div>
+<h2>7 · Saturation</h2><p>Support is very regular: after ~200 census pages no new source template appeared, and product hubs/tabs repeat the same components. Regional sampling stopped at 24 pairs because aliases were identical and language sites matched from the first pairs.</p>
+<h2>8 · Estimation methodology</h2><p>Same model as the marketing report: templates, variants, blocks and integrations estimated once; content migration separated; regional increments itemized; 10% coordination. Non-page URLs (records, redirects) are priced as data conversion and redirect maps, not page migration.</p>
+</main>
+<footer>Estimation report for the Illumina support site family, generated 9 October 2026 from sitemap inventories, a live template census, stratified deep analysis and regional equivalence testing. Read-only, public pages only. Companion report: Illumina Marketing family. Evidence labels: <span class="badge ev-c">Confirmed</span> <span class="badge ev-o">Observed</span> <span class="badge ev-o">Inferred</span> <span class="badge ev-a">Assumption</span> <span class="badge ev-v">Needs validation</span>. 1 person-day = 8 h.</footer>
+</body></html>

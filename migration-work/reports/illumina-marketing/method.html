@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Method — Illumina Marketing EDS</title><style>:root{--bg:#f4f8f9;--panel:#fff;--panel2:#eaf4f5;--line:#d6e3e6;--txt:#17252b;--mut:#5a6d74;--brand:#0a8f9c;--accent:#08808c;--hi:#c0392b;--me:#9a6a00;--lo:#1e8f5b}
+*{box-sizing:border-box}body{margin:0;font:14px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt)}
+a{color:var(--accent)}
+header.top{padding:22px 30px;background:linear-gradient(90deg,#045e68,#0a8f9c 55%,#3cbfc6);color:#fff}
+header.top h1{margin:0;font-size:21px}header.top p{margin:6px 0 0;opacity:.92;font-size:13px}
+nav.topnav{display:flex;gap:2px;background:var(--panel);border-bottom:1px solid var(--line);padding:0 14px;position:sticky;top:0;z-index:10;flex-wrap:wrap}
+nav.topnav a{color:var(--mut);padding:12px 13px;text-decoration:none;border-bottom:2px solid transparent;font-size:13px}
+nav.topnav a:hover{color:var(--txt)}nav.topnav a.active{color:var(--txt);border-bottom-color:var(--brand)}
+main{padding:24px 30px;max-width:1240px;margin:0 auto}
+h2{font-size:17px;margin:28px 0 10px;border-left:3px solid var(--brand);padding-left:10px}
+h3{font-size:14px;margin:18px 0 6px}
+p.lead{color:var(--mut);max-width:960px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;background:var(--panel)}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mut);font-weight:600;position:sticky;top:var(--navh,44px);background:var(--panel)}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:hover td{background:var(--panel2)}
+tr.total td{font-weight:700;background:var(--panel2)}
+.grid{display:grid;gap:14px}.g6{grid-template-columns:repeat(6,1fr)}.g5{grid-template-columns:repeat(5,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.g6,.g5,.g4,.g3{grid-template-columns:1fr 1fr}}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;text-align:center}
+.stat .n{font-size:23px;font-weight:700;white-space:nowrap}.stat .l{color:var(--mut);font-size:12px;margin-top:4px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
+.card.hl{border-color:var(--brand);background:rgba(10,143,156,.05)}
+.pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap}
+.High{background:rgba(192,57,43,.12);color:var(--hi)}.Medium{background:rgba(154,106,0,.14);color:var(--me)}.Low{background:rgba(30,143,91,.14);color:var(--lo)}
+.tag{font-family:ui-monospace,Menlo,monospace;font-size:11px;background:var(--panel2);padding:1px 6px;border-radius:4px;color:var(--accent)}
+.muted{color:var(--mut)}.warn{color:var(--hi);font-weight:600}.ok{color:var(--lo);font-weight:600}
+.bar{height:14px;border-radius:7px;background:var(--accent);min-width:2px}
+.barrow{display:flex;align-items:center;gap:10px;margin:5px 0}.barrow .lab{width:260px;font-size:12px;color:var(--mut);flex:none;text-align:right}.barrow .val{font-size:12px;width:80px}
+.badge{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;background:var(--panel2);color:var(--mut);margin:1px;white-space:nowrap}
+.ev-c{background:rgba(30,143,91,.14);color:var(--lo)}.ev-o{background:rgba(10,143,156,.12);color:var(--accent)}.ev-a{background:#eef0f3;color:#56606b}.ev-v{background:rgba(154,106,0,.14);color:var(--me)}
+footer{padding:20px 30px;color:var(--mut);font-size:12px;border-top:1px solid var(--line);margin-top:34px}
+.legend{font-size:12px;color:var(--mut);margin:4px 0 10px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.shots{grid-template-columns:1fr 1fr}}
+.shot{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.shot .cap{padding:8px 10px;font-size:12px;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.shot .cap a{text-decoration:none;font-weight:600}
+.shot .frame{height:420px;overflow:hidden;border-bottom:1px solid var(--line);background:var(--panel2)}
+.shot img{width:100%;height:auto;display:block}
+.shot .meta{padding:0 10px 10px;font-size:12px;color:var(--mut)}
+ul.tight{margin:6px 0;padding-left:20px}ul.tight li{margin:3px 0}
+.ref{font-size:11px;color:var(--mut)}
+.kpi-note{font-size:11px;color:var(--mut);margin-top:2px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.flow .step{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:12px;text-align:center}
+.flow .step b{display:block;font-size:16px}
+.flow .arr{color:var(--mut);font-size:18px}
+.cls{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:600;white-space:nowrap}
+.c-global{background:rgba(10,143,156,.12);color:var(--accent)}
+.c-mkt{background:rgba(43,79,216,.12);color:#2b4fd8}
+.c-sup{background:rgba(120,60,190,.12);color:#6a3cbe}
+.c-int{background:rgba(192,57,43,.10);color:var(--hi)}
+.c-reg{background:rgba(154,106,0,.14);color:var(--me)}
+.c-once{background:rgba(30,143,91,.14);color:var(--lo)}
+td.small,th.small{font-size:12px}
+.tw{overflow-x:auto;max-width:100%}
+.tw table{min-width:100%}
+th{position:static}
+.crit{background:rgba(192,57,43,.22);color:#8e1b10}
+</style></head><body>
+<header class="top"><h1>Illumina Marketing Family (www.illumina.com + SAPAC · EMEA · Japan · China · Korea) — EDS Migration Report</h1><p>26,502 sitemap URLs inventoried across 6 sites/locales · 59 pages deeply analyzed · 450 URLs template-classified live · 140 regional comparisons · AEM 6.5 (illumina-designs) → Adobe Edge Delivery Services</p></header>
+<nav class="topnav"><a href="index.html">Summary</a><a href="method.html" class="active">Method</a><a href="sections.html">Report per Section</a><a href="blocks.html">Blocks</a><a href="templates.html">Templates</a><a href="migration.html">Migration &amp; Validation</a><a href="visual-qa.html">Visual QA</a><a href="estimation.html">Estimation</a><a href="assumptions.html">Assumptions</a></nav>
+<main>
+<p class="lead">Primary-site-first: www.illumina.com was analyzed in depth; regional sites were validated for equivalence and only their differences were analyzed. Effort follows templates, blocks and integrations, not URL count.</p>
+<h2>Discovery funnel</h2><div class="flow"><div class="step"><b>26,502</b>Sitemap URLs (6 sites)</div><div class="arr">→</div><div class="step"><b>68</b>URL clusters</div><div class="arr">→</div><div class="step"><b>1 of 2</b>Site family</div><div class="arr">→</div><div class="step"><b>275</b>Status-checked</div><div class="arr">→</div><div class="step"><b>450</b>Template-classified</div><div class="arr">→</div><div class="step"><b>59</b>Deep sample</div><div class="arr">→</div><div class="step"><b>140</b>Regional comparisons</div><div class="arr">→</div><div class="step"><b>14</b>Source templates</div><div class="arr">→</div><div class="step"><b>15</b>EDS templates</div><div class="arr">→</div><div class="step"><b>37</b>EDS blocks</div></div>
+<h2>Inventory vs analysis — what was actually done</h2>
+<div class="tw"><table class=""><thead><tr><th class="">Measure</th><th class="n">Count</th><th class="">How</th></tr></thead><tbody><tr><td class="">URLs inventoried (sitemaps, 6 sites/locales)</td><td class="n">26,502</td><td class="">robots.txt → sitemap-*-marketing.xml per domain; parsed loc + 25–30 hreflang alternates each</td></tr><tr><td class="">Unique primary URLs (www)</td><td class="n">4,116</td><td class="">sitemap-amr-marketing.xml</td></tr><tr><td class="">Regional/localized URLs</td><td class="n">22,386</td><td class="">SAPAC 5,014 · EMEA 5,655 · JP 4,526 · CN 3,182 · KR 4,009</td></tr><tr><td class="">URLs mapped to EDS template (rule-based)</td><td class="n">26,502</td><td class="">Path rules calibrated against live census; see Templates</td></tr><tr><td class="">URLs status-checked</td><td class="n">275</td><td class="">Up to 6 random URLs per www cluster</td></tr><tr><td class="">URLs template-classified (live fetch)</td><td class="n">450</td><td class="">Random sample of www; AEM <span class="tag">template</span>/<span class="tag">pageTemplate</span> meta recorded</td></tr><tr><td class="">Pages deeply analyzed</td><td class="n">59</td><td class="">Stratified by cluster + integration-heavy pages</td></tr><tr><td class="">Regional pages compared</td><td class="n">140</td><td class="">28 template pairs × SAPAC, EMEA, JP, CN, KR</td></tr><tr><td class="">Network-captured interactive pages</td><td class="n">9</td><td class="">Browser capture of XHR/fetch for search, listing, kit selector, video hub</td></tr><tr><td class="">Redirect / retired (sample rate)</td><td class="n">~7%</td><td class="">20 / 275 returned 301/302/404</td></tr><tr><td class="">Inaccessible pages</td><td class="n">0</td><td class="">No bot protection; public pages only</td></tr></tbody></table></div>
+<p class="legend">URLs <b>inventoried</b> were read from sitemaps only. URLs <b>classified</b> were fetched live and their AEM template marker recorded. Pages <b>deeply analyzed</b> had their full HTML, components, integrations, media, forms and SEO tags extracted. <b>Regional comparisons</b> fetched the same path on each regional domain and compared it with the primary.</p>
+<h2>1 · Sitemap analysis and URL clustering</h2><p>Each domain's robots.txt lists one marketing sitemap (www also lists the Korean sitemap under <span class="tag">/ko-kr/</span>). All six were parsed in full. Each entry carries 25–30 hreflang alternates linking the regional equivalents, which gave a direct path-level mapping between sites. URLs were clustered by first and second path segment (68 clusters on www) and every URL was then assigned to a proposed EDS template by path rule.</p>
+<h2>2 · Primary-site selection and stratified sampling</h2><p>Deep sample: 59 www pages chosen per cluster (1–3 per cluster, more for large clusters such as video hub, news center, products, events), plus deliberate picks of integration-heavy pages (faceted product listing, PDP with buy box, search, kit selector, forms). Each page: template marker, AEM component ids (<span class="tag">text-…</span>, <span class="tag">container-…</span>), BEM component roots, parbase components, iframes, forms, PDFs, tables, video, third-party hosts, SEO tags, page weight.</p>
+<h2>3 · Template discovery (source AEM templates)</h2><p>Modern pages expose <span class="tag">&lt;meta name="template"&gt;</span> (homepage-template, basicpage-template, pdp-template, systems-page-template). Legacy pages expose <span class="tag">&lt;meta name="pageTemplate"&gt;</span> (e.g. <span class="tag">/apps/illumina-marketing/templates/bootstraplandingpage</span>). A random census of 450 URLs recorded these markers: <b>14 source templates</b>, 90% legacy. Source templates were then consolidated into 15 EDS templates by page purpose (e.g. four article-like legacy templates → one Article template with variants).</p>
+<h2>4 · Component and block discovery</h2><p>Components were identified from AEM component ids, BEM roots (<span class="tag">hero__</span>, <span class="tag">instrumentspecs__</span>, <span class="tag">product-summary__</span>…), legacy parbase names (<span class="tag">productLongDescription</span>) and the rendered DOM. Each was mapped to an EDS block; duplicates across generations (legacy tiles vs modern cards) were merged.</p>
+<h2>5 · Integration discovery</h2><p>Three sources: (1) third-party hosts in page HTML, (2) live browser network capture on interactive pages (search, listing, kit selector, video hub, PDP), (3) the supplied <b>Third-Party Integrations Inventory</b> (AEM 6.5 LTS upgrade) and <b>AEM architecture diagram</b>. Network capture added items not in the inventory (MaxMind/geoip-js, Qualtrics, ZoomInfo, Reddit, AEP Web SDK, chinalytics, Baidu).</p>
+<h2>6 · Regional equivalence test</h2><p class="lead">For every source template, 1–2 www URLs with the widest regional coverage were fetched on each regional site. Compared: template marker, set of CSS classes (Jaccard similarity), third-party hosts, MT disclaimer, ICP footer, GTM, HTML hash.</p>
+<div class="tw"><table class=""><thead><tr><th class="">Region</th><th class="n">Template pairs compared</th><th class="n">Same source template</th><th class="n">Avg. class-set similarity</th><th class="n">Byte-identical HTML</th><th class="n">Machine-translation disclaimer</th><th class="n">China ICP footer</th><th class="n">GTM present</th><th class="">Classification</th></tr></thead><tbody><tr><td class="">SAPAC (en-AU)</td><td class="n">28</td><td class="n">28 / 28</td><td class="n">1.00</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">27</td><td class="">A</td></tr><tr><td class="">EMEA (en-GB)</td><td class="n">28</td><td class="n">28 / 28</td><td class="n">0.99</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">27</td><td class="">A</td></tr><tr><td class="">Japan (ja-JP)</td><td class="n">28 (2 × 404)</td><td class="n">26 / 26</td><td class="n">0.97</td><td class="n">0</td><td class="n">23</td><td class="n">0</td><td class="n">25</td><td class="">B/C</td></tr><tr><td class="">China (zh-CN)</td><td class="n">28 (3 × 404)</td><td class="n">25 / 25</td><td class="n">0.96</td><td class="n">0</td><td class="n">0</td><td class="n">21</td><td class="n">0</td><td class="">C</td></tr><tr><td class="">Korea (ko-KR)</td><td class="n">28</td><td class="n">28 / 28</td><td class="n">0.90</td><td class="n">0</td><td class="n">24</td><td class="n">0</td><td class="n">27</td><td class="">B</td></tr></tbody></table></div>
+<h2>7 · Saturation</h2><p>Template discovery saturated after ~300 census pages: the last 150 classified pages introduced no new source template. Block discovery saturated inside the deep sample (no new component roots in the last 15 pages). Regional sampling stopped at 28 pairs per region because every pair matched the primary template; the only new signals (MT disclaimer, ICP, China hosts) appeared consistently from the first pairs onward.</p>
+<h2>8 · Estimation methodology</h2><p>Bottom-up, in hours with low / most likely / high. Engineering = foundation + templates + variants + blocks + integrations + CWV + accessibility, each estimated <b>once</b>. Content migration = import tooling per template + automated bulk import with remediation + data-driven generation + assets + SEO/redirects. Regional increments are itemized per site (configuration, content migration, translation of UI strings, region-specific development, linguistic QA, regional QA). Coordination = 10% of the subtotal. Duration accounts for dependencies (China hosting, MyIllumina CORS) rather than hours ÷ team size.</p>
+</main>
+<footer>Estimation report for the Illumina marketing site family, generated 9 October 2026 from sitemap inventories, a live template census, stratified deep analysis and regional equivalence testing. Read-only, public pages only. Companion report: Illumina Support family. Evidence labels: <span class="badge ev-c">Confirmed</span> <span class="badge ev-o">Observed</span> <span class="badge ev-o">Inferred</span> <span class="badge ev-a">Assumption</span> <span class="badge ev-v">Needs validation</span>. 1 person-day = 8 h.</footer>
+</body></html>
